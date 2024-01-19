@@ -1,6 +1,7 @@
 import { MdPets } from "react-icons/md";
 import { FaPlay } from 'react-icons/fa';
 import "../Banner/Banner.css"
+import WhyChoseUs from "../WhyChooseUs/WhyChoseUs";
 const Banner = () => {
     return (
         <div className="max-w-[1366px] mb-20">
@@ -41,9 +42,15 @@ const Banner = () => {
                         <h3 className="text-sm md:flex items-center gap-5 xl:text-2xl md:text-sm">Pets Shelter Support <FaPlay></FaPlay></h3>
                     </div>
                 </div>
+
+                {/* Update Marque  */}
+
+                <div className="bg-[#FFE3E1] mt-[28px] h-14">
+                    <button className="text-white btn-sm h-full px-5 bg-[#F04336]">Update</button>
+                </div>
+
+
             </div>
-
-
         </div>
     );
 };
