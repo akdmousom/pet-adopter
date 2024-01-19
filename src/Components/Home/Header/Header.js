@@ -6,9 +6,9 @@ const Header = () => {
             <div className="">
                 <p>Call us: 747-800-9880  Opening Hours: 7:00 am - 9:00 pm (Mon - Sun)</p>
             </div>
-            <div className="md:flex  space-y-2 justify-center items-center gap-2">
+            <div className="md:flex  space-y-2 md:space-y-0 justify-center items-center gap-2">
                 <p>Follow :</p>
-                <div className="flex gap-5 justify-center">
+                <div className="flex gap-5  items-center">
                     <FaFacebook />
                     <FaTwitter />
                     <FaInstagram />
