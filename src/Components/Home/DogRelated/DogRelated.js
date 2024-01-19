@@ -3,7 +3,7 @@ import React from 'react';
 const DogRelated = () => {
     return (
         <div>
-            Dog Related
+            Dog Related work
         </div>
     );
 };
