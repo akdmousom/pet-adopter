@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/Shared/NavBar/NavBar'
 import Footer from '@/components/Shared/Footer/Footer'
+import WhyChoseUs from '@/Components/Home/WhyChooseUs/WhyChoseUs'
 
 
 
@@ -19,8 +20,10 @@ export default function RootLayout({ children }) {
         <div className=" max-w-[1366px] mx-auto">
           <NavBar />
 
-          <div className="">
+          <div className="bg-[#FFF5E4]">
             {children}
+            
+            <WhyChoseUs></WhyChoseUs>
           </div>
           <Footer />
         </div>
