@@ -5,6 +5,7 @@ import Footer from '@/components/Shared/Footer/Footer'
 
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
         <div className=" max-w-[1366px] mx-auto">
           <NavBar />
 
-          <div className="">
+          <div className="bg-[#FFF5E4]">
             {children}
           </div>
           <Footer />
