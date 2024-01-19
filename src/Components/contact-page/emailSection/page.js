@@ -2,9 +2,9 @@ import Image from "next/image";
 import img from '../../../../public/images/email.webp'
 const EmailSection = () => {
     return (
-        <div className="mx-24">
-              <div className="bg-[#FFE3E1] py-3 text-center text-xl font-bold  my-10">Contact us with e-mail</div>
-              <div className="bg-[#FFE3E1] flex flex-row py-10">
+        <div className="md:mx-12 lg:mx-24 lg:mt-10">
+              <div className="bg-[#FFE3E1] py-3 text-center text-xl font-bold mb-2 mt-8 lg:mb-2 lg:mt-32">Contact us with e-mail</div>
+              <div className="bg-[#FFE3E1] flex flex-col-reverse lg:flex-row py-10">
                 <div className="grid grid-cols-1 space-y-5 flex-1 py-10 px-16">
                 <input type="text" placeholder="Your Name" className="input input-bordered input-secondary w-full max-w-xs" />
                 <input type="text" placeholder="Your E-mail" className="input input-bordered input-secondary w-full max-w-xs" />

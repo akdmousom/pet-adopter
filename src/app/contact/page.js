@@ -1,14 +1,12 @@
-import Banner from '@/components/contact-page/banner/page';
-import EmailSection from '@/components/contact-page/emailSection/page';
-import SocialMediaSection from '@/components/contact-page/socialMediaSection/page';
-import React from 'react';
+import Banner from "@/Components/Home/Banner/Banner";
+import EmailSection from "@/Components/contact-page/emailSection/page";
 
 const ContactPage = () => {
     return (
         <div>
             <Banner />
             <EmailSection />
-            <SocialMediaSection />
+            
 
         </div>
     );
