@@ -1,0 +1,19 @@
+
+@media only screen and (min-width: 1024px) {
+    .laptopView{
+        width: 838px;
+        margin-left: 26px;
+    }
+
+
+  }
+
+  
+@media only screen and (min-width: 1288px) {
+    .laptopView{
+        width: 1120px;
+        margin-left: 14px;
+        position: absolute;
+    }
+
+  }
