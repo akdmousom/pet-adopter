@@ -4,10 +4,7 @@ import Link from "next/link";
 import { CgProfile } from "react-icons/cg";
 import logo from "../../../../public/logo.png"
 import { usePathname } from "next/navigation";
-import Header from "@/components/Home/Header/Header";
-
-
-
+import Header from "@/Components/Home/Header/Header";
 
 const NavLinks = [
     { id: 1, name: 'Home', path: '/' },
@@ -16,7 +13,7 @@ const NavLinks = [
     { id: 4, name: 'Contact', path: '/contact' },
 ];
 
-const NavBar = () => {
+const NavBar = ({children}) => {
 
     const pathname = usePathname();
 
@@ -24,7 +21,7 @@ const NavBar = () => {
     return (
         <div>
             <Header />
-            <div className="drawer bg-[#ffe3e1] text-black shadow-md ">
+            <div className="drawer z-10 bg-[#ffe3e1] text-black shadow-md ">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex justify-evenly flex-col">
                     {/* Navbar */}
@@ -62,7 +59,9 @@ const NavBar = () => {
                             </div>
                         </div>
                     </div>
-
+                    <div className="bg-[#FFF5E4]">
+                       {children}
+                    </div>
                     {/* Page content here */}
 
                 </div>

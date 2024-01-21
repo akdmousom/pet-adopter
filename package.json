@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.12.1",
     "@react-icons/all-files": "^4.1.0",
     "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
+    "pigeon-maps": "^0.21.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "sharp": "^0.33.2"
   },

@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 import img from '../../../../public/images/contact-banner.png'
-const Banner = () => {
+
+const ContactBanner = () => {
     return (
         <div>
             <Image src={img} layout="responsive" width='full' alt="Contact page" />
@@ -9,4 +10,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default ContactBanner;
