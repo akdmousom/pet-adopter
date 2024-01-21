@@ -19,8 +19,12 @@ You need to install Node JS on your computer first otherwise these commands will
 
 ## Second Step
 
+With this cmd you can run this project in your local machine.
+
 ``yarn dev``
+
 ``npm run dev``
+
 ``npm run dev``
 
 # Technology we use :
