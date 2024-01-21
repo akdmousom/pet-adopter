@@ -33,7 +33,7 @@ const EmailSection = () => {
 
                 </form>
                 <div className="flex-1">
-                    <Image src={img} className="p-5"/>
+                    <Image src={img} className="p-5" alt='image of contact page'/>
                 </div>
               </div>            
         </div>
