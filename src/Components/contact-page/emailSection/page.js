@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import img from '../../../../public/images/email.svg'
 import Script from "next/script";
