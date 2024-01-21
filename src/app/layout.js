@@ -3,9 +3,6 @@ import './globals.css'
 import NavBar from '@/components/Shared/NavBar/NavBar'
 import Footer from '@/components/Shared/Footer/Footer'
 
-
-
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
