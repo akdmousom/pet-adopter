@@ -17,6 +17,11 @@ You need to install Node JS on your computer first otherwise these commands will
 
 ``pnmp install``
 
+## Second Step
+
+``yarn dev``
+``npm run dev``
+``npm run dev``
 
 # Technology we use :
 
