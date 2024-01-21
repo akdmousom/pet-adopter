@@ -1,11 +1,14 @@
-import Banner from "@/Components/Home/Banner/Banner";
+"use client"
+import ContactBanner from "@/Components/contact-page/banner/page";
 import EmailSection from "@/Components/contact-page/emailSection/page";
+import Googlemap from "@/Components/contact-page/googleMap/page";
 
 const ContactPage = () => {
     return (
         <div>
-            <Banner />
+            <ContactBanner />
             <EmailSection />
+            <Googlemap/>
             
 
         </div>
