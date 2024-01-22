@@ -5,7 +5,7 @@ import WhyChoseUs from '@/Components/Home/WhyChooseUs/WhyChoseUs'
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Banner />
       <WhyChoseUs/>
       <Donate />
