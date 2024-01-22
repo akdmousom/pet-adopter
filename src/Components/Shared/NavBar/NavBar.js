@@ -32,7 +32,7 @@ const NavBar = ({children}) => {
                             </label>
                         </div>
                         <div className="flex justify-evenly w-full  ">
-                            <Image src={logo} width={120} alt="logo" />
+                            <Image src={logo} height={30} width={120} alt="logo" />
 
 
                             <div className="flex-none   text-center hidden md:block">
