@@ -11,6 +11,8 @@ const NavLinks = [
     // { id: 2, name: 'Blog', path: '/blog' },
     { id: 3, name: 'About', path: '/about' },
     { id: 4, name: 'Contact', path: '/contact' },
+    { id: 5, name: 'Login', path: '/login' },
+    { id: 5, name: 'Register', path: '/register' },
 ];
 
 const NavBar = ({children}) => {
