@@ -13,10 +13,7 @@ const Footer = () => {
         <div>
             <footer className="footer p-10 bg-[#ffe3e1] text-base-content">
                 <aside className="text-center w-[340px]">
-                    <div className="mx-auto w-auto">
-
-                        <Image  src={logo} width={'auto'} height={40} alt="Footer logo" />
-                    </div>
+                    <Image src={logo} height={120} width={120} alt="Footer logo" className="mx-auto" />
                     <p className=""> Pet Adopter Limitied<br />Facilitating pet adoptions with trust and dedication since 1992.</p>
                 </aside>
                 <nav>

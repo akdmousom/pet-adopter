@@ -4,7 +4,7 @@ import img from '../../../../public/images/contact-banner.png'
 
 const ContactBanner = () => {
     return (
-        <div >
+        <div>
             <Image src={img} layout="responsive" width='full' alt="Contact page" />
         </div>
     );
