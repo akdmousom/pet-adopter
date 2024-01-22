@@ -16,8 +16,8 @@ const EmailSection = () => {
       let email=target.user_email.value
       let subject=target.subject.value
       let message=target.message.value
-      const rules="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
-     console.log(name,email,subject,message)
+
+    
      if(name==='' || email==='' || subject==='' || message===''){
       Swal.fire({
         position: "center",
@@ -34,7 +34,7 @@ const EmailSection = () => {
           target.user_email.value=''
           target.subject.value=''
           target.message.value=''
-            console.log(result.text);
+
             Swal.fire({
               position: "center",
               icon: "success",
@@ -43,7 +43,11 @@ const EmailSection = () => {
               timer: 2500
             })
         }, (error) => {
-            console.log(error.text);
+          Swal.fire({
+            title: "Something Wrong",
+            text: `${error.text}`,
+            icon: "error"
+          });
         });
     };
      }
