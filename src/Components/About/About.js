@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import {img} from 'next/image';
 import React from 'react';
 
 const About = () => {
@@ -12,7 +12,7 @@ const About = () => {
                         <p className="font-normal text-base leading-6 text-gray-600 ">We are not just about adorable paws and wagging tails, we are about creating lasting bonds between loving families and rescued animals. Every day, our technology fuels a community of passionate volunteers and dedicated shelter partners, empowering them to find furry friends their forever homes. Join us in transforming lives, one wag at a time.</p>
                     </div>
                     <div className="w-full lg:w-8/12">
-                        <Image className="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
+                        <img className="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
                     </div>
                 </div>
 
@@ -24,28 +24,28 @@ const About = () => {
                     <div className="w-full lg:w-8/12 lg:pt-8">
                         <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
                             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                                <Image className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
-                                <Image className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
                                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">Arijit</p>
                             </div>
                             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                                <Image className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
-                                <Image className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
                                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">Shawon</p>
                             </div>
                             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                                <Image className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
-                                <Image className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
                                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">Masud</p>
                             </div>
                             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                                <Image className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
-                                <Image className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
                                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">Tahamid</p>
                             </div>
                             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                                <Image className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
-                                <Image className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:block hidden" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
+                                <img className="md:hidden block" src="https://i.ibb.co/cwmJ4ZH/Pngtree-business-male-icon-vector-4187852.png" />
                                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">Rasel</p>
                             </div>
                         </div>
