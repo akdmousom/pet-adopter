@@ -4,20 +4,51 @@ import img from '../../../../public/images/email.svg'
 import Script from "next/script";
 import emailjs from "../emailJsFile/page";
 import { useRef } from "react";
+import Swal from "sweetalert2";
 
 const EmailSection = () => {
   const form=useRef()
     
     const sendEmail = (e) => {
       e.preventDefault();
-  
+      const target=e.target
+      let name=target.user_name.value
+      let email=target.user_email.value
+      let subject=target.subject.value
+      let message=target.message.value
+      const rules="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
+     console.log(name,email,subject,message)
+     if(name==='' || email==='' || subject==='' || message===''){
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "input box is empty !",
+        showConfirmButton: false,
+        timer: 2500
+      })
+     }
+     else{
       emailjs.sendForm('service_so3nrs7', 'template_a94lqzf', form.current, 'GzJCnzv2qNGyYuwaT')
         .then((result) => {
+          target.user_name.value=''
+          target.user_email.value=''
+          target.subject.value=''
+          target.message.value=''
             console.log(result.text);
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Successfully email send",
+              showConfirmButton: false,
+              timer: 2500
+            })
         }, (error) => {
             console.log(error.text);
         });
-    };  
+    };
+     }
+  
+        
     return (
         <div className="md:mx-12 lg:mx-24 lg:mt-10 mx-auto">
         <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
