@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CgProfile } from "react-icons/cg";
 import logo from "../../../../public/logo.png"
 import { usePathname } from "next/navigation";
-import Header from "@/Components/Home/Header/Header";
+import Header from "@/components/Home/Header/Header";
 
 const NavLinks = [
     { id: 1, name: 'Home', path: '/' },
