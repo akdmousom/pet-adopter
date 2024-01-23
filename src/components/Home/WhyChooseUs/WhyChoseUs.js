@@ -2,7 +2,7 @@
 const WhyChoseUs = () => {
 
     return (
-        <div className="mt-44 py-5 mb-12 mx-auto xl:w-[1120px] bg-[#FFD1D1] ">
+        <div className="mt-20 py-5 mb-12 mx-auto xl:w-[1120px] bg-[#FFD1D1] ">
 
             <div>
                 <div>
