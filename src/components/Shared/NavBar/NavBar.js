@@ -10,7 +10,7 @@ import { useState } from "react";
 
 const NavLinks = [
     { id: 1, name: 'Home', path: '/' },
-    { id: 2, name: 'Petlisting', path: '/petlisting' },
+    { id: 2, name: 'Pet-listing', path: '/pet-listing' },
     { id: 3, name: 'About', path: '/about' },
     { id: 4, name: 'Contact', path: '/contact' },
 ];
@@ -78,9 +78,9 @@ const NavBar = ({ children }) => {
                             )}
                         </div>
                     </div>
-                    <div className="bg-[#FFF5E4]">
+                    {/* <div className="bg-[#FFF5E4]">
                         {children}
-                    </div>
+                    </div> */}
                     {/* Page content here */}
 
                 </div>
