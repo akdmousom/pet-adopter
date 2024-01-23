@@ -7,8 +7,10 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <WhyChoseUs/>
+      <WhyChoseUs />
       <Donate />
+
+
     </div>
   )
 }
