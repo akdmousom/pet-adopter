@@ -11,10 +11,10 @@ const Footer = () => {
     };
     return (
         <div>
-            <footer className="footer p-10 bg-[#ffe3e1] text-base-content">
+            <footer className="footer  px-4 py-10 md:px-10 bg-[#ffe3e1] text-base-content">
                 <aside className="text-center w-[340px]">
                     <Image src={logo} height={120} width={120} alt="Footer logo" className="mx-auto" />
-                    <p className=""> Pet Adopter Limitied<br />Facilitating pet adoptions with trust and dedication since 1992.</p>
+                    <p className="text-sm md:text-base"> Pet Adopter Limitied<br />Facilitating pet adoptions with trust and dedication since 1992.</p>
                 </aside>
                 <nav>
                     <header className="footer-title text-[#F04336]">ABOUT US</header>

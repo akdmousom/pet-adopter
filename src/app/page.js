@@ -1,14 +1,18 @@
 
-import Banner from '@/Components/Home/Banner/Banner'
-import Donate from '@/Components/Home/Donate/Donate'
-import WhyChoseUs from '@/Components/Home/WhyChooseUs/WhyChoseUs'
+import WhyChoseUs from '@/components/Home/WhyChooseUs/WhyChoseUs'
+import Banner from '@/components/Home/Banner/Banner'
+import Donate from '@/components/Home/Donate/Donate'
+
+
 
 export default function Home() {
   return (
     <div className="">
       <Banner />
-      <WhyChoseUs/>
+      <WhyChoseUs />
       <Donate />
+
+
     </div>
   )
 }
