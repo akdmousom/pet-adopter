@@ -8,8 +8,8 @@ const ContactPage = () => {
         <div>
             <ContactBanner />
             <EmailSection />
-            <Googlemap/>
-            
+            <Googlemap />
+
 
         </div>
     );
