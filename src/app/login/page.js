@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const page = () => {
     return (
         <div className="hero max-w-[1366px] min-h-screen bg-base-200">
@@ -23,8 +25,11 @@ const page = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
+                        <div>
+                            <p className="text-sm text-center">Don&#39;t have account <span className="text-[#f04336] font-bold"><Link href={'/register'}>Register</Link></span></p>
+                        </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn bg-[#f04336] text-white  hover:bg-black">Login</button>
                         </div>
                     </form>
                 </div>
