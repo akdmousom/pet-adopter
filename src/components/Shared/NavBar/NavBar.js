@@ -71,7 +71,7 @@ const NavBar = ({ children }) => {
                                 <div className={`absolute mt-[170px] right-10 duration-500 md:right-40 md:mt-[170px] z-30 bg-white border rounded shadow-md transition-all overflow-hidden ${isPopupVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-10'}`}>
                                     <div className="bg-white p-4 rounded-md" >
 
-                                        <p>Sign in / Sign up</p>
+                                       <Link href={'/login'}> <p>Sign in / Sign up</p></Link>
 
                                     </div>
                                 </div>
