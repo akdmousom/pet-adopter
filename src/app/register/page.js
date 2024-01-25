@@ -1,10 +1,14 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
-
+import googleIcon from '../../../public/images/google.svg'
+import githubIcon from '../../../public/images/github.svg'
+import Image from 'next/image'
+import {signIn} from 'next-auth/react'
 const page = () => {
 
     const userData = async (formData) => {
-        'use server'
+        // 'use server'
         const rawFormData = {
             fullName: formData.get('userName'),
             userEmail: formData.get('userEmail'),
@@ -64,6 +68,15 @@ const page = () => {
 
                         <div className="form-control mt-6">
                             <button type='submit' className="btn bg-[#f04336] text-white hover:bg-black">Register</button>
+                        </div>
+                        <hr/>
+                        <p className="text-center">OR</p>
+                        <hr/>
+                        <div className="form-control ">
+                            <button onClick={()=>signIn('google')} type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={googleIcon} alt='google icon' width={30} /> Login With Google</button>
+                        </div>
+                        <div className="form-control ">
+                            <button onClick={()=>signIn('github')} type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={githubIcon} alt='google icon' width={30} /> Login With Github</button>
                         </div>
                     </form>
                 </div>
