@@ -50,6 +50,7 @@ const About = () => {
                         <Image src="https://i.ibb.co/ChmWZBv/Play-Station.png" width={1900} height={600} alt="Play Station" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[300px] h-[300px] object-cover" />
                     </div>
                 </div>
+                {/* Donate Advertisement */}
                 <div className="bg-[#ffe3e1] mb-8 py-4 px-3">
                     <div className="flex flex-1 flex-col lg:flex-row lg:grid-cols-3 gap-6 lg:gap-0 items-center justify-between">
                         <h3 className="text-xl lg:text-5xl font-bold col-span-5">Register your pet with us and <br/> <span className="text-[#F04336]">Get exiting gift</span></h3>
