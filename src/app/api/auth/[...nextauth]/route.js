@@ -12,6 +12,10 @@ const handler=NextAuth({
             clientId: process.env.FACEBOOK_CLIENT_ID,
             clientSecret: process.env.FACEBOOK_CLIENT_SECRET
         }),
-    ]
+    ],
+
+    secret: process.env.client_secret
+
+    
 })
 export {handler as GET, handler as POST} 
