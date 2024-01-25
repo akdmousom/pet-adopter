@@ -33,7 +33,7 @@ const About = () => {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Image src="https://i.ibb.co/hZtWyFD/icons8-bone-48.png" width={1900} height={600} alt="Pet Banner" className="h-8 w-8" />
-                                <p>Hungry horses: whatever the size of your pe</p>
+                                <p>Hungry horses: whatever the size of your pet</p>
                             </div>
                         </div>
                     </div>
