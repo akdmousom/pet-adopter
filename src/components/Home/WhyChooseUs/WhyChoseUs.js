@@ -1,54 +1,47 @@
+import Image from "next/image";
+import Statistics from "../Statistics/Statistics";
 
 const WhyChoseUs = () => {
 
     return (
-        <div className="mt-20 py-5 mb-12 mx-auto xl:w-[1120px] bg-[#FFD1D1] ">
+        <>
+            <div className="bg-[#FFF5E4] max-w-[1366px] mx-auto">
+                <Statistics />
+                <div className="bg-[#ffe3e1] grid mx-auto my-8">
+                    <div className="text-black p-8">
 
-            <div>
-                <div>
-                    <h3 className="text-xl text-center text-[#F04336] font-bold p-4 ">Why Choose Us?</h3>
-                    <h1 className="text-center font-bold lg:text-4xl md:text-2xl">Best Service to Breeds Your <br /> Loved Dog Explore</h1>
+                        <h3 className="text-4xl lg:text-5xl text-center font-bold py-8">Why Choose Us?</h3>
 
-                    {/* box */}
-                    <div className="mt-12 mb-14  grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2">
-                        {/* Card 1  */}
-                        <div>
-                            <div className="w-[200px] mx-auto h-[200px] relative rounded-md bg-white">
-                                <h1 className="text-center text-[#000] text-3xl font-bold items-center absolute left-[70px] top-[83px]">159+</h1>
+                        <div className="grid lg:grid-cols-4 gap-6 items-center justify-center my-4">
+                            <div className="mb-4 lg:mb-0">
+                                <Image src="https://i.ibb.co/Pw1vByK/pet-24service.jpg" alt="Pet-24/7 Service" width={300} height={300}
+                                    className="rounded-full border-white hover:border-black hover:shadow-md border-2 hover:scale-110 transfrom duration-700 w-[250px] lg:w-[300px] h-[250px] lg:h-[300px] object-cover mx-auto" data-aos="zoom-in" />
+                                <h3 className="text-center text-xl text-[#F04336] mt-4 font-bold">24/7 Service</h3>
+                                <p className="text-black mt-2 text-center">Unwavering support, anytime, anywhere. Our 24/7 service ensures a smooth adoption journey with assistance available around the clock</p>
                             </div>
-                            <p className="text-2xl font-bold text-center mt-2">Vet Suport</p>
-                        </div>
-
-                        {/* Card 2  */}
-                        <div>
-                            <div className="w-[200px] mx-auto h-[200px] relative rounded-md bg-white">
-                                <h1 className="text-center text-[#000] text-3xl font-bold items-center absolute left-[70px] top-[83px]">256+</h1>
+                            <div className="mb-4 lg:mb-0">
+                                <Image src="https://i.ibb.co/BwxjKqf/pet-doctor.jpg" alt="pet-doctor" width={300} height={300}
+                                    className="rounded-full border-white hover:border-black hover:shadow-md border-2 hover:scale-110 transfrom duration-700 w-[250px] lg:w-[300px] h-[250px] lg:h-[300px] object-cover mx-auto" data-aos="zoom-in" />
+                                <h3 className="text-center text-xl text-[#F04336] mt-4 font-bold">Experienced Staff</h3>
+                                <p className="text-black mt-2 text-center">Adopt with tailored guidance. Our In-Home Consultants bring personalized advice to your doorstep, ensuring the perfect match for your unique lifestyle.</p>
                             </div>
-                            <p className="text-2xl font-bold text-center mt-2">Adoption Done</p>
-                        </div>
-
-                        {/* Card 3  */}
-                        <div>
-                            <div className="w-[200px] mx-auto h-[200px] relative rounded-md bg-white">
-                                <h1 className="text-center text-[#000] text-3xl font-bold items-center absolute left-[70px] top-[83px]">5K+</h1>
+                            <div className="mb-4 lg:mb-0">
+                                <Image src="https://i.ibb.co/QQJ5kgJ/pet-2.jpg" alt="pet-2" width={300} height={300}
+                                    className="rounded-full border-white hover:border-black hover:shadow-md border-2 hover:scale-110 transfrom duration-700 w-[250px] lg:w-[300px] h-[250px] lg:h-[300px] object-cover mx-auto" data-aos="zoom-in" />
+                                <h3 className="text-center text-xl text-[#F04336] mt-4 font-bold">In-Home Consult</h3>
+                                <p className="text-black mt-2 text-center">Expertly guided adoptions. Our Pro Staff is committed to making your adoption experience enjoyable, providing knowledgeable assistance at every turn.</p>
                             </div>
-                            <p className="text-2xl font-bold text-center mt-2">DOG BREEDING</p>
-                        </div>
-
-                        {/* Card 4  */}
-                        <div>
-                            <div className="w-[200px] mx-auto h-[200px] relative rounded-md bg-white">
-                                <h1 className="text-center text-[#000] text-3xl font-bold items-center absolute left-[70px] top-[83px]">7+</h1>
+                            <div className="mb-4 lg:mb-0">
+                                <Image src="https://i.ibb.co/KKFgFF3/pet-3.jpg" alt="pet-3" width={300} height={300}
+                                    className="rounded-full border-white hover:border-black hover:shadow-md border-2 hover:scale-110 transfrom duration-700 w-[250px] lg:w-[300px] h-[250px] lg:h-[300px] object-cover mx-auto" data-aos="zoom-in" />
+                                <h3 className="text-center text-xl text-[#F04336] mt-4 font-bold">PetPal Connect</h3>
+                                <p className="text-black mt-2 text-center">Where hearts and paws meet seamlessly. PetPal Connect fosters a personal connection in pet adoptions, ensuring furry friends find their homes.</p>
                             </div>
-                            <p className="text-2xl font-bold text-center mt-2">YEARS OF HISTORY</p>
                         </div>
-
-
                     </div>
                 </div>
-              
             </div>
-        </div>
+        </>
     );
 };
 
