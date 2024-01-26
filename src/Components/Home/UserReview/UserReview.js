@@ -10,6 +10,7 @@ import './UserReview.css'
 
 
 import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
+import Image from 'next/image';
 
 const UserReview = () => {
 
@@ -46,7 +47,7 @@ const UserReview = () => {
             {/* Card 1  */}
             <SwiperSlide className='bg-pink-100'>
                 <div className='text-center'>
-                    <img className='ml-[106px]' src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
+                    <Image className='ml-[106px]' width={200} height={200} src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
 
                     <div>
                         <h1 className='text-xl mt-2'>Masud Rana</h1>
@@ -68,7 +69,7 @@ const UserReview = () => {
             {/* Card 2  */}
             <SwiperSlide className='bg-green-100'>
                 <div className='text-center'>
-                    <img className='ml-[106px]' src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
+                    <Image className='ml-[106px]' width={200} height={200} src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
 
                     <div>
                         <h1 className='text-xl mt-2'>Masud Rana</h1>
@@ -89,7 +90,7 @@ const UserReview = () => {
             {/* Card 3  */}
             <SwiperSlide className='bg-orange-100'>
                 <div className='text-center'>
-                    <img className='ml-[106px]' src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
+                    <Image className='ml-[106px]' width={200} height={200} src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
 
                     <div>
                         <h1 className='text-xl mt-2'>Masud Rana</h1>
