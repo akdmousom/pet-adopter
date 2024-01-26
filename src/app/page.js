@@ -1,8 +1,8 @@
 
-import GalleryPhoto from '@/Components/Home/GalleryPhoto/GalleryPhoto'
-import PetSection from '@/Components/Home/PetSection/PetSection'
-import PetService from '@/Components/Home/PetService/PetService'
-import UserReview from '@/Components/Home/UserReview/UserReview'
+import GalleryPhoto from '@/components/Home/GalleryPhoto/GalleryPhoto'
+import PetSection from '@/components/Home/PetSection/PetSection'
+import PetService from '@/components/Home/PetService/PetService'
+import UserReview from '@/components/Home/UserReview/UserReview'
 import Banner from '@/components/Home/Banner/Banner'
 import Donate from '@/components/Home/Donate/Donate'
 import WhyChoseUs from '@/components/Home/WhyChooseUs/WhyChoseUs'
