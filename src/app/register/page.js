@@ -4,7 +4,6 @@ import React from 'react';
 import googleIcon from '../../../public/images/google.svg'
 import facebookIcon from '../../../public/images/facebook.svg'
 import Image from 'next/image'
-import {signIn} from 'next-auth/react'
 const page = () => {
 
     const userData = async (formData) => {
@@ -73,10 +72,10 @@ const page = () => {
                         <p className="text-center">OR</p>
                         <hr/>
                         <div className="form-control ">
-                            <button onClick={()=>signIn('google')} type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={googleIcon} alt='google icon' width={30} /> Login With Google</button>
+                            <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={googleIcon} alt='google icon' width={30} /> Login With Google</button>
                         </div>
                         <div className="form-control ">
-                            <button onClick={()=>signIn('facebook')} type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={facebookIcon} alt='facebook icon' width={30}  /> Login With Facebook</button>
+                            <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={facebookIcon} alt='facebook icon' width={30}  /> Login With Facebook</button>
                         </div>
                     </form>
                 </div>
