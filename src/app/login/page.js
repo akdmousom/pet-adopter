@@ -1,5 +1,4 @@
 'use client'
-import { signIn } from "next-auth/react";
 import Link from "next/link";
 import googleIcon from '../../../public/images/google.svg'
 import facebookIcon from '../../../public/images/facebook.svg'
