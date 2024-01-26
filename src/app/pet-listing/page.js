@@ -1,10 +1,14 @@
 import Petlisting from '@/components/Petlisting/Petlisting';
 import React from 'react';
 
+const session = null;
+
+
 const PetlistingPage = () => {
+
     return (
         <div>
-            <h1>Pet listing</h1>
+
             <Petlisting />
         </div>
     );

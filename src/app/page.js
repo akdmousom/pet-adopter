@@ -1,4 +1,8 @@
 
+import GalleryPhoto from '@/components/Home/GalleryPhoto/GalleryPhoto'
+import PetSection from '@/components/Home/PetSection/PetSection'
+import PetService from '@/components/Home/PetService/PetService'
+import UserReview from '@/components/Home/UserReview/UserReview'
 import Banner from '@/components/Home/Banner/Banner'
 import Donate from '@/components/Home/Donate/Donate'
 import WhyChoseUs from '@/components/Home/WhyChooseUs/WhyChoseUs'
@@ -8,7 +12,11 @@ export default function Home() {
     <div>
       <Banner />
       <WhyChoseUs />
+      <PetService/>
       <Donate />
+      <PetSection/>
+      <GalleryPhoto/>
+      <UserReview/>
 
 
     </div>

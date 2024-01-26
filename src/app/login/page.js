@@ -1,9 +1,12 @@
+'use client'
 import Link from "next/link";
-
+import googleIcon from '../../../public/images/google.svg'
+import facebookIcon from '../../../public/images/facebook.svg'
+import Image from 'next/image'
 const page = () => {
 
     const userData = async (formData) => {
-        'use server'
+        // 'use server'
         const rawFormData = {
             userEmail: formData.get('email'),
             userPassword: formData.get('password'),
@@ -44,6 +47,15 @@ const page = () => {
                         </div>
                         <div className="form-control mt-6">
                             <button type="submit" className="btn bg-[#f04336] text-white  hover:bg-black">Login</button>
+                        </div>
+                        <hr/>
+                        <p className="text-center">OR</p>
+                        <hr/>
+                        <div className="form-control ">
+                            <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={googleIcon} alt='google icon' width={30} /> Login With Google</button>
+                        </div>
+                        <div className="form-control ">
+                            <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={facebookIcon} alt='facebook icon' width={30} /> Login With Facebook</button>
                         </div>
                     </form>
                 </div>

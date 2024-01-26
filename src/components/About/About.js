@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import MeetOurTeam from './MeetOurTeam/MeetOurTeam';
 
 const About = () => {
     return (
@@ -41,6 +42,14 @@ const About = () => {
                         <Image src="https://i.ibb.co/ZT5KN77/pet-5.jpg" width={1900} height={600} alt="pet-5" className=" rounded-3xl px-3 object-cover" />
                     </div>
                 </div>
+
+
+                {/* Meet Our Team */}
+                <div className='mt-20 mb-20'>
+                    <MeetOurTeam/>
+                </div>
+
+
                 <div className="mb-20 lg:mb-40 px-4">
                     <h3 className="text-3xl lg:text-5xl text-[#F04336] text-center font-bold my-8">Our Partner</h3>
                     <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center">
@@ -53,7 +62,7 @@ const About = () => {
                 {/* Donate Advertisement */}
                 <div className="bg-[#ffe3e1] mb-8 py-4 px-3">
                     <div className="flex flex-1 flex-col lg:flex-row lg:grid-cols-3 gap-6 lg:gap-0 items-center justify-between">
-                        <h3 className="text-xl lg:text-5xl font-bold col-span-5">Register your pet with us and <br/> <span className="text-[#F04336]">Get exiting gift</span></h3>
+                        <h3 className="text-xl lg:text-5xl font-bold col-span-5">Register your pet with us and <br /> <span className="text-[#F04336]">Get exiting gift</span></h3>
                         <Image src="https://i.ibb.co/7JRXqNQ/pet-4.jpg" width={1900} height={600} alt="pet-4" className="w-[200px] lg:w-[250px] h-[200px] lg:h-[320px] col-span-2 object-cover" />
                         <div className="lg:px-3 space-y-4 col-span-5 mx-auto">
                             <h3 className="text-xs lg:text-xl font-medium">We are your local dog home boarding service giving you complete</h3>
