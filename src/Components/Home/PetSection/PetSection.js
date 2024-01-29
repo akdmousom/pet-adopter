@@ -22,7 +22,7 @@ const PetSection = () => {
                         <a href="#!">
                             <img className="rounded-t-lg " src="https://i.ibb.co/fMHW4kp/pet8.jpg" />
                         </a>
-                        <div class="p-2">
+                        <div className="p-2">
                             <div className="flex items-center justify-between mb-3">
                                 <h3 className="text-lg font-medium">Max & Luna</h3>
                                 {/* Rating 1 */}
@@ -81,7 +81,7 @@ const PetSection = () => {
                         <a href="#!">
                             <img className="rounded-t-lg " src="https://i.ibb.co/DM0P3r0/pet7.jpg" />
                         </a>
-                        <div class="p-2">
+                        <div className="p-2">
                             <div className="flex items-center justify-between mb-3">
                                 <h3 className="text-lg font-medium">Leo & Lily</h3>
                                 {/* Rating 3 */}
@@ -109,7 +109,7 @@ const PetSection = () => {
                         <a href="#!">
                             <img className="rounded-t-lg " src="https://i.ibb.co/pJqCSPq/pet9.jpg" />
                         </a>
-                        <div class="p-2">
+                        <div className="p-2">
                             <div className="flex items-center justify-between mb-3">
                                 <h3 className="text-lg font-medium">Charlie</h3>
                                 {/* Rating 4 */}
