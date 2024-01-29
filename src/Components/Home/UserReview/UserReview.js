@@ -56,7 +56,7 @@ const UserReview = () => {
                         <div className="rating w-20">
                             <input type="radio" className="mask mask-star bg-yellow-400" />
                             <input type="radio" className="mask mask-star bg-yellow-400" />
-                            <input type="radio" className="mask mask-star bg-yellow-400" checked />
+                            <input type="radio" className="mask mask-star bg-yellow-400" />
                             <input type="radio" className="mask mask-star " />
                             <input type="radio" className="mask mask-star " />
                         </div>
@@ -77,7 +77,7 @@ const UserReview = () => {
                         {/* Rating 2 */}
                         <div className="rating w-20">
                             <input type="radio" className="mask mask-star bg-yellow-400" />
-                            <input type="radio" className="mask mask-star bg-yellow-400" checked />
+                            <input type="radio" className="mask mask-star bg-yellow-400" />
                             <input type="radio" className="mask mask-star " />
                             <input type="radio" className="mask mask-star " />
                             <input type="radio" className="mask mask-star " />
@@ -98,8 +98,8 @@ const UserReview = () => {
                         {/* Rating 3 */}
                         <div className="rating w-20">
                             <input type="radio" name="rating-3" className="mask mask-star bg-yellow-400" />
-                            <input type="radio" name="rating-3" className="mask mask-star bg-yellow-400" checked />
-                            <input type="radio" name="rating-3" className="mask mask-star bg-yellow-400" checked />
+                            <input type="radio" name="rating-3" className="mask mask-star bg-yellow-400"  />
+                            <input type="radio" name="rating-3" className="mask mask-star bg-yellow-400" />
                             <input type="radio" name="rating-3" className="mask mask-star " />
                             <input type="radio" name="rating-3" className="mask mask-star " />
                         </div>
