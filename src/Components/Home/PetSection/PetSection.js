@@ -28,7 +28,7 @@ const PetSection = () => {
                                 {/* Rating 1 */}
                                 <div className="rating w-20">
                                     <input type="radio"  className="mask mask-star bg-yellow-400" />
-                                    <input type="radio"  className="mask mask-star bg-yellow-400" checked/>
+                                    <input type="radio"  className="mask mask-star bg-yellow-400" defaultChecked="true"/>
                                     <input type="radio"  className="mask mask-star" />
                                     <input type="radio"  className="mask mask-star" />
                                     <input type="radio"  className="mask mask-star" />
@@ -58,7 +58,7 @@ const PetSection = () => {
                                 <div className="rating w-20">
                                     <input type="radio"  className="mask mask-star bg-yellow-400"/>
                                     <input type="radio" className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio"  className="mask mask-star bg-yellow-400" checked/>
+                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
                                     <input type="radio" className="mask mask-star" />
                                     <input type="radio"  className="mask mask-star" />
                                     
@@ -89,7 +89,7 @@ const PetSection = () => {
                                     <input type="radio"  className="mask mask-star bg-yellow-400"/>
                                     <input type="radio" className="mask mask-star bg-yellow-400"/>
                                     <input type="radio" className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio" className="mask mask-star bg-yellow-400" checked/>
+                                    <input type="radio" className="mask mask-star bg-yellow-400" />
                                     <input type="radio" className="mask mask-star " />
                                    
                                 </div>
@@ -115,7 +115,7 @@ const PetSection = () => {
                                 {/* Rating 4 */}
                                 <div className="rating w-20">
                                     <input type="radio"  className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio"  className="mask mask-star bg-yellow-400" checked/>
+                                    <input type="radio"  className="mask mask-star bg-yellow-400" />
                                     <input type="radio"  className="mask mask-star" />
                                     <input type="radio"  className="mask mask-star" />
                                     <input type="radio"  className="mask mask-star" />
