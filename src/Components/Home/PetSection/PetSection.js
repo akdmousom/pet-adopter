@@ -51,7 +51,7 @@ const PetSection = () => {
                         <a href="#!">
                             <img className="rounded-t-lg " src="https://i.ibb.co/8nZpQhF/pet6.jpg" />
                         </a>
-                        <div class="p-2">
+                        <div className="p-2">
                             <div className="flex items-center justify-between mb-3 ">
                                 <h3 className="text-lg font-medium">Callie</h3>
                                 {/* Rating 2 */}
