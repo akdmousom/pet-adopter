@@ -1,4 +1,3 @@
-'use client'
 import Link from 'next/link';
 import React from 'react';
 import googleIcon from '../../../public/images/google.svg'
@@ -7,7 +6,7 @@ import Image from 'next/image'
 const page = () => {
 
     const userData = async (formData) => {
-        // 'use server'
+        'use server'
         const rawFormData = {
             fullName: formData.get('userName'),
             userEmail: formData.get('userEmail'),
@@ -62,7 +61,7 @@ const page = () => {
                         </div>
 
                         <div className='mt-4'>
-                            <p className="text-sm text-center ">Already have an account <span className='text-[#f04336] font-bold'><Link href={'/login'}>Login</Link></span></p>
+                            <p className="text-sm text-center ">Already have an account <span className='text-[#f04336] font-bold'><Link href={'/api/auth/signin'}>Login</Link></span></p>
                         </div>
 
                         <div className="form-control mt-6">

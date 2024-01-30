@@ -14,7 +14,7 @@
     "aos": "^2.3.4",
     "dotenv": "^16.4.1",
     "next": "14.0.4",
-    "next-auth": "^4.24.5",
+    "next-auth": "^5.0.0-beta.5",
     "pigeon-maps": "^0.21.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
