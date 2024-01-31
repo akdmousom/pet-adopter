@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import React from 'react';
 import googleIcon from '../../../../public/images/google.svg'
-
 import { signIn } from "next-auth/react"
 const Google = () => {
 
