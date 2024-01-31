@@ -29,8 +29,6 @@ const page = () => {
 
         const data = await res.json()
 
-        console.log(data.acknowledged);
-
         if (data.acknowledged === true) {
 
             redirect('/login')
