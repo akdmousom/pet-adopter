@@ -1,11 +1,14 @@
 import Link from "next/link";
-import googleIcon from '../../../public/images/google.svg'
-import facebookIcon from '../../../public/images/facebook.svg'
-import Image from 'next/image'
+import Google from "@/components/Shared/ProviderButton/Google";
+import Facebook from "@/components/Shared/ProviderButton/Facebook";
 import { signIn } from "../api/auth";
 
 
+
+
 const page = async () => {
+
+
 
     const userData = async (formData) => {
         'use server'
@@ -15,11 +18,14 @@ const page = async () => {
         }
 
         const {username, password} = rawFormData;
+        
 
         await signIn('credentials', {
             username: username,
             password: password,
             redirectTo: '/'
+            
+           
         })
         
 
@@ -64,10 +70,10 @@ const page = async () => {
                         <p className="text-center">OR</p>
                         <hr/>
                         <div className="form-control ">
-                            <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={googleIcon} alt='google icon' width={30} /> Login With Google</button>
+                            <Google/>
                         </div>
                         <div className="form-control ">
-                            <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={facebookIcon} alt='facebook icon' width={30} /> Login With Facebook</button>
+                            <Facebook/>
                         </div>
                     </form>
                 </div>
