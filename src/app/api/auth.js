@@ -17,22 +17,18 @@ const config = {
         password: { label: "Password", type: "password", placeholder: "Password" }
       },
 
-      async authorize(credentials, req) {
-        // Add logic here to look up the user from the credentials supplied
-        const user = { id: "1", name: "J Smith", username: "AKD", password: "admin", email: "jsmith@example.com" }
+      async authorize(credentials, request) {
+        const userDataFormDatabase = await fetch('http://localhost:5000/api/v1/getregisteruser')
+        const data = await userDataFormDatabase.json();
+        
+        const user = {username : data[0].userName, password: data[0].password, email: data[0].email}
 
-        if (credentials.username === user.username && credentials.password === user.password) {
-
-          return user
-
-        }
+        if (credentials.username == user.username && credentials.password == user.password) return user
 
         return null
 
       }
     }),
-
-
 
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,

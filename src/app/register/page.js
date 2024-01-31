@@ -3,6 +3,7 @@ import React from 'react';
 import googleIcon from '../../../public/images/google.svg'
 import facebookIcon from '../../../public/images/facebook.svg'
 import Image from 'next/image'
+import { redirect } from 'next/navigation';
 const page = () => {
 
     const userData = async (formData) => {
@@ -14,9 +15,26 @@ const page = () => {
             userPassword: formData.get('userPassword'),
         }
 
-        // When user hit the login button you can get user information in rawFormData object
-        await rawFormData
-        console.log(rawFormData);
+        const res = await fetch('http://localhost:5000/api/v1/userregistration', {
+            method: 'POST',
+            cache: 'no-cache',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(rawFormData),
+
+
+        })
+
+        const data = await res.json()
+
+        console.log(data.acknowledged);
+
+        if (data.acknowledged === true) {
+
+            redirect('/login')
+            
+        }
 
     }
 
