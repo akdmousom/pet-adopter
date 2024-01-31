@@ -19,7 +19,7 @@ const config = {
 
       async authorize(credentials, request) {
         const email = credentials.username;
-        const userDataFormDatabase = await fetch(`http://localhost:5000/api/v1/getregisteruser?email=${email}`)
+        const userDataFormDatabase = await fetch(`https://pet-adopter-backend.vercel.app/api/v1/getregisteruser?email=${email}`)
         const data = await userDataFormDatabase.json();
         console.log(data);
 
