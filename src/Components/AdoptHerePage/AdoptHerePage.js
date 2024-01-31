@@ -13,7 +13,7 @@ const AdoptHerePage = () => {
 
     // When user hit the login button you can get user information in rawFormData object
     await rawFormData
-    console.log(rawFormData);
+    // console.log(rawFormData);
 
 }
     return (

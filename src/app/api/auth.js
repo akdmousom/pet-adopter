@@ -6,6 +6,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 
 const config = {
+  
 
   providers: [
     CredentialsProvider({
@@ -17,11 +18,11 @@ const config = {
         password: { label: "Password", type: "password", placeholder: "Password" }
       },
 
+      
       async authorize(credentials, request) {
         const email = credentials.username;
         const userDataFormDatabase = await fetch(`https://pet-adopter-backend.vercel.app/api/v1/getregisteruser?email=${email}`)
         const data = await userDataFormDatabase.json();
-        console.log(data);
 
         const user = { username: data.userEmail, password: data.userPassword, email: data.userEmail, fullname: data.fullName, userImg: data.userAvater }
 
@@ -40,11 +41,15 @@ const config = {
     })
 
   ],
+  trustHost: true,
+  trustHostedDomain: true,
 
   pages: {
     signIn: '/login',
 
   }, secret: process.env.AUTH_SECRET,
+
+
 
   callbacks: {
     async jwt({ token, user }) {
@@ -69,7 +74,6 @@ const config = {
 
     async redirect({ url, baseUrl }) {
       // Allows relative callback URLs
-      console.log('url', url, 'base url', baseUrl);
       if (url.startsWith("/")) return `${baseUrl}${url}`
       // Allows callback URLs on the same origin
       else if (new URL(url).origin === baseUrl) return url
