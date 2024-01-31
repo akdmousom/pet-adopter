@@ -6,43 +6,50 @@ import CredentialsProvider from "next-auth/providers/credentials";
 
 
 const config = {
-    
-    providers: [
-        CredentialsProvider({
-       
-          name: "credentials",
-        
-          credentials: {
-            username: { label: "username", type: "text", placeholder: "username" },
-            password: { label: "Password", type: "password", placeholder: "Password" }
-          },
 
-          async authorize(credentials, req) {
-            // Add logic here to look up the user from the credentials supplied
-            const user = { id: "1", name: "J Smith", username: "AKD", password: "admin", email: "jsmith@example.com" }
-      
-            if (credentials.username === user.username && credentials.password === user.password) {
+  providers: [
+    CredentialsProvider({
 
-                return user
-                
-            }
+      name: "credentials",
 
-            return null
-      
-          }
-        })
-      ],
-
-      pages: {
-        signIn: '/login',
-       
+      credentials: {
+        username: { label: "username", type: "text", placeholder: "username" },
+        password: { label: "Password", type: "password", placeholder: "Password" }
       },
-   
-      
 
-      
+      async authorize(credentials, request) {
+        const userDataFormDatabase = await fetch('http://localhost:5000/api/v1/getregisteruser')
+        const data = await userDataFormDatabase.json();
+        
+        const user = {username : data[0].userName, password: data[0].password, email: data[0].email}
 
-      secret: process.env.AUTH_SECRET
+        if (credentials.username == user.username && credentials.password == user.password) return user
+
+        return null
+
+      }
+    }),
+
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET
+    })
+
+
+
+
+  ],
+
+  pages: {
+    signIn: '/login',
+
+  },
+
+
+
+
+
+  secret: process.env.AUTH_SECRET
 }
 
-export const {auth, handlers, signIn, signOut} = NextAuth(config)
+export const { auth, handlers, signIn, signOut } = NextAuth(config)
