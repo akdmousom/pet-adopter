@@ -13,7 +13,7 @@ export default function Home() {
       <Banner />
       <WhyChoseUs />
       <PetService/>
-      <Donate />
+      {/* <Donate /> */}
       <PetSection/>
       <GalleryPhoto/>
       <UserReview/>

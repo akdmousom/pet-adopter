@@ -175,7 +175,7 @@ const Petlisting = () => {
 
                 </select>
             </div>
-            <div data-aos="fade-up" className=" grid md:grid-cols-2 lg:grid-cols-3 items-center justify-center ">
+            <div data-aos="fade-up" className=" grid md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-3 mb-10">
                 {filteredPetListing?.map(pet =>
                     <div key={pet.id} className="bg-white rounded-md shadow-md p-4">
                         <Image src={pet.petImage} alt="cat" width={400} height={340} className="rounded-lg w-[400px] h-[340px] object-cover mb-4 hover:scale-110 duration-700" />

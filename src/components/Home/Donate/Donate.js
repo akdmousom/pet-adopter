@@ -8,7 +8,7 @@ const Donate = ({ heading }) => {
         <div className='bg-[#FFF5E4]'>
             <SectionTitle heading={' Help Us Change Lives'} />
             <div className="px-16 py-5 text-white ">
-                <div className="hero bg-fixed min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/HYr8Rqh/donate.jpg)' }}>
+                <div className="hero bg-fixed lg:h-[500px]" style={{ backgroundImage: 'url(https://i.ibb.co/HYr8Rqh/donate.jpg)' }}>
                     <div className="hero-overlay bg-opacity-30"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div className="max-w-md text-white">
