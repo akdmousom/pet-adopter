@@ -13,21 +13,25 @@ const config = {
       name: "credentials",
 
       credentials: {
-        username: { label: "username", type: "text", placeholder: "username" },
+        username: { label: "username", type: "email", placeholder: "username" },
         password: { label: "Password", type: "password", placeholder: "Password" }
       },
 
       async authorize(credentials, request) {
-        const userDataFormDatabase = await fetch('http://localhost:5000/api/v1/getregisteruser')
+        const email = credentials.username;
+        const userDataFormDatabase = await fetch(`http://localhost:5000/api/v1/getregisteruser?email=${email}`)
         const data = await userDataFormDatabase.json();
-        
-        const user = {username : data[0].userName, password: data[0].password, email: data[0].email}
+        console.log(data);
+
+        const user = { username: data.userEmail, password: data.userPassword, email: data.userEmail, fullname: data.fullName, userImg: data.userAvater }
 
         if (credentials.username == user.username && credentials.password == user.password) return user
 
         return null
 
       }
+
+
     }),
 
     GoogleProvider({
@@ -35,21 +39,45 @@ const config = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET
     })
 
-
-
-
   ],
 
   pages: {
     signIn: '/login',
 
-  },
+  }, secret: process.env.AUTH_SECRET,
+
+  callbacks: {
+    async jwt({ token, user }) {
+      // Persist the OAuth access_token and or the user id to the token right after signin
+      if (user) {
+        token.name = user.fullname;
+        token.picture = user.userImg;
+      }
+      return token
+    },
+
+    async session({ session, token }) {
+      // Send properties to the client, like an access_token and user id from a provider.
+      if (session.user) {
+
+        session.name = token.name
+
+      }
+
+      return session
+    },
+
+    async redirect({ url, baseUrl }) {
+      // Allows relative callback URLs
+      console.log('url', url, 'base url', baseUrl);
+      if (url.startsWith("/")) return `${baseUrl}${url}`
+      // Allows callback URLs on the same origin
+      else if (new URL(url).origin === baseUrl) return url
+      return baseUrl
+    }
 
 
-
-
-
-  secret: process.env.AUTH_SECRET
+  }
 }
 
 export const { auth, handlers, signIn, signOut } = NextAuth(config)
