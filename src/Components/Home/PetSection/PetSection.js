@@ -14,33 +14,24 @@ const PetSection = () => {
             </div>
 
             {/* Card section */}
-            <div className=" mb-5">
+            <div >
 
-                <div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 ">
+                <div className="grid grid-cols-1 mx-10 xl:grid-cols-4 lg:grid-cols- md:grid-cols-2 gap-4">
 
                     {/* Card 1 */}
-                    <div className="mt-4 mb-6 w-72 mx-auto shadow-xl rounded-lg bg-pink-100 ">
+                    <div className="mt-4 mb-6  mx-auto shadow-xl rounded-lg bg-white ">
                         <a href="#!">
-                            <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 duration-700" src="https://i.ibb.co/fMHW4kp/pet8.jpg" alt="" />
+                            <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 duration-700 w-full" src="https://i.ibb.co/fMHW4kp/pet8.jpg" alt="" />
                         </a>
                         <div className="p-2">
-                            <div className="flex items-center justify-between mb-3">
-                                <h3 className="text-lg font-medium">Max & Luna</h3>
-                                {/* Rating 1 */}
-                                <div className="rating w-20">
-                                    <input type="radio"  className="mask mask-star bg-yellow-400" />
-                                    <input type="radio"  className="mask mask-star bg-yellow-400" defaultChecked="true"/>
-                                    <input type="radio"  className="mask mask-star" />
-                                    <input type="radio"  className="mask mask-star" />
-                                    <input type="radio"  className="mask mask-star" />
-                                </div>
-                            </div>
+                            <h3 className="text-lg font-medium mb-2">Max & Luna</h3>
+
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
                                 <div className="flex justify-around mt-4 mb-2">
                                     <button className="btn-sm text-white rounded-md bg-[#F04336] hover:scale-105 ">Adopt</button>
-                                    <button className="btn-sm rounded-md hover:scale-105  bg-green-700 text-white">Read More</button>
+                                    <button className="btn-sm rounded-md hover:scale-105  bg-pink-700  text-white">Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -48,29 +39,20 @@ const PetSection = () => {
 
 
                     {/* Card 2 */}
-                    <div className=" mt-4 mb-6 w-72 mx-auto shadow-xl rounded-lg bg-pink-100 ">
+                    <div className=" mt-4 mb-6  mx-auto shadow-xl rounded-lg bg-white ">
                         <a href="#!">
-                            <Image width={300} height={300}  className="rounded-t-lg hover:scale-105 transform delay-200 duration-700" src="https://i.ibb.co/8nZpQhF/pet6.jpg" alt="" />
+                            <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 w-full duration-700" src="https://i.ibb.co/8nZpQhF/pet6.jpg" alt="" />
                         </a>
                         <div className="p-2">
-                            <div className="flex items-center justify-between mb-3 ">
-                                <h3 className="text-lg font-medium">Callie</h3>
-                                {/* Rating 2 */}
-                                <div className="rating w-20">
-                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio" className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio" className="mask mask-star" />
-                                    <input type="radio"  className="mask mask-star" />
-                                    
-                                </div>
-                            </div>
+                            
+                                <h3 className="text-lg font-medium mb-2">Callie</h3>
+                            
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
                                 <div className="flex justify-around mt-4 mb-2">
                                     <button className="btn-sm text-white rounded-md bg-[#F04336] hover:scale-105">Adopt</button>
-                                    <button className="btn-sm rounded-md hover:scale-105  bg-green-700 text-white">Read More</button>
+                                    <button className="btn-sm rounded-md hover:scale-105  bg-pink-700  text-white">Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -78,56 +60,36 @@ const PetSection = () => {
 
 
                     {/* Card 3 */}
-                    <div className=" mt-4 mb-6 w-72 mx-auto shadow-xl rounded-lg bg-pink-100 ">
+                    <div className=" mt-4 mb-6  mx-auto shadow-xl rounded-lg bg-white ">
                         <a href="#!">
-                            <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 duration-700" src="https://i.ibb.co/DM0P3r0/pet7.jpg" alt="" />
+                            <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 w-full duration-700" src="https://i.ibb.co/DM0P3r0/pet7.jpg" alt="" />
                         </a>
                         <div className="p-2">
-                            <div className="flex items-center justify-between mb-3">
-                                <h3 className="text-lg font-medium">Leo & Lily</h3>
-                                {/* Rating 3 */}
-                                <div className="rating w-20">
-                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio" className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio" className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio" className="mask mask-star bg-yellow-400" />
-                                    <input type="radio" className="mask mask-star " />
-                                   
-                                </div>
-                            </div>
+                                <h3 className="text-lg font-medium mb-2">Leo & Lily</h3>
+
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
                                 <div className="flex justify-around mt-4 mb-2">
                                     <button className="btn-sm text-white rounded-md bg-[#F04336]  hover:scale-105">Adopt</button>
-                                    <button className="btn-sm rounded-md hover:scale-105  bg-green-700 text-white">Read More</button>
+                                    <button className="btn-sm rounded-md hover:scale-105  bg-pink-700  text-white">Read More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     {/* Card 4 */}
-                    <div className=" mt-4 mb-6 w-72 mx-auto shadow-xl rounded-lg bg-pink-100 ">
+                    <div className=" mt-4 mb-6  mx-auto shadow-xl rounded-lg bg-white ">
                         <a href="#!">
-                            <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 duration-700" src="https://i.ibb.co/pJqCSPq/pet9.jpg" alt="" />
+                            <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 w-full duration-700" src="https://i.ibb.co/pJqCSPq/pet9.jpg" alt="" />
                         </a>
                         <div className="p-2">
-                            <div className="flex items-center justify-between mb-3">
-                                <h3 className="text-lg font-medium">Charlie</h3>
-                                {/* Rating 4 */}
-                                <div className="rating w-20">
-                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
-                                    <input type="radio"  className="mask mask-star bg-yellow-400" />
-                                    <input type="radio"  className="mask mask-star" />
-                                    <input type="radio"  className="mask mask-star" />
-                                    <input type="radio"  className="mask mask-star" />
-                                </div>
-                            </div>
+                                <h3 className="text-lg font-medium mb-2">Charlie</h3>
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
                                 <div className="flex justify-around mt-4 mb-2">
                                     <button className="btn-sm text-white rounded-md bg-[#F04336] hover:scale-105">Adopt</button>
-                                    <button className="btn-sm rounded-md hover:scale-105  bg-green-700 text-white">Read More</button>
+                                    <button className="btn-sm rounded-md hover:scale-105  bg-pink-700  text-white">Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +99,7 @@ const PetSection = () => {
             </div>
 
             {/* See All Pets Button  */}
-            <div className="text-center ">
+            <div className="text-center my-5 ">
                 <button className=" p-2 rounded-md bg-[#F04336] text-white hover:scale-105 font-medium ">See All Pets</button>
             </div>
 

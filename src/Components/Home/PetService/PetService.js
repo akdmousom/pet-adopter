@@ -15,7 +15,7 @@ const PetService = () => {
         {/* Pet Care Services */}
         <div className=" mt-10 mb-10">
 
-            <div className=" grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-5">
+            <div className=" grid md:px-8 grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 gap-5">
 
                 {/* Card 1 */}
                 <div className=' w-60 text-center mx-auto'>
