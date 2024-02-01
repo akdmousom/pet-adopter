@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 
 const PetService = () => {
@@ -14,13 +15,13 @@ const PetService = () => {
         {/* Pet Care Services */}
         <div className=" mt-10 mb-10">
 
-            <div className=" grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-5">
+            <div className=" grid md:px-8 grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 gap-5">
 
                 {/* Card 1 */}
                 <div className=' w-60 text-center mx-auto'>
 
                     <div className="border-pink-500 border-[3px] rounded-full mx-auto w-32 h-32">
-                        <img className='mx-auto rounded-full  w-24 h-24 mt-3 mb-3' src="https://i.ibb.co/WygKs7k/bank.png" alt="" />
+                        <Image width={200} height={200} className='mx-auto rounded-full  w-24 h-24 mt-3 mb-3' src="https://i.ibb.co/WygKs7k/bank.png" alt="" />
                     </div>
 
                     <div className="space-y-2">
@@ -32,7 +33,7 @@ const PetService = () => {
                 <div className=' w-60 text-center mx-auto'>
 
                     <div className="border-green-500 border-[3px] rounded-full mx-auto w-32 h-32">
-                        <img className='mx-auto rounded-full  w-24 h-24 mt-3 mb-3' src="https://i.ibb.co/SQnwsk5/pets.png" alt="" />
+                        <Image width={200} height={200} className='mx-auto rounded-full  w-24 h-24 mt-3 mb-3' src="https://i.ibb.co/SQnwsk5/pets.png" alt="" />
                     </div>
 
                     <div className="space-y-2">
@@ -44,7 +45,7 @@ const PetService = () => {
                 <div className=' w-60 text-center mx-auto'>
 
                     <div className="border-orange-500 border-[3px] rounded-full mx-auto w-32 h-32">
-                        <img className='mx-auto rounded-full  w-24 h-24 mt-3 mb-3' src="https://i.ibb.co/n78wYTH/dog-house.png" alt="" />
+                        <Image width={200} height={200} className='mx-auto rounded-full  w-24 h-24 mt-3 mb-3' src="https://i.ibb.co/n78wYTH/dog-house.png" alt="" />
                     </div>
 
                     <div className="space-y-2">
@@ -56,7 +57,7 @@ const PetService = () => {
                 <div className=' w-60 text-center mx-auto'>
 
                     <div className="border-blue-500 border-[3px] rounded-full mx-auto w-32 h-32">
-                        <img className='mx-auto rounded-full  w-24 h-24 mt-3 mb-3' src="https://i.ibb.co/DrqWLH8/dog.png" alt="" />
+                        <Image width={200} height={200} className='mx-auto rounded-full  w-24 h-24 mt-3 mb-3' src="https://i.ibb.co/DrqWLH8/dog.png" alt="" />
                     </div>
 
                     <div className="space-y-2">
