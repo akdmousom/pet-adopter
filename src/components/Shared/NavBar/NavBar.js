@@ -42,7 +42,8 @@ const NavBar = ({ children }) => {
                             </label>
                         </div>
                         <div className="flex justify-evenly w-full  ">
-                            <Image src={logo} alt="logo" className=" h-10 w-24 md:h-24 md:w-52 object-cover" />
+                           
+                           <Link href={'/'}> <Image src={logo} alt="logo" className=" h-10 w-24 md:h-24 md:w-52 object-cover" /></Link>
 
 
                             <div className="flex-none text-center hidden lg:block">

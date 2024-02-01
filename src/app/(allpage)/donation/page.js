@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { auth } from "../api/auth";
+import { auth } from "../../api/auth";
 
 const page = async () => {
 
