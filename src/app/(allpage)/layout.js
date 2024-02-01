@@ -1,5 +1,5 @@
 import { Poppins } from 'next/font/google'
-import './globals.css'
+import '../globals.css'
 import NavBar from '@/components/Shared/NavBar/NavBar'
 import Footer from '@/components/Shared/Footer/Footer'
 
