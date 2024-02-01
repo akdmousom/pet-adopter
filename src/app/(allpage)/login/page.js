@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Google from "@/components/Shared/ProviderButton/Google";
 import Facebook from "@/components/Shared/ProviderButton/Facebook";
-import { signIn } from "../api/auth";
+import { signIn } from "../../api/auth";
 
 
 

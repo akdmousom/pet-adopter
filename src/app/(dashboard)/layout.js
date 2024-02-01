@@ -12,7 +12,7 @@ const poppins = Poppins(
 })
 
 export const metadata = {
-  title: 'Pet Adopter',
+  title: 'Dashboard',
   description: 'Adopt a pet form here we are happy to give you our loving pets',
 }
 
@@ -22,7 +22,7 @@ export default function DashboardLayout({ children }) {
       <body className={poppins.className}>
 
 
-          <div className="bg-[#FFF5E4]">
+          <div className="bg-[#FFF5E4] min-h-screen">
             {children}
           </div>
 
