@@ -1,9 +1,21 @@
 'use client'
 import Link from "next/link";
+<<<<<<< HEAD
 import googleIcon from '../../../public/images/google.svg'
 import facebookIcon from '../../../public/images/facebook.svg'
 import Image from 'next/image'
 const page = () => {
+=======
+import Google from "@/components/Shared/ProviderButton/Google";
+import Facebook from "@/components/Shared/ProviderButton/Facebook";
+import { signIn } from "../../api/auth";
+
+
+
+
+const page = async () => {
+
+>>>>>>> 8427981d87ac750ab90cade97f45250fce507e8c
 
     const userData = async (formData) => {
         // 'use server'
@@ -12,6 +24,23 @@ const page = () => {
             userPassword: formData.get('password'),
         }
 
+<<<<<<< HEAD
+=======
+        const {username, password} = rawFormData;
+        
+
+  
+        await signIn('credentials', {
+            username: username,
+            password: password,
+            redirectTo: '/'
+            
+           
+        })
+        
+        
+
+>>>>>>> 8427981d87ac750ab90cade97f45250fce507e8c
         // When user hit the login button you can get user information in rawFormData object
         await rawFormData
         console.log(rawFormData);

@@ -4,6 +4,11 @@ import React from 'react';
 import googleIcon from '../../../public/images/google.svg'
 import facebookIcon from '../../../public/images/facebook.svg'
 import Image from 'next/image'
+<<<<<<< HEAD
+=======
+import { redirect } from 'next/navigation';
+
+>>>>>>> 8427981d87ac750ab90cade97f45250fce507e8c
 const page = () => {
 
     const userData = async (formData) => {
