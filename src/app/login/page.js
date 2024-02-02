@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import Google from "@/components/Shared/ProviderButton/Google";
 import Facebook from "@/components/Shared/ProviderButton/Facebook";
@@ -10,10 +11,10 @@ const page = async () => {
 
 
     const userData = async (formData) => {
-        'use server'
+        // 'use server'
         const rawFormData = {
-            username: formData.get('username'),
-            password: formData.get('password'),
+            userEmail: formData.get('email'),
+            userPassword: formData.get('password'),
         }
 
         const {username, password} = rawFormData;
@@ -31,9 +32,8 @@ const page = async () => {
         
 
         // When user hit the login button you can get user information in rawFormData object
-       
-
-     
+        await rawFormData
+        console.log(rawFormData);
 
     }
 
@@ -48,9 +48,9 @@ const page = async () => {
                     <form action={userData} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Username</span>
+                                <span className="label-text">Email</span>
                             </label>
-                            <input type="text" name="username" placeholder="username" className="input input-bordered" required />
+                            <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -71,10 +71,10 @@ const page = async () => {
                         <p className="text-center">OR</p>
                         <hr/>
                         <div className="form-control ">
-                            <Google/>
+                            <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={googleIcon} alt='google icon' width={30} /> Login With Google</button>
                         </div>
                         <div className="form-control ">
-                            <Facebook/>
+                            <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={facebookIcon} alt='facebook icon' width={30} /> Login With Facebook</button>
                         </div>
                       
                     </form>

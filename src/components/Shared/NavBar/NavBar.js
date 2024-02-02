@@ -42,11 +42,10 @@ const NavBar = ({ children }) => {
                             </label>
                         </div>
                         <div className="flex justify-evenly w-full  ">
-                           
-                           <Link href={'/'}> <Image src={logo} alt="logo" className=" h-10 w-24 md:h-24 md:w-52 object-cover" /></Link>
+                            <Image src={logo} alt="logo" className=" h-10 w-24 md:h-24 md:w-52 object-cover" />
 
 
-                            <div className="flex-none text-center hidden lg:block">
+                            <div className="flex-none   text-center hidden md:block">
                                 <ul className="flex items-center gap-5">
                                     {/* Navbar menu content here */}
                                     {NavLinks.map((link) => {
@@ -54,7 +53,7 @@ const NavBar = ({ children }) => {
                                             <li key={link.id}>
                                                 <Link
                                                     href={link.path}
-                                                    className={isActive(link.path) ? ' bg-[#F04336] text-lg px-3 py-2 rounded-lg  font-bold text-white mx-2' : 'text-lg font-bold hover:border-b-4 duration-700  border-[#F04336] '}
+                                                    className={isActive(link.path) ? ' bg-[#F04336] text-lg px-3 py-2 rounded-lg  font-bold text-white mx-2' : 'text-lg font-bold hover:border-b-4  duration-700  border-[#F04336] '}
                                                 >
                                                     {link.name}
                                                 </Link>
@@ -66,38 +65,21 @@ const NavBar = ({ children }) => {
                             </div>
                             <div className="flex gap-3 md:gap-5 items-center ">
                                 <Link href="/adoptHerePage">
-                                    <button className=" md:text-lg  text-white rounded-full font-medium md:px-5 px-2 py-2 md:py-2 bg-[#F04336]">Adopt Here</button>
+                                <button className=" md:text-lg text-white rounded-full font-medium md:px-5 px-2 py-2 md:py-2 bg-[#F04336]">Adopt Here</button>
                                 </Link>
-                                {/* <CgProfile onClick={showPopup} className="text-3xl text-[#F04336] cursor-pointer" /> */}
+                                <CgProfile onClick={showPopup} className="text-3xl text-[#F04336] cursor-pointer" />
                             </div>
-
-
-                            <div className="dropdown dropdown-end">
-                              <UserDropdown/>
-                            </div>
-
-
-                            {/* This code is Rasel Khan*/}
-
-                            {/* {isPopupVisible && (
+                            {isPopupVisible && (
                                 <div className={`absolute mt-[170px] right-10 duration-500 md:right-40 md:mt-[170px] z-30 bg-white border rounded shadow-md transition-all overflow-hidden ${isPopupVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-10'}`}>
                                     <div className="bg-white p-4 rounded-md flex gap-5" >
 
-                                        <Link href={'/login'}> <button className="btn bg-[#f04336] text-white font-bold  hover:bg-black">Sign in</button></Link>
-                                        <Link href={'/register'}> <button className="btn bg-[#f04336] text-white font-bold hover:bg-black"> Sign up</button></Link>
+                                       <Link href={'/login'}> <button className="btn bg-[#f04336] text-white font-bold  hover:bg-black">Sign in</button></Link>
+                                       <Link href={'/register'}> <button className="btn bg-[#f04336] text-white font-bold hover:bg-black"> Sign up</button></Link>
 
                                     </div>
                                 </div>
-                            )} */}
-
+                            )}
                         </div>
-
-
-
-
-
-
-
                     </div>
                     {/* <div className="bg-[#FFF5E4]">
                         {children}
