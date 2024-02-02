@@ -1,12 +1,10 @@
-
-import { auth } from '@/app/api/auth';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 const UserDropdown = async() => {
 
-    const session = await auth();
+  
   
 
     return (
