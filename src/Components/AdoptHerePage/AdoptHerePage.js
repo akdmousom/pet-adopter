@@ -1,27 +1,56 @@
+'use client'
+import { useRef } from 'react';
+import  Swal  from 'sweetalert2';
+import emailjs from '../contact-page/emailJsFile/page';
 
 
 const AdoptHerePage = () => {
+    const form=useRef()
     
-  const userData = async (formData) => {
-    'use server'
-    const rawFormData = {
-        name: formData.get('user_name'),
-        email: formData.get('user_email'),
-        number: formData.get('number'),
-        message: formData.get('message'),
-    }
-
-    // When user hit the login button you can get user information in rawFormData object
-    await rawFormData
-    // console.log(rawFormData);
-
-}
+    const handlesubmit = (e) => {
+      e.preventDefault();
+      const target=e.target
+      let name=target.user_name.value
+      let email=target.user_email.value
+      let number=target.number.value
+      let message=target.message.value
+     
+      console.log(name,email,number,message)
+     if(name==='' || email==='' || message==='' || message===''){
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "input box is empty !",
+        showConfirmButton: false,
+        timer: 2500
+      })
+     }
+     else{
+      emailjs.sendForm('service_so3nrs7', 'template_a94lqzf', form.current, 'GzJCnzv2qNGyYuwaT')
+        .then((result) => {
+          target.user_name.value=''
+          target.user_email.value=''
+          target.number.value=''
+          target.message.value=''
+            console.log(result.text);
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Send Adopt Request Successful",
+              showConfirmButton: false,
+              timer: 2500
+            })
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+     }
     return (
         <div>
             {/* <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script> */}
             <div className="hero min-h-screen bg-[#FFF5E4]">
      <div className="card shrink-0 w-full max-w-2xl lg:shadow-2xl bg-base-100">
-      <form  action={userData} className="card-body">
+      <form ref={form} onSubmit={handlesubmit} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>

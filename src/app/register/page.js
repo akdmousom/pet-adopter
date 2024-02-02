@@ -1,39 +1,23 @@
+'use client'
 import Link from 'next/link';
 import React from 'react';
-import googleIcon from '../../../../public/images/google.svg'
-import facebookIcon from '../../../../public/images/facebook.svg'
+import googleIcon from '../../../public/images/google.svg'
+import facebookIcon from '../../../public/images/facebook.svg'
 import Image from 'next/image'
-import { redirect } from 'next/navigation';
 const page = () => {
 
     const userData = async (formData) => {
-        'use server'
+        // 'use server'
         const rawFormData = {
             fullName: formData.get('userName'),
             userEmail: formData.get('userEmail'),
             userAvater: formData.get('userAvater'),
             userPassword: formData.get('userPassword'),
         }
-        // Send post request for new user
-        
-        const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/userregistration', {
-            method: 'POST',
-            cache: 'no-cache',
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(rawFormData),
 
-
-        })
-
-        const data = await res.json()
-
-        if (data.acknowledged === true) {
-
-            redirect('/login')
-            
-        }
+        // When user hit the login button you can get user information in rawFormData object
+        await rawFormData
+        console.log(rawFormData);
 
     }
 
@@ -78,7 +62,7 @@ const page = () => {
                         </div>
 
                         <div className='mt-4'>
-                            <p className="text-sm text-center ">Already have an account <span className='text-[#f04336] font-bold'><Link href={'/api/auth/signin'}>Login</Link></span></p>
+                            <p className="text-sm text-center ">Already have an account <span className='text-[#f04336] font-bold'><Link href={'/login'}>Login</Link></span></p>
                         </div>
 
                         <div className="form-control mt-6">
