@@ -9,7 +9,6 @@ import { signIn } from "../../api/auth";
 const page = async () => {
 
 
-
     const userData = async (formData) => {
         'use server'
         const rawFormData = {
@@ -20,6 +19,7 @@ const page = async () => {
         const {username, password} = rawFormData;
         
 
+  
         await signIn('credentials', {
             username: username,
             password: password,
@@ -27,6 +27,7 @@ const page = async () => {
             
            
         })
+        
         
 
         // When user hit the login button you can get user information in rawFormData object
@@ -75,7 +76,9 @@ const page = async () => {
                         <div className="form-control ">
                             <Facebook/>
                         </div>
+                      
                     </form>
+                    
                 </div>
             </div>
         </div>

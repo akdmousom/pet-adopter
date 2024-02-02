@@ -4,7 +4,7 @@ import img from '../../../../public/images/email.svg'
 import Script from "next/script";
 import emailjs from "../emailJsFile/page";
 import { useRef } from "react";
-import Swal from "sweetalert2";
+const Swal = require('sweetalert2')
 
 const EmailSection = () => {
   const form=useRef()

@@ -5,6 +5,14 @@ import googleIcon from '../../../../public/images/google.svg'
 import { signIn } from "next-auth/react"
 const Google = () => {
 
+    const handleClick = async () => {
+        console.log('click');
+        try {
+            await signIn('google', {callbackUrl:'/'})
+        } catch (error) {
+            console.log(error);
+        }
+    }
    
     return (
         <button onClick={async()=>{
