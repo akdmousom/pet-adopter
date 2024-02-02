@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 const PetSection = () => {
@@ -44,9 +45,9 @@ const PetSection = () => {
                             <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 w-full duration-700" src="https://i.ibb.co/8nZpQhF/pet6.jpg" alt="" />
                         </a>
                         <div className="p-2">
-                            
-                                <h3 className="text-lg font-medium mb-2">Callie</h3>
-                            
+
+                            <h3 className="text-lg font-medium mb-2">Callie</h3>
+
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
@@ -65,7 +66,7 @@ const PetSection = () => {
                             <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 w-full duration-700" src="https://i.ibb.co/DM0P3r0/pet7.jpg" alt="" />
                         </a>
                         <div className="p-2">
-                                <h3 className="text-lg font-medium mb-2">Leo & Lily</h3>
+                            <h3 className="text-lg font-medium mb-2">Leo & Lily</h3>
 
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
@@ -83,7 +84,7 @@ const PetSection = () => {
                             <Image width={300} height={300} className="rounded-t-lg hover:scale-105 transform delay-200 w-full duration-700" src="https://i.ibb.co/pJqCSPq/pet9.jpg" alt="" />
                         </a>
                         <div className="p-2">
-                                <h3 className="text-lg font-medium mb-2">Charlie</h3>
+                            <h3 className="text-lg font-medium mb-2">Charlie</h3>
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
@@ -100,7 +101,9 @@ const PetSection = () => {
 
             {/* See All Pets Button  */}
             <div className="text-center my-5 ">
-                <button className=" p-2 rounded-md bg-[#F04336] text-white hover:scale-105 font-medium ">See All Pets</button>
+                <Link href="/pet-listing">
+                    <button className=" p-2 rounded-md bg-[#F04336] text-white hover:scale-105 font-medium ">See All Pets</button>
+                </Link>
             </div>
 
         </div>
