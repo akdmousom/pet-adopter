@@ -15,7 +15,9 @@ const Google = () => {
     }
    
     return (
-        <button onClick={handleClick} type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={googleIcon} alt='google icon' width={30} /> Login With Google</button>
+        <button onClick={async()=>{
+            await signIn('google', {callbackUrl: '/'})
+        }} type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={googleIcon} alt='google icon' width={30} /> Login With Google</button>
     );
 };
 
