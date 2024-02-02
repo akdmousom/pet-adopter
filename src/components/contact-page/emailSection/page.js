@@ -17,6 +17,7 @@ const EmailSection = () => {
       let subject=target.subject.value
       let message=target.message.value
       const rules="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
+     console.log(name,email,subject,message)
      if(name==='' || email==='' || subject==='' || message===''){
       Swal.fire({
         position: "center",
@@ -33,7 +34,7 @@ const EmailSection = () => {
           target.user_email.value=''
           target.subject.value=''
           target.message.value=''
-
+            console.log(result.text);
             Swal.fire({
               position: "center",
               icon: "success",
@@ -42,7 +43,7 @@ const EmailSection = () => {
               timer: 2500
             })
         }, (error) => {
-      
+            console.log(error.text);
         });
     };
      }
@@ -53,8 +54,7 @@ const EmailSection = () => {
         <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
         
               <div className="bg-[#FFE3E1] py-3 text-center text-xl font-bold mb-2 mt-8 my-10">Contact us with e-mail</div>
-              <div className="bg-[#FFE3E1] flex flex-col-reverse lg:flex-row py-10 px-10 md:px-48 lg:px-20">
-                
+              <div className="bg-[#FFE3E1] flex flex-col-reverse lg:flex-row py-10 px-20">
                 <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 space-y-3 flex-1 py-10 ">
                 <input type="text" name='user_name' placeholder="Your Name" className="input input-bordered input-secondary w-full max-w-xs" />
                 <input type="email" name='user_email' placeholder="Your E-mail" className="input input-bordered input-secondary w-full max-w-xs" />

@@ -47,10 +47,10 @@ const UserReview = () => {
             {/* Card 1  */}
             <SwiperSlide className='bg-pink-100'>
                 <div className='text-center'>
-                    <Image className='ml-[106px] h-24 w-24 object-cover' width={200} height={200} src="https://i.ibb.co/cYHQRCp/team4.jpg" alt="" />
+                    <Image className='ml-[106px]' width={200} height={200} src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
 
                     <div>
-                        <h1 className='text-xl mt-2'>David Parker</h1>
+                        <h1 className='text-xl mt-2'>Masud Rana</h1>
 
                         {/* Rating 1 */}
                         <div className="rating w-20">
@@ -69,10 +69,10 @@ const UserReview = () => {
             {/* Card 2  */}
             <SwiperSlide className='bg-green-100'>
                 <div className='text-center'>
-                    <Image className='ml-[106px] h-24 w-24 object-cover' width={200} height={200} src="https://i.ibb.co/tzTW92P/team2.jpg" alt="" />
+                    <Image className='ml-[106px]' width={200} height={200} src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
 
                     <div>
-                        <h1 className='text-xl mt-2'>John Smith</h1>
+                        <h1 className='text-xl mt-2'>Masud Rana</h1>
 
                         {/* Rating 2 */}
                         <div className="rating w-20">
@@ -90,10 +90,10 @@ const UserReview = () => {
             {/* Card 3  */}
             <SwiperSlide className='bg-orange-100'>
                 <div className='text-center'>
-                    <Image className='ml-[106px] h-24 w-24 object-cover' width={200} height={200} src="https://i.ibb.co/MSLktRC/team1.jpg" alt="" />
+                    <Image className='ml-[106px]' width={200} height={200} src="https://i.ibb.co/t4qzwBv/Masud-Rana.jpg" alt="" />
 
                     <div>
-                        <h1 className='text-xl mt-2'>Daniel Lee</h1>
+                        <h1 className='text-xl mt-2'>Masud Rana</h1>
 
                         {/* Rating 3 */}
                         <div className="rating w-20">
