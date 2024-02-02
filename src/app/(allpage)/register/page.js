@@ -4,6 +4,8 @@ import googleIcon from '../../../../public/images/google.svg'
 import facebookIcon from '../../../../public/images/facebook.svg'
 import Image from 'next/image'
 import { redirect } from 'next/navigation';
+import Swal from 'sweetalert2'
+import 'sweetalert2/src/sweetalert2.scss'
 const page = () => {
 
     const userData = async (formData) => {
@@ -30,7 +32,12 @@ const page = () => {
         const data = await res.json()
 
         if (data.acknowledged === true) {
-
+            Swal.fire({
+                title: 'Error!',
+                text: 'Do you want to continue',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
             redirect('/login')
             
         }
