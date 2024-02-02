@@ -3,11 +3,11 @@ import Google from "@/components/Shared/ProviderButton/Google";
 import Facebook from "@/components/Shared/ProviderButton/Facebook";
 import { signIn } from "../../api/auth";
 
+import { redirect } from 'next/navigation'
 
 
 
 const page = async () => {
-
 
 
     const userData = async (formData) => {
@@ -20,6 +20,8 @@ const page = async () => {
         const {username, password} = rawFormData;
         
 
+    
+       try {
         await signIn('credentials', {
             username: username,
             password: password,
@@ -27,6 +29,11 @@ const page = async () => {
             
            
         })
+       } catch (error) {
+        console.log(error);
+       }
+
+        
         
 
         // When user hit the login button you can get user information in rawFormData object
@@ -75,7 +82,9 @@ const page = async () => {
                         <div className="form-control ">
                             <Facebook/>
                         </div>
+                      
                     </form>
+                    
                 </div>
             </div>
         </div>
