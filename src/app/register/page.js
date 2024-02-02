@@ -4,6 +4,8 @@ import React from 'react';
 import googleIcon from '../../../public/images/google.svg'
 import facebookIcon from '../../../public/images/facebook.svg'
 import Image from 'next/image'
+import { redirect } from 'next/navigation';
+
 const page = () => {
 
     const userData = async (formData) => {

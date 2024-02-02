@@ -1,9 +1,14 @@
 'use client'
 import Link from "next/link";
-import googleIcon from '../../../public/images/google.svg'
-import facebookIcon from '../../../public/images/facebook.svg'
-import Image from 'next/image'
-const page = () => {
+import Google from "@/components/Shared/ProviderButton/Google";
+import Facebook from "@/components/Shared/ProviderButton/Facebook";
+import { signIn } from "../../api/auth";
+
+
+
+
+const page = async () => {
+
 
     const userData = async (formData) => {
         // 'use server'
@@ -11,6 +16,20 @@ const page = () => {
             userEmail: formData.get('email'),
             userPassword: formData.get('password'),
         }
+
+        const {username, password} = rawFormData;
+        
+
+  
+        await signIn('credentials', {
+            username: username,
+            password: password,
+            redirectTo: '/'
+            
+           
+        })
+        
+        
 
         // When user hit the login button you can get user information in rawFormData object
         await rawFormData
@@ -57,7 +76,9 @@ const page = () => {
                         <div className="form-control ">
                             <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={facebookIcon} alt='facebook icon' width={30} /> Login With Facebook</button>
                         </div>
+                      
                     </form>
+                    
                 </div>
             </div>
         </div>
