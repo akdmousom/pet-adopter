@@ -3,6 +3,7 @@ import Link from "next/link";
 import googleIcon from '../../../public/images/google.svg'
 import facebookIcon from '../../../public/images/facebook.svg'
 import Image from 'next/image'
+import { signIn } from "next-auth/react";
 const page = () => {
 
     const userData = async (formData) => {
@@ -14,7 +15,17 @@ const page = () => {
 
         // When user hit the login button you can get user information in rawFormData object
         await rawFormData
-        console.log(rawFormData);
+
+        const user = {
+            username : rawFormData.userEmail,
+            password : rawFormData.userPassword,
+        }
+         
+        await signIn('credentials',{
+            username: user.username,
+            password: user.password
+        })
+        
 
     }
 
