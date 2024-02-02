@@ -31,12 +31,7 @@ const page = () => {
         const data = await res.json()
 
         if (data.acknowledged === true) {
-            Swal.fire({
-                title: 'Error!',
-                text: 'Do you want to continue',
-                icon: 'error',
-                confirmButtonText: 'Cool'
-              })
+          
             redirect('/login')
             
         }
