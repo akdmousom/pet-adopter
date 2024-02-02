@@ -29,7 +29,7 @@ const Banner = () => {
         <div className=" hidden mx-auto lg:block md:block xl:w-[1120px] lg:w-[782px] md:w-[578px]  absolute bg-[#0A303A] h-[116px] md:left-[46px] xl:left-[123px] lg:left-[123px] xl:right-[123px] lg:right-[123px] top-[637px] left-[39px] right-[44px] ">
 
             {/* Banner Card  */}
-            <div className="grid grid-cols-3 mt-[43px] ">
+            <div className="grid grid-cols-3  mt-[43px] ">
                 
                 {/* button 1  */}
                 <div className="text-white px-3">

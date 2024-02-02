@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 
 
 const PetSection = () => {
@@ -54,9 +52,18 @@ const PetSection = () => {
                             <img className="rounded-t-lg " src="https://i.ibb.co/8nZpQhF/pet6.jpg" />
                         </a>
                         <div className="p-2">
-
-                            <h3 className="text-lg font-medium mb-2">Callie</h3>
-
+                            <div className="flex items-center justify-between mb-3 ">
+                                <h3 className="text-lg font-medium">Callie</h3>
+                                {/* Rating 2 */}
+                                <div className="rating w-20">
+                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
+                                    <input type="radio" className="mask mask-star bg-yellow-400"/>
+                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
+                                    <input type="radio" className="mask mask-star" />
+                                    <input type="radio"  className="mask mask-star" />
+                                    
+                                </div>
+                            </div>
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
@@ -75,8 +82,18 @@ const PetSection = () => {
                             <img className="rounded-t-lg " src="https://i.ibb.co/DM0P3r0/pet7.jpg" />
                         </a>
                         <div className="p-2">
-                            <h3 className="text-lg font-medium mb-2">Leo & Lily</h3>
-
+                            <div className="flex items-center justify-between mb-3">
+                                <h3 className="text-lg font-medium">Leo & Lily</h3>
+                                {/* Rating 3 */}
+                                <div className="rating w-20">
+                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
+                                    <input type="radio" className="mask mask-star bg-yellow-400"/>
+                                    <input type="radio" className="mask mask-star bg-yellow-400"/>
+                                    <input type="radio" className="mask mask-star bg-yellow-400" />
+                                    <input type="radio" className="mask mask-star " />
+                                   
+                                </div>
+                            </div>
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
@@ -93,7 +110,17 @@ const PetSection = () => {
                             <img className="rounded-t-lg " src="https://i.ibb.co/pJqCSPq/pet9.jpg" />
                         </a>
                         <div className="p-2">
-                            <h3 className="text-lg font-medium mb-2">Charlie</h3>
+                            <div className="flex items-center justify-between mb-3">
+                                <h3 className="text-lg font-medium">Charlie</h3>
+                                {/* Rating 4 */}
+                                <div className="rating w-20">
+                                    <input type="radio"  className="mask mask-star bg-yellow-400"/>
+                                    <input type="radio"  className="mask mask-star bg-yellow-400" />
+                                    <input type="radio"  className="mask mask-star" />
+                                    <input type="radio"  className="mask mask-star" />
+                                    <input type="radio"  className="mask mask-star" />
+                                </div>
+                            </div>
                             <div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
@@ -109,10 +136,8 @@ const PetSection = () => {
             </div>
 
             {/* See All Pets Button  */}
-            <div className="text-center my-5 ">
-                <Link href="/pet-listing">
-                    <button className=" p-2 rounded-md bg-[#F04336] text-white hover:scale-105 font-medium ">See All Pets</button>
-                </Link>
+            <div className="text-center ">
+                <button className=" p-2 rounded-md bg-[#F04336] text-white font-medium hover:bg-green-700">See All Pets</button>
             </div>
 
         </div>
