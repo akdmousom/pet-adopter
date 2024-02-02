@@ -57,7 +57,9 @@ const page = () => {
                         <div className="form-control ">
                             <button  type="submit" className="btn hover:bg-black hover:text-white gap-5"><Image src={facebookIcon} alt='facebook icon' width={30} /> Login With Facebook</button>
                         </div>
+                      
                     </form>
+                    
                 </div>
             </div>
         </div>
