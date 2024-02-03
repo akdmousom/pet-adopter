@@ -1,7 +1,7 @@
 'use client'
 import { useRef } from 'react';
 import  Swal  from 'sweetalert2';
-import emailjs from '../contact-page/emailJsFile/page';
+
 
 
 const AdoptHerePage = () => {
@@ -14,6 +14,7 @@ const AdoptHerePage = () => {
       let email=target.user_email.value
       let number=target.number.value
       let message=target.message.value
+      const userdata={name,email,number,message}
      
       console.log(name,email,number,message)
      if(name==='' || email==='' || message==='' || message===''){
@@ -26,13 +27,18 @@ const AdoptHerePage = () => {
       })
      }
      else{
-      emailjs.sendForm('service_so3nrs7', 'template_a94lqzf', form.current, 'GzJCnzv2qNGyYuwaT')
-        .then((result) => {
+          const res=fetch('http://localhost:5000/api/v1/adoptData',{
+            method:'POST',
+            headers:{
+              "Content-Type":"application/json"
+            },
+            body:JSON.stringify(userdata)
+          })
           target.user_name.value=''
           target.user_email.value=''
           target.number.value=''
           target.message.value=''
-            console.log(result.text);
+            // console.log(result.text);
             Swal.fire({
               position: "center",
               icon: "success",
@@ -40,9 +46,7 @@ const AdoptHerePage = () => {
               showConfirmButton: false,
               timer: 2500
             })
-        }, (error) => {
-            console.log(error.text);
-        });
+        
     };
      }
     return (
