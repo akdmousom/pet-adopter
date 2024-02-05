@@ -63,7 +63,7 @@ const About = () => {
                 {/* Donate Advertisement */}
                 <div className="bg-[#ffe3e1] mb-8 py-4 px-3">
                     <div className="flex flex-1 flex-col lg:flex-row lg:grid-cols-3 gap-6 lg:gap-0 items-center justify-between">
-                        <h3 className="text-xl lg:text-5xl font-bold col-span-5">Register your pet with us and <br /> <span className="text-[#F04336]">Get exiting gift</span></h3>
+                        <h3 className="text-xl lg:text-4xl font-bold col-span-5">Register your pet with us and <br /> <span className="text-[#F04336]">Get exiting gift</span></h3>
                         <Image src="https://i.ibb.co/7JRXqNQ/pet-4.jpg" width={1900} height={600} alt="pet-4" className="w-[200px] lg:w-[250px] h-[200px] lg:h-[320px] col-span-2 object-cover" />
                         <div className="lg:px-3 space-y-4 col-span-5 mx-auto">
                             <h3 className="text-xs lg:text-xl font-medium">We are your local dog home boarding service giving you complete</h3>

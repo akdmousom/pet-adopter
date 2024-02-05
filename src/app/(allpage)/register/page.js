@@ -1,8 +1,10 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
-import googleIcon from '../../../public/images/google.svg'
-import facebookIcon from '../../../public/images/facebook.svg'
+
+import googleIcon from '../../../../public/images/google.svg'
+import facebookIcon from '../../../../public/images/facebook.svg'
+
 import Image from 'next/image'
 const page = () => {
 
