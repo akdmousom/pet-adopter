@@ -27,7 +27,7 @@ const NavBar = ({ children }) => {
     };
 
     const hidePopup = () => {
-        // setPopupVisible(!isPopupVisible);
+        
     };
     return (
         <div>
