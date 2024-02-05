@@ -1,4 +1,4 @@
-import AdoptHerePage from '@/Components/AdoptHerePage/AdoptHerePage';
+import AdoptHerePage from '../../../components/AdoptHerePage/AdoptHerePage'
 import React from 'react';
 
 const page = () => {
