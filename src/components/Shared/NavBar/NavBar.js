@@ -46,7 +46,7 @@ const NavBar = ({ children }) => {
                             <Image src={logo} alt="logo" className=" h-10 w-24 md:h-24 md:w-52 object-cover" />
 
 
-                            <div className="flex-none   text-center hidden md:block">
+                            <div className="flex-none text-center hidden lg:block">
                                 <ul className="flex items-center gap-5">
                                     {/* Navbar menu content here */}
                                     {NavLinks.map((link) => {
@@ -66,9 +66,9 @@ const NavBar = ({ children }) => {
                             </div>
                             <div className="flex gap-3 md:gap-5 items-center ">
                                 <Link href="/adoptHerePage">
-                                    <button className=" md:text-lg text-white rounded-full font-medium md:px-5 px-2 py-2 md:py-2 bg-[#F04336]">Adopt Here</button>
+                                    <button className="md:text-lg  text-white rounded-full font-medium md:px-5 px-2 py-2 md:py-2 bg-[#F04336]">Adopt Here</button>
                                 </Link>
-                                <CgProfile onClick={showPopup} className="text-3xl text-[#F04336] cursor-pointer" />
+                                {/* <CgProfile onClick={showPopup} className="text-3xl text-[#F04336] cursor-pointer" /> */}
                             </div>
 
 
