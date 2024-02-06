@@ -23,12 +23,14 @@ export default function RootLayout({ children }) {
       <body className={poppins.className}>
 
           <div className=" max-w-[1366px] mx-auto">
-          <NavBar >
 
           <div className="bg-[#FFF5E4]">
+             <NavBar>
             {children}
+            </NavBar>
           </div>
-          </NavBar>
+         
+
           <Footer />
         </div>
    
