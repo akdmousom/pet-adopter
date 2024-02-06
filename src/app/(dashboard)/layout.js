@@ -1,4 +1,5 @@
-import UserDashNav from "@/Components/Shared/NavBar/UserDashNav/UserDashNav"
+
+import UserDashNav from '@/Components/Shared/UserDashNav/UserDashNav'
 import '../globals.css'
 export const metadata = {
   title: 'Next.js',
