@@ -4,9 +4,6 @@ import React from 'react';
 
 const UserDropdown = async() => {
 
-  
-  
-
     return (
         <div>
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
