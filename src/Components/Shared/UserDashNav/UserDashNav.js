@@ -53,7 +53,7 @@ const UserDashNav = ({childrens}) => {
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label> 
-    <ul className="menu p-4  min-h-full bg-base-200">
+    <ul className="menu p-4 min-h-full bg-base-200">
       {Navlinks}
     </ul>
   </div>
