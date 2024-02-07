@@ -27,7 +27,7 @@ const AdoptHerePage = () => {
       })
      }
      else{
-          const res=fetch('http://localhost:5000/api/v1/adoptData',{
+          const res=fetch('https://pet-adopter-backend.vercel.app/api/v1/adoptData',{
             method:'POST',
             headers:{
               "Content-Type":"application/json"
