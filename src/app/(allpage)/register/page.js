@@ -6,6 +6,8 @@ import googleIcon from '../../../../public/images/google.svg'
 import facebookIcon from '../../../../public/images/facebook.svg'
 
 import Image from 'next/image'
+import { POST } from '@/app/api/auth/[...nextauth]/route';
+import { redirect } from 'next/navigation';
 const page = () => {
 
     const userData = async (formData) => {
@@ -19,9 +21,22 @@ const page = () => {
 
         // When user hit the login button you can get user information in rawFormData object
         await rawFormData
-        console.log(rawFormData);
+        const res = await fetch(`https://pet-adopter-backend.vercel.app/api/v1/userregistration`, {
+            method: 'POST',
+            headers:{
+                "Content-Type": "application/json",
+                
+            },
+            body: JSON.stringify(rawFormData),
+        })
+        
+        if (res.ok) {
 
+            redirect('/')
+            
+        }
     }
+
 
 
 
