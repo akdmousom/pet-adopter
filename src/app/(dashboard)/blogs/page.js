@@ -1,10 +1,10 @@
-import Blogs from "@/components/Blogs/Blogs";
+import PetCommunity from "@/Components/PetCommunity/PetCommunity";
 
 
 const page = () => {
     return (
         <div>
-            <Blogs/>
+            <PetCommunity/>
         </div>
     );
 };

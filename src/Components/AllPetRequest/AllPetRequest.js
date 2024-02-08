@@ -5,15 +5,15 @@ import { useEffect, useState } from "react";
 const AllPetRequest = () => {
     const [data,setdata]=useState([])
      useEffect(()=>{
-        fetch('http://localhost:5000/api/v1/adoptData')
+        fetch('https://pet-adopter-backend.vercel.app/api/v1/adoptData')
     .then(res=>res.json())
     .then(data=>setdata(data))
      },[])
     // console.log(data)
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 lg:mx-5'>
             {
-                data.map(datas=><div key={datas._id} className="card bg-base-100 border border-[#f04336] m-5">
+                data.map(datas=><div key={datas._id} className="card bg-base-100 border border-[#f04336] m-2">
                 <div className="p-5 flex space-x-5">
                 <div className="avatar">
                    <div className="w-8 lg:w-12 rounded-full ring ring-[#F04336] ring-offset-base-100 ring-offset-2">
