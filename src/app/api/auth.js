@@ -14,17 +14,11 @@ export const authOptions = {
         
                       authorize: async(credentials)=> {
                         const username = credentials?.username
-                        
 
                         const registerUser = await fetch(`https://pet-adopter-backend.vercel.app/api/v1/getregisteruser?email=${username}`)
                         const registeredUsers = await registerUser.json()
-                        
-                        
-                        
-        
                         const user = registeredUsers
-                        console.log(user);
-        
+                              
                         if (credentials.username === registeredUsers.userEmail && credentials.password === registeredUsers.userPassword ) {
                             return user
                         }else{
@@ -48,36 +42,40 @@ export const authOptions = {
   secret: process.env.AUTH_SECRET,
 
   callbacks: {
+    async signIn({ account, profile }) {
+      if (account.provider === "google") {
+       // return profile.email_verified && profile.email.endsWith("@example.com")
+        return profile
+      }
+      return true // Do different verification for other providers that don't have `email_verified`
+    },
 
 
-    async jwt({token, user}){
+    async jwt({token, user,account, profile}){
 
       if (user) {
 
         token.fullName = user.fullName,
-        token.email = user.userEmail,
-        token.avater= user.userAvater
+        token.email = user.userEmail || profile?.email,
+        token.avater= user.userAvater,
         token.role = user.userRole
         
       }
-
-      console.log(token);
 
       return token
 
     },
 
 
-    async session({ session, token }) {
+    async session({ session, token, profile }) {
       // Send properties to the client, like an access_token and user id from a provider.
       if (session.user) {
 
-        session.user.image = token.avater,
-        session.user.name = token.fullName,
-        session.user.role = token.role
-              
+        session.user.image = token.avater || token.picture,
+        session.user.name = token.fullName || token.name,
+        session.user.role = token.role     || "user"      
       }
-      
+        
       return session
     }
   }

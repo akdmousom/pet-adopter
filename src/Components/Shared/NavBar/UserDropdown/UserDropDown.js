@@ -7,6 +7,7 @@ import React from 'react';
 const UserDropdown = async() => {
 
     const session = await auth();
+  
 
     
 
@@ -14,7 +15,7 @@ const UserDropdown = async() => {
         <div>
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                 <div className="w-14 rounded-full">
-                    <Image width={200} height={200} alt="Tailwind CSS Navbar component" src={session?.user ? session?.user?.image : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+                    <Image width={200} height={200} alt="Tailwind CSS Navbar component" src={session?.user ? session?.user?.image || session.user.picture : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
 
                 </div>
             </div>
@@ -22,7 +23,7 @@ const UserDropdown = async() => {
                 {
                     session?.user ? <><li><a >Profile</a></li>
                     <li><Link href={"#"}>Dashboard</Link></li>
-                    <li><Link href={"/api/auth/signout"}>SignOut</Link></li></> : <><li><Link href={"/login"}>SignIn</Link></li></>
+                    <li><Link href={"/api/auth/signout"}>SignOut</Link></li></> : <><li><Link href={"/api/auth/signin"}>SignIn</Link></li></>
                 }
                 
             </ul>

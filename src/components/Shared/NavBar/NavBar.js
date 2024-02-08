@@ -1,10 +1,10 @@
-"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../../public/logo.png"
-import { usePathname } from "next/navigation";
 import Header from "@/components/Home/Header/Header";
-import { useState } from "react";
+import UserDropdown from "./UserDropdown/UserDropDown";
+import { auth } from "@/app/api/auth";
 
 
 
@@ -16,20 +16,11 @@ const NavLinks = [
     { id: 4, name: 'Contact', path: '/contact' },
 ];
 
-const NavBar = ({ children }) => {
+const NavBar = async ({ children }) => {
 
-    const [isPopupVisible, setPopupVisible] = useState(false);
-
-    const pathname = usePathname();
-
-    const isActive = (path) => pathname === path;
-    const showPopup = () => {
-        setPopupVisible(!isPopupVisible);
-    };
-
-    const hidePopup = () => {
-        
-    };
+    const session = await auth()
+   
+  
     return (
         <div>
             <Header />
@@ -55,7 +46,7 @@ const NavBar = ({ children }) => {
                                             <li key={link.id}>
                                                 <Link
                                                     href={link.path}
-                                                    className={isActive(link.path) ? ' bg-[#F04336] text-lg px-3 py-2 rounded-lg  font-bold text-white mx-2' : 'text-lg font-bold hover:border-b-4  duration-700  border-[#F04336] '}
+                                                    className= 'text-lg font-bold hover:border-b-4  duration-700  border-[#F04336] '
                                                 >
                                                     {link.name}
                                                 </Link>
@@ -74,32 +65,8 @@ const NavBar = ({ children }) => {
 
 
                             <div className="dropdown dropdown-end">
-                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-14 rounded-full">
-                                        <Image width={200} height={200} alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-
-                                    </div>
-                                </div>
-                                <ul tabIndex={0} className="mt-3 gap-1 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-40">
-
-                                    <li><Link href={"/dashboard"}>Dashboard</Link></li>
-                                    <li><Link href={"/api/auth/signout"}>Sign Out</Link></li>
-                                </ul>
-                            </div>
-
-
-                            {/* This code is Rasel Khan*/}
-
-                            {isPopupVisible && (
-                                <div className={`absolute mt-[170px] right-10 duration-500 md:right-40 md:mt-[170px] z-30 bg-white border rounded shadow-md transition-all overflow-hidden ${isPopupVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-10'}`}>
-                                    <div className="bg-white p-4 rounded-md flex gap-5" >
-
-                                        <Link href={'/login'}> <button className="btn bg-[#f04336] text-white font-bold  hover:bg-black">Sign in</button></Link>
-                                        <Link href={'/register'}> <button className="btn bg-[#f04336] text-white font-bold hover:bg-black"> Sign up</button></Link>
-
-                                    </div>
-                                </div>
-                            )}
+                               <UserDropdown/>
+                            </div>                          
                         </div>
                     </div>
                     <div className="bg-[#FFF5E4]">
@@ -117,7 +84,7 @@ const NavBar = ({ children }) => {
                                 <li key={link.id}>
                                     <Link
                                         href={link.path}
-                                        className={isActive(link.path) ? ' bg-[#F04336] text-lg px-3 py-2 rounded-lg  font-bold text-white mx-2' : 'text-lg font-bold'}
+                                        className= 'text-lg font-bold hover:border-b-4  duration-700  border-[#F04336] '
                                     >
                                         {link.name}
                                     </Link>
