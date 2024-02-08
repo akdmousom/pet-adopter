@@ -1,6 +1,6 @@
 'use client'
 import '../../globals.css'
-import EmptyDashboard from '@/Components/EmptyDashboard/EmptyDashboard'
+import EmptyDashboard from '@/components/EmptyDashboard/EmptyDashboard'
 const page = () => {
          
     return (
