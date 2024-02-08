@@ -1,9 +1,10 @@
 "use client"
 
+// import { useState } from "react";
 import { LuSendHorizonal } from "react-icons/lu";
 
 const Modal = () => {
-
+   
     
     const handleComment = event => {
         event.preventDefault()
@@ -11,9 +12,19 @@ const Modal = () => {
         const comment = form.comment.value;
         event.target.comment.value=" "
         console.log(comment);
-
-
+        
+        
     }
+    const allcomments=[
+        {comments:'lokman hakim shawon'},
+        {comments:'lokman hakim shawon'},
+        {comments:'lokman hakim shawon'},
+        {comments:'lokman hakim shawon'},
+        {comments:'lokman hakim shawon'},
+        {comments:'lokman hakim shawon'},
+        {comments:'lokman hakim shawon'},
+        {comments:'lokman hakim shawon'},
+]
 
     return (
         <div>
@@ -32,6 +43,19 @@ const Modal = () => {
                         </form>
 
                     </div>
+                    {
+                        allcomments.map(data=><div key={data.comments} className="bg-gray-100 py-5 px-3 rounded-lg my-2">
+                        <div className="flex space-x-2 ">
+                        <div className="avatar">
+                           <div className="w-8 rounded-full">
+                             <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                           </div>
+                        </div>
+                            <h1 className="font-bold">commenter Name</h1>
+                        </div>
+                        <h1 className="pl-5 py-3">{data.comments}</h1>
+                    </div>)
+                    }
                 </div>
             </dialog>
 
