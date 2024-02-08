@@ -1,24 +1,24 @@
-'use client'
+// 'use client'
 import Link from "next/link";
-
 import googleIcon from '../../../../public/images/google.svg'
 import facebookIcon from '../../../../public/images/facebook.svg'
-
 import Image from 'next/image'
+
+
 const page = () => {
 
     const userData = async (formData) => {
-        // 'use server'
+        'use server'
         const rawFormData = {
-            userEmail: formData.get('email'),
-            userPassword: formData.get('password'),
+            username: formData.get('username'),
+            password: formData.get('password'),
         }
 
-        // When user hit the login button you can get user information in rawFormData object
-        await rawFormData
-        console.log(rawFormData);
+        const {username, password} = rawFormData;
 
+        
     }
+   
 
     return (
         <div className="hero max-w-[1366px] min-h-screen bg-base-200">
@@ -31,9 +31,9 @@ const page = () => {
                     <form action={userData} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text">Username</span>
                             </label>
-                            <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                            <input type="text" name="username" placeholder="username" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">

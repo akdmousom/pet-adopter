@@ -1,12 +1,11 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { CgProfile } from "react-icons/cg";
 import logo from "../../../../public/logo.png"
 import { usePathname } from "next/navigation";
 import Header from "@/components/Home/Header/Header";
 import { useState } from "react";
-import UserDropdown from "./UserDropdown/UserDropDown";
+
 
 
 const NavLinks = [
@@ -18,6 +17,7 @@ const NavLinks = [
 ];
 
 const NavBar = ({ children }) => {
+
     const [isPopupVisible, setPopupVisible] = useState(false);
 
     const pathname = usePathname();
