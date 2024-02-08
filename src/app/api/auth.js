@@ -14,14 +14,16 @@ export const authOptions = {
         
                       authorize: async(credentials)=> {
                         const username = credentials?.username
+                        
 
                         const registerUser = await fetch(`https://pet-adopter-backend.vercel.app/api/v1/getregisteruser?email=${username}`)
                         const registeredUsers = await registerUser.json()
-                        console.log(registeredUsers);
+                        
                         
                         
         
-                        const user = { id: "1", name: "J Smith", role:'admin',  username: 'akd', password:'admin', }
+                        const user = registeredUsers
+                        console.log(user);
         
                         if (credentials.username === registeredUsers.userEmail && credentials.password === registeredUsers.userPassword ) {
                             return user
@@ -40,13 +42,41 @@ export const authOptions = {
 
     // ...add more providers here
   ],
+  trustHost: true,
+  trustHostedDomain: true,
+  
   secret: process.env.AUTH_SECRET,
 
   callbacks: {
-    async session({ session, token, user }) {
+
+
+    async jwt({token, user}){
+
+      if (user) {
+
+        token.fullName = user.fullName,
+        token.email = user.userEmail,
+        token.avater= user.userAvater
+        token.role = user.userRole
+        
+      }
+
+      console.log(token);
+
+      return token
+
+    },
+
+
+    async session({ session, token }) {
       // Send properties to the client, like an access_token and user id from a provider.
-      session.accessToken = token.accessToken
-      session.user.id = token.id
+      if (session.user) {
+
+        session.user.image = token.avater,
+        session.user.name = token.fullName,
+        session.user.role = token.role
+              
+      }
       
       return session
     }

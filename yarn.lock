@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@auth/core@0.26.2":
-  version "0.26.2"
-  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.26.2.tgz#29c9e1abc6ce3670b92453c0da52df0c2b2c5b85"
-  integrity sha512-BK+NaUDLcX8AMW/O32wxzk+SE9lr/xvjO4PsTgla9ToHHanoPMl+6pYu2/WoNKnZomdHBWOl/00LFfajuulIVA==
+"@auth/core@0.26.3":
+  version "0.26.3"
+  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.26.3.tgz#885fb12d128f34e1d9b73102f531102f1c4a552c"
+  integrity sha512-Ka6rMjWMdiQCvLW/CnYZxj4Rq2bhQ/ZtU32NLxmtyAaixGb0mRXQ9MxJUBZA7GHovbghdzu55p2Cb54qNlVFzw==
   dependencies:
     "@panva/hkdf" "^1.1.1"
     "@types/cookie" "0.6.0"
@@ -2030,12 +2030,12 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next-auth@^5.0.0-beta.8:
-  version "5.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-5.0.0-beta.8.tgz#1b7b277ad25a98028221f7248ef5b25c1b7ec958"
-  integrity sha512-KRO3VBngzuxnfHhacXvp4lKa9afoE73D3Q4EiMSuQIKrg2KVFfB/uTRVro4Pjnhr/TzLqYZoaiJBfGpyhgby2Q==
+next-auth@^5.0.0-beta.9:
+  version "5.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-5.0.0-beta.9.tgz#deaee88090926e8ea2f85c9d343fe525fa753911"
+  integrity sha512-BWFiwJ/wzfxWpHnGpAoFsXHSlVofWgFns6tjtIGeDrXfEf3D+afnBpmzCNyek2RNYDVgMHi8Q5uXzFoNBd2l5g==
   dependencies:
-    "@auth/core" "0.26.2"
+    "@auth/core" "0.26.3"
 
 next@14.0.4:
   version "14.0.4"
@@ -2077,9 +2077,9 @@ normalize-range@^0.1.2:
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
 oauth4webapi@^2.4.0:
-  version "2.10.2"
-  resolved "https://registry.yarnpkg.com/oauth4webapi/-/oauth4webapi-2.10.2.tgz#3c590aaf08dd1a49c70d0867024f894268fabb20"
-  integrity sha512-ib0x1f4tCaZkTEEnRpkt96D8F2e38AFWzTOwpha1Wmme5kD+RFFgDVkrXyBSxBefFeQUoODVaieS/w9QmkZbnQ==
+  version "2.10.3"
+  resolved "https://registry.yarnpkg.com/oauth4webapi/-/oauth4webapi-2.10.3.tgz#8e6d5a8a984a297dd80276a6c52634359319d034"
+  integrity sha512-9FkXEXfzVKzH63GUOZz1zMr3wBaICSzk6DLXx+CGdrQ10ItNk2ePWzYYc1fdmKq1ayGFb2aX97sRCoZ2s0mkDw==
 
 object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"
