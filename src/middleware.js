@@ -26,5 +26,5 @@ export default auth((req) => {
 })
 
 export const config = {
-  matcher: [ "/about", "/pet-listing"],
+  matcher: ["/pet-listing"],
 }
