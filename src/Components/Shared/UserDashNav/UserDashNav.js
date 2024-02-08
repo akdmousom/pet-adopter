@@ -12,7 +12,7 @@ const UserDashNav = ({childrens}) => {
 </div>
          Profile</Link></li>
         <li className=''><Link href="/dashboard">Dashboard</Link></li>
-        <li className=' '><Link href="/pet-listing" >Pet Lover Community</Link></li>
+        <li className=' '><Link href="/blogs" >Pet Lover Community</Link></li>
         <li className=''><Link href="/allPetRequest">All adopt Request</Link></li>
         <li><Link href='/yourRequest'>Your Request</Link></li>
         <li className=''><Link href='/yourRequest'>Menu</Link></li>
@@ -37,7 +37,7 @@ const UserDashNav = ({childrens}) => {
       </div> 
       <div className="flex-1 px-2 mx-2 lg:hidden">Pet Adopter</div>
       <div className="flex-none max-w-full  hidden lg:block lg:min-h-screen  lg:overflow-auto">
-        <ul className="menu menu-verticle h-full font-bold text-lg bg-[#ffe3e1] ">
+        <ul className="menu menu-verticle h-full font-bold text-sm bg-[#ffe3e1] ">
         
           {Navlinks}
         
