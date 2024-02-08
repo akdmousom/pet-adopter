@@ -4,6 +4,7 @@ import GoogleProvider from "next-auth/providers/google";
 export const authOptions = {
   // Configure one or more authentication providers
   providers: [
+    // I added credential provider here. With this provider use can login their accout with user name and password if he/she have registered account
     CredentialsProvider({
                     name: "credentials",
         
@@ -27,7 +28,7 @@ export const authOptions = {
         
                       }
                 }),
-
+                // I added google provider here. With this provider user don't need to register an accout he/she can login their account with one click.
                 GoogleProvider({
                   clientId: process.env.GOOGLE_CLIENT_ID,
                   clientSecret: process.env.GOOGLE_CLIENT_SECRET
@@ -41,6 +42,7 @@ export const authOptions = {
   secret: process.env.AUTH_SECRET,
 
   callbacks: {
+    // Here i just find out he/she login in this web application with google or not
     async signIn({ account, profile }) {
       if (account.provider === "google") {
        // return profile.email_verified && profile.email.endsWith("@example.com")
@@ -49,7 +51,7 @@ export const authOptions = {
       return true // Do different verification for other providers that don't have `email_verified`
     },
 
-
+    // I just create an token with this function this fuction return a user token it's help us to know who is the user.
     async jwt({token, user,account, profile}){
 
       if (user) {
@@ -65,7 +67,7 @@ export const authOptions = {
 
     },
 
-
+    // Here I create a session with user profile details. And I return the session with user info basically this session help us to fetch user info in our ui
     async session({ session, token, profile }) {
       // Send properties to the client, like an access_token and user id from a provider.
       if (session.user) {
