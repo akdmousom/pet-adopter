@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const AllPetRequest = () => {
@@ -16,7 +17,7 @@ const AllPetRequest = () => {
                 <div className="p-5 flex space-x-5">
                 <div className="avatar">
                    <div className="w-8 lg:w-12 rounded-full ring ring-[#F04336] ring-offset-base-100 ring-offset-2">
-                   <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                   <Image width={200} height={200} src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt="" />
                 </div>
                 </div>
                 <div>
