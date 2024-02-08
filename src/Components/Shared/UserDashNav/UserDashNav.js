@@ -4,7 +4,7 @@ import  Link  from 'next/link';
 const UserDashNav = ({childrens}) => {
     const Navlinks=(
         <>
-        <li className=' border-y-2 lg:border-y-4 border-black mb-2 lg:mb-10'><Link href="/dashboard" className='py-2 lg:py-10'>
+        <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link href="/dashboard" className='py-2 lg:py-5'>
         <div className="avatar  lg:ml-5">
   <div className="w-8 lg:w-16 rounded-full">
     <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
@@ -12,15 +12,15 @@ const UserDashNav = ({childrens}) => {
 </div>
          Profile</Link></li>
         <li className=''><Link href="/dashboard">Dashboard</Link></li>
-        <li className=''><Link href="/allPetRequest">All Pet Request</Link></li>
+        <li className=' '><Link href="/pet-listing" >Pet Lover Community</Link></li>
+        <li className=''><Link href="/allPetRequest">All adopt Request</Link></li>
         <li><Link href='/yourRequest'>Your Request</Link></li>
         <li className=''><Link href='/yourRequest'>Menu</Link></li>
-        <li className='border-t-2 lg:border-t-4 border-black  lg:mt-10'><Link href="/" >Home Page</Link></li>
+        <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" >Home Page</Link></li>
         <li className=' '><Link href="/adoptHerePage" >Adopt Request</Link></li>
         <li className=' '><Link href="/pet-listing" >Pet-Listing</Link></li>
-        <li className=' border-t-2 lg:border-t-4 border-black  lg:mt-10'><Link href="/" >Setting</Link></li>
+        <li className=' border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" >Setting</Link></li>
         <li className=' '><Link href="/adoptHerePage" >Security</Link></li>
-        <li className=' '><Link href="/pet-listing" >Pet Lover Community</Link></li>
     </> 
     )
     return (
@@ -36,8 +36,8 @@ const UserDashNav = ({childrens}) => {
         </label>
       </div> 
       <div className="flex-1 px-2 mx-2 lg:hidden">Pet Adopter</div>
-      <div className="flex-none w-full  hidden lg:block">
-        <ul className="menu menu-verticle min-h-screen font-bold text-lg">
+      <div className="flex-none max-w-full  hidden lg:block lg:min-h-screen  lg:overflow-auto">
+        <ul className="menu menu-verticle h-full font-bold text-lg bg-[#ffe3e1] ">
         
           {Navlinks}
         
@@ -45,11 +45,15 @@ const UserDashNav = ({childrens}) => {
       </div>
     </div>
     {/* Page content here */}
+    <div className='lg:h-screen lg:overflow-auto lg:w-full'>
+    <div className='h-full '>
     {childrens}
+    </div>
+    </div>
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label> 
-    <ul className="menu p-4  min-h-full bg-base-200">
+    <ul className="menu p-4 min-h-full bg-base-200">
       {Navlinks}
     </ul>
   </div>
