@@ -1,4 +1,4 @@
-import AllPetRequest from "@/Components/AllPetRequest/AllPetRequest";
+import AllPetRequest from "@/components/AllPetRequest/AllPetRequest";
 
 const page = () => {
     return (

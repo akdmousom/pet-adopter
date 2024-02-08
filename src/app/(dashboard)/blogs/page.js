@@ -1,4 +1,4 @@
-import PetCommunity from "@/Components/PetCommunity/PetCommunity";
+import PetCommunity from "@/components/PetCommunity/PetCommunity";
 
 
 const page = () => {
