@@ -5,7 +5,7 @@ import Link from 'next/link';
 const UserDashNav = ({ childrens }) => {
   const Navlinks = (
     <>
-      <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link href="/dashboard" className='py-2 lg:py-5'>
+      <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link href="/userprofile" className='py-2 lg:py-5'>
         <div className="avatar  lg:ml-5">
           <div className="w-8 lg:w-16 rounded-full">
             <Image width={200} height={200} src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt='' />
