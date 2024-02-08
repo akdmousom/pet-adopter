@@ -38,7 +38,6 @@ export const authOptions = {
   ],
   trustHost: true,
   trustHostedDomain: true,
-  
   secret: process.env.AUTH_SECRET,
 
   callbacks: {

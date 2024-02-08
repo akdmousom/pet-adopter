@@ -4,7 +4,6 @@ import Link from "next/link";
 import logo from "../../../../public/logo.png"
 import Header from "@/components/Home/Header/Header";
 import UserDropdown from "./UserDropdown/UserDropDown";
-import { auth } from "@/app/api/auth";
 
 
 
@@ -18,7 +17,6 @@ const NavLinks = [
 
 const NavBar = async ({ children }) => {
 
-    const session = await auth()
    
   
     return (
