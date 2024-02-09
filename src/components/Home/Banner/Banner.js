@@ -29,19 +29,19 @@ const Banner = () => {
             <div className=" hidden mx-auto lg:block md:block xl:w-[1120px] lg:w-[782px] md:w-[578px]  absolute bg-[#0A303A] h-[116px] md:left-[46px] xl:left-[123px] lg:left-[123px] xl:right-[123px] lg:right-[123px] top-[604px] left-[39px] right-[44px] ">
 
                 {/* Banner Card  */}
-                <div className="grid grid-cols-3  mt-[43px] ">
+                <div className="flex justify-evenly mt-[43px]">
 
                     {/* button 1  */}
                     <div className="text-white px-3">
-                        <h3 className="lg:text-2xl md:text-lg items-center justify-center gap-5 flex">Pets Rescue <MdPets className="text-[#F04336]" /> </h3>
+                        <h3 className="lg:text-2xl md:text-lg items-center justify-center gap-5 flex">Pets Rescue <MdPets/> </h3>
                     </div>
                     {/* button 2  */}
                     <div className="text-white px-3">
-                        <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Grooming <MdPets className="text-[#F04336]" /> </h3>
+                        <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Grooming <MdPets/> </h3>
                     </div>
                     {/* button 3  */}
                     <div className="text-white px-3">
-                        <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Sitter <MdPets className="text-[#F04336]"/> </h3>
+                        <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Sitter <MdPets/> </h3>
                     </div>
 
 
