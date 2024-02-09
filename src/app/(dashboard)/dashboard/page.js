@@ -1,8 +1,6 @@
 'use client'
-import Image from 'next/image';
-import Link from 'next/link';
 import '../../globals.css'
-import EmptyDashboard from '@/Components/EmptyDashboard/EmptyDashboard'
+import EmptyDashboard from '@/components/EmptyDashboard/EmptyDashboard'
 const page = () => {
          
     return (

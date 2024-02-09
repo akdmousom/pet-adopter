@@ -1,4 +1,3 @@
-
 import UserDashNav from '@/components/Shared/UserDashNav/UserDashNav'
 import '../globals.css'
 export const metadata = {
@@ -18,3 +17,4 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
