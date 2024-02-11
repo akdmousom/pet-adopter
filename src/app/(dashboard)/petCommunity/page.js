@@ -3,7 +3,7 @@ import PetCommunity from "@/components/PetCommunity/PetCommunity";
 
 const page = () => {
     return (
-        <div>
+        <div className="">
             <PetCommunity/>
         </div>
     );
