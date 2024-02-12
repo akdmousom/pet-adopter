@@ -1,5 +1,6 @@
 import { MdPets } from "react-icons/md";
 import { FaPlay } from 'react-icons/fa';
+import Link from "next/link";
 
 
 const Banner = () => {
@@ -17,7 +18,7 @@ const Banner = () => {
                         <p className="text-xl">You can adopt here any kind of pets for your children <br /> or your any friends.</p>
 
                         <div>
-                            <button className="flex md:text-lg py-6 items-center gap-1 btn-sm rounded-md bg-[#F04336] text-white">View More<MdPets></MdPets></button>
+                            <Link href={'/pet-listing'}><button className="flex md:text-lg py-6 items-center gap-1 btn-sm rounded-md bg-[#F04336] text-white">View More<MdPets></MdPets></button></Link>
                         </div>
 
                     </div>
