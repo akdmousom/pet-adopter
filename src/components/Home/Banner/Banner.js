@@ -1,5 +1,4 @@
 import { MdPets } from "react-icons/md";
-import { FaPlay } from 'react-icons/fa';
 import Link from "next/link";
 
 
