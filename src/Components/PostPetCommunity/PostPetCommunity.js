@@ -1,12 +1,36 @@
 "use client"
+import  axios from 'axios';
+import  Swal  from 'sweetalert2';
 
 const PostPetCommunity = () => {
     const handleCommunityData=(e)=>{
         e.preventDefault();
         const event=e.target
-        const img=event.file.value;
+        const img=event.file.files[0]
         const message=event.message.value
-        console.log(img,message)
+        const imgbb_key='ceccd7f28cf74921bd1fb98402d6032f'
+       
+        const formData= new FormData()
+        formData.append('image',img)
+        axios.post(`https://api.imgbb.com/1/upload?key=${imgbb_key}`,formData)
+        .then(res=>{
+            const image=res.data.data.display_url
+            const postData={image,message}
+            console.log(image,message)
+            axios.post('http://localhost:5000/api/v1/petCommunity',postData)
+            .then(res=>{
+                console.log(res)
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your work has been saved",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            })
+            .catch(error=>console.log(error,'error'))
+        })
+        .catch(error=>console.log(error,'error'))
     }
     return (
         <div>
