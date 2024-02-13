@@ -31,8 +31,8 @@ const PetSection = () => {
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
                                 <div className="flex justify-around mt-4 mb-2">
-                                    <button className="btn-sm text-white rounded-md bg-[#F04336] hover:scale-105 ">Adopt</button>
-                                    <button className="btn-sm rounded-md hover:scale-105  bg-pink-700  text-white">Read More</button>
+                                    <button className="btn-sm text-white rounded-md bg-[#F04336] hover:bg-black ">Adopt</button>
+                                    <button className="btn-sm rounded-md hover:bg-black  bg-pink-700  text-white">Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -52,8 +52,8 @@ const PetSection = () => {
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
                                 <div className="flex justify-around mt-4 mb-2">
-                                    <button className="btn-sm text-white rounded-md bg-[#F04336] hover:scale-105">Adopt</button>
-                                    <button className="btn-sm rounded-md hover:scale-105  bg-pink-700  text-white">Read More</button>
+                                    <button className="btn-sm text-white rounded-md bg-[#F04336] hover:bg-black">Adopt</button>
+                                    <button className="btn-sm rounded-md hover:bg-black  bg-pink-700  text-white">Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -72,8 +72,8 @@ const PetSection = () => {
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
                                 <div className="flex justify-around mt-4 mb-2">
-                                    <button className="btn-sm text-white rounded-md bg-[#F04336]  hover:scale-105">Adopt</button>
-                                    <button className="btn-sm rounded-md hover:scale-105  bg-pink-700  text-white">Read More</button>
+                                    <button className="btn-sm text-white rounded-md bg-[#F04336]  hover:bg-black">Adopt</button>
+                                    <button className="btn-sm rounded-md hover:bg-black  bg-pink-700  text-white">Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -89,8 +89,8 @@ const PetSection = () => {
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem delectus eaque sequi ullam cupiditate quae?</p>
 
                                 <div className="flex justify-around mt-4 mb-2">
-                                    <button className="btn-sm text-white rounded-md bg-[#F04336] hover:scale-105">Adopt</button>
-                                    <button className="btn-sm rounded-md hover:scale-105  bg-pink-700 text-white">Read More</button>
+                                    <button className="btn-sm text-white rounded-md bg-[#F04336] hover:bg-black">Adopt</button>
+                                    <button className="btn-sm rounded-md hover:bg-black  bg-pink-700 text-white">Read More</button>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ const PetSection = () => {
             {/* See All Pets Button  */}
             <div className="text-center my-5 ">
                 <Link href="/pet-listing">
-                <button className=" p-2 rounded-md bg-[#F04336] text-white hover:scale-105 font-medium ">See All Pets</button>
+                <button className=" p-2 rounded-md bg-[#F04336] text-white hover:bg-black font-medium ">See All Pets</button>
                 </Link>
                 
             </div>
