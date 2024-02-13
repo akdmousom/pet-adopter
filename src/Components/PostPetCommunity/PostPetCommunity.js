@@ -5,9 +5,9 @@ import  Swal  from 'sweetalert2';
 const PostPetCommunity = () => {
     const handleCommunityData=(e)=>{
         e.preventDefault();
-        const event=e.target
-        let img=event.file.files[0]
-        let message=event.message.value
+        const event = e.target
+        let img = event.file.files[0]
+        let message = event.message.value
         const imgbb_key='ceccd7f28cf74921bd1fb98402d6032f'
        
         const formData= new FormData()
