@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import MeetOurTeam from './MeetOurTeam/MeetOurTeam';
 import Link from 'next/link';
+import Marquee from 'react-fast-marquee';
 
 const About = () => {
     return (
@@ -53,12 +54,14 @@ const About = () => {
 
                 <div className="mb-20 lg:mb-40 px-4">
                     <h3 className="text-3xl lg:text-5xl text-[#F04336] text-center font-bold my-8">Our Partner</h3>
-                    <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center">
-                        <Image src="https://i.ibb.co/PrT58Qp/F1-Formula-1.png" width={200} height={600} alt="F1-Formula-1" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[200px] h-[200px] mx-auto object-cover" />
-                        <Image src="https://i.ibb.co/3yn4PhJ/Louis-Vuitton-Print.png" width={200} height={600} alt="Louis Vuitton" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[200px] h-[200px] mx-auto object-cover" />
-                        <Image src="https://i.ibb.co/D7R6575/STANLEY.png" width={200} height={600} alt="STANLEY" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[200px] h-[200px] mx-auto object-cover" />
-                        <Image src="https://i.ibb.co/ChmWZBv/Play-Station.png" width={200} height={600} alt="Play Station" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[200px] h-[200px] mx-auto object-cover" />
-                    </div>
+                    <Marquee>
+                        <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center">
+                            <Image src="https://i.ibb.co/PrT58Qp/F1-Formula-1.png" width={200} height={600} alt="F1-Formula-1" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[200px] h-[200px] mx-auto object-cover" />
+                            <Image src="https://i.ibb.co/3yn4PhJ/Louis-Vuitton-Print.png" width={200} height={600} alt="Louis Vuitton" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[200px] h-[200px] mx-auto object-cover" />
+                            <Image src="https://i.ibb.co/D7R6575/STANLEY.png" width={200} height={600} alt="STANLEY" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[200px] h-[200px] mx-auto object-cover" />
+                            <Image src="https://i.ibb.co/ChmWZBv/Play-Station.png" width={200} height={600} alt="Play Station" className="hover:scale-110 hover:border-black border-2 transfrom duration-700 w-[200px] h-[200px] mx-auto object-cover" />
+                        </div>
+                    </Marquee>
                 </div>
                 {/* Donate Advertisement */}
                 <div className="bg-[#ffe3e1] mb-8 py-4 px-3">
