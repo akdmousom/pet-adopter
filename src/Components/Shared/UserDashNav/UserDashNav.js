@@ -15,7 +15,7 @@ const UserDashNav = ({ childrens }) => {
       <li className=''><Link href="/dashboard">Dashboard</Link></li>
       <li className=' '><Link href="/petCommunity " >Pet Lover Community</Link></li>
       <li className=''><Link href="/allPetRequest">All adopt Request</Link></li>
-      <li><Link href='/yourRequest'>Your Request</Link></li>
+      <li><Link href='/postPetCommunity'>Post Your Community</Link></li>
       <li className=''><Link href='/yourRequest'>Menu</Link></li>
       <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" >Home Page</Link></li>
       <li className=' '><Link href="/adoptHerePage" >Adopt Request</Link></li>
