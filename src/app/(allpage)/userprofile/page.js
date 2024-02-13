@@ -90,7 +90,7 @@ const page = () => {
             </div>
 
             <div className="flex justify-none justify-around md:justify-end md:mr-14">
-                <button className="p-2 rounded-lg hover:bg-red-600 bg-[#F04336] text-white">Update Profile</button>
+                <button className="p-2 rounded-lg hover:bg-black bg-[#F04336] text-white">Update Profile</button>
             </div>
 
         </div>
