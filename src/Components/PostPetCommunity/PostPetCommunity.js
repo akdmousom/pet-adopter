@@ -78,7 +78,7 @@ const PostPetCommunity = ({user}) => {
           <textarea name='message' className="textarea textarea-secondary h-48" placeholder="Your Message"></textarea>
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-[#f04336] text-white font-bold">Post Your Community</button>
+          <button className="btn bg-[#f04336] hover:bg-black text-white font-bold">Post Your Community</button>
         </div>
       </form>
     </div>
