@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 // import { useState } from "react";
 import { LuSendHorizonal } from "react-icons/lu";
 
@@ -48,7 +49,7 @@ const Modal = () => {
                         <div className="flex space-x-2 ">
                         <div className="avatar">
                            <div className="w-8 rounded-full">
-                             <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                             <Image width={200} height={200} src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt=""/>
                            </div>
                         </div>
                             <h1 className="font-bold">commenter Name</h1>

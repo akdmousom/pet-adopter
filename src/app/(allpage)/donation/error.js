@@ -8,7 +8,7 @@ const Error = ({ error, reset }) => {
             <div>
                 <h2 className='font-bold text-3xl'>Something went wrong!</h2>
                 <div className='pt-4'>    
-                     <button className='bg-[#f04336] py-2 px-2 rounded-lg text-white'
+                     <button className='bg-[#f04336] hover:bg-black py-2 px-2 rounded-lg text-white'
                     onClick={
                         // Attempt to recover by trying to re-render the segment
                         () => reset()
