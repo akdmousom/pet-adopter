@@ -3,7 +3,7 @@ import  axios from 'axios';
 import  Swal  from 'sweetalert2';
 
 const PostPetCommunity = ({user}) => {
-    const {name,image}=user
+    const {name,image,email}=user
     
     const handleCommunityData=(e)=>{
         e.preventDefault();
@@ -17,7 +17,7 @@ const PostPetCommunity = ({user}) => {
         axios.post(`https://api.imgbb.com/1/upload?key=${imgbb_key}`,formData)
         .then(res=>{
             const input_image=res.data.data.display_url
-            const postData={input_image,input_message:message,user_name:name,user_image:image}
+            const postData={input_image,input_message:message,user_name:name,user_image:image,user_email:email}
             console.log(image,message)
             if(message==='' || img===''){
                 Swal.fire({
