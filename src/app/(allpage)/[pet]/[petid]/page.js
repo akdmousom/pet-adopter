@@ -1,12 +1,34 @@
 
-
+'use client'
+import { auth } from '@/app/api/auth';
 import { getSinglePet } from '@/utils/getSinglePet';
+import axios from 'axios';
 import Image from 'next/image';
 import React from 'react';
 
 const petDetailPage = async ({ params }) => {
     const pet = await getSinglePet(params.petid)
-    console.log(pet);
+    // console.log(pet);
+    const session = await auth();
+    // console.log(session?.user.name);
+
+    const handleAdoptClick = () => {
+        const userData = {
+            name: session?.user.name,
+            email: session?.user.email,
+            image: session?.user.image, // Adjust this based on the actual structure of your user object
+        };
+        axios.post('http://localhost:5000/api/v1/adoptrequest', { pet, user: userData })
+            .then(res => {
+                console.log(res.data);
+
+                console.log('Pet adopted successfully!');
+            })
+            .catch(error => {
+
+                console.error('Error adopting pet:', error);
+            });
+    };
     return (
         <div>
 
@@ -40,7 +62,9 @@ const petDetailPage = async ({ params }) => {
                     <p className="text-gray-700">{pet.description}</p>
 
                     <div className="mt-4 flex gap-10 items-center">
-                        <button className="hover:bg-[#f28583] bg-[#FA524F] text-white font-bold py-2 px-4 rounded">
+                        <button
+                            onClick={handleAdoptClick}
+                            className="hover:bg-[#f28583] bg-[#FA524F] text-white font-bold py-2 px-4 rounded">
                             Adopt
                         </button>
 
