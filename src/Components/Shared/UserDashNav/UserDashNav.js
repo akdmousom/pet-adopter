@@ -1,17 +1,21 @@
 
+import { auth } from '@/app/api/auth';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const UserDashNav = ({ childrens }) => {
+const UserDashNav = async({ childrens }) => {
+  const session = await auth();
+    const user=session.user
+    console.log(user,'navabar')
   const Navlinks = (
     <>
-      <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link href="/userprofile" className='py-2 lg:py-5'>
+      <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link   href={{pathname:"/userprofile",query:{user}}} className='py-2 lg:py-5'>
         <div className="avatar  lg:ml-5">
           <div className="w-8 lg:w-16 rounded-full">
-            <Image width={200} height={200} src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt='' />
+            <Image width={200} height={200} src={user.image} alt='' />
           </div>
         </div>
-        Profile</Link></li>
+        {user.name}</Link></li>
       <li className=''><Link href="/dashboard">Dashboard</Link></li>
       <li className=' '><Link href="/petCommunity " >Pet Lover Community</Link></li>
       <li className=''><Link href="/allPetRequest">All adopt Request</Link></li>

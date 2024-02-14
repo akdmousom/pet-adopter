@@ -8,7 +8,7 @@ const PetCommunity = () => {
     const [trueData,setStrueData]=useState(true)
     const [postData,setPostData]=useState([])
 
-     const story='Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.Hello Everyone This is my pet.'
+     
      useEffect(()=>{
         axios.get('http://localhost:5000/api/v1/petCommunity')
      .then(res=>setPostData(res.data))
@@ -40,7 +40,7 @@ const PetCommunity = () => {
                     {/* Description  */}
                     <div className="lg:mx-4 my-3">
                       {
-                        story.length <= 150?
+                        data.input_message.length <= 150?
                         <h1>{data.input_message}</h1>
                         :
                         trueData===true?
