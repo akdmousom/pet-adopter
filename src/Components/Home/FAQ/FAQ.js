@@ -7,7 +7,7 @@ const FAQ = () => {
             <h3 className='text-4xl text-center font-semibold pb-6'>FAQ</h3>
             <div className='flex flex-col lg:flex-row items-center justify-center gap-3 py-4 px-4'>
                 <div className='w-1/2'>
-                    <Image src="https://i.ibb.co/hKdxMdP/pet-6.jpg" alt="pet-6" width={400} height={400} className='hidden md:block w-[400px] md:w-[400px] lg:w-[600px] h-[200px] md:h-[400px] lg:h-[400px] object-cover' />
+                    <Image src="https://i.ibb.co/hKdxMdP/pet-6.jpg" alt="pet-6" width={400} height={400} className='hidden md:block rounded-md w-[400px] md:w-[400px] lg:w-[600px] h-[200px] md:h-[400px] lg:h-[400px] object-cover' />
                 </div>
                 <div>
                     <div className="collapse collapse-arrow bg-[#FFF5E4] border-2 border-black mb-4">

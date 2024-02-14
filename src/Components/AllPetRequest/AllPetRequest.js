@@ -30,8 +30,8 @@ const AllPetRequest = () => {
     <p>{datas.message} </p>
     <div className="card-actions justify-end ">
       <div className="space-x-5 pt-5 flex">
-      <button className="btn bg-[#fb943a] text-white lg:font-bold text-sm">Read More</button>
-      <button className="btn bg-[#F04336] text-white font-bold">Donate pet</button>
+      <button className="btn bg-[#fb943a] hover:bg-black text-white lg:font-bold text-sm">Read More</button>
+      <button className="btn bg-[#F04336] hover:bg-black text-white font-bold">Donate pet</button>
       </div>
 
     </div>

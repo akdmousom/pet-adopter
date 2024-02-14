@@ -113,7 +113,7 @@ const Petlisting = () => {
                             <p className="text-gray-500 mb-2">Location: {pet.petLocation}</p>
                             <Link href={`/${pet.petCategory}/${pet._id}`} >
                                 <button
-                                    className="bg-[#FA524F] text-white font-bold rounded-md px-4 py-2 hover:bg-[#f17876] active:bg-[#f17876] focus:outline-none"
+                                    className="bg-[#FA524F] text-white font-bold rounded-md px-4 py-2 hover:bg-black active:bg-[#f17876] focus:outline-none"
                                 >
                                     View Details
                                 </button>

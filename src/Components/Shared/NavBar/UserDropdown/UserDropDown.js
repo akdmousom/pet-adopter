@@ -21,7 +21,7 @@ const UserDropdown = async() => {
             </div>
             <ul tabIndex={0} className="mt-3 gap-1 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-40">
                 {
-                    session?.user ? <><li><a >Profile</a></li>
+                    session?.user ? <><li><Link href={"/userprofile"}>Profile</Link></li>
                     <li><Link href={"/dashboard"}>Dashboard</Link></li>
                     <li><Link href={"/api/auth/signout"}>SignOut</Link></li></> 
                     :

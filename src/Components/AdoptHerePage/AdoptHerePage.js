@@ -81,7 +81,7 @@ const AdoptHerePage = () => {
           
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-[#F04336] text-white font-bold">Send Adopt Request</button>
+          <button className="btn bg-[#F04336] hover:bg-black text-white font-bold">Send Adopt Request</button>
         </div>
       </form>
     </div>
