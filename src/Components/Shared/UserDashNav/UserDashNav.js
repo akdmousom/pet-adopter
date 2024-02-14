@@ -1,17 +1,21 @@
 
+import { auth } from '@/app/api/auth';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const UserDashNav = ({ childrens }) => {
+const UserDashNav = async({ childrens }) => {
+  const session = await auth();
+    const user=session.user
+    console.log(user,'navabar')
   const Navlinks = (
     <>
-      <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link href="/userprofile" className='py-2 lg:py-5'>
+      <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link   href={{pathname:"/userprofile",query:{user}}} className='py-2 lg:py-5'>
         <div className="avatar  lg:ml-5">
           <div className="w-8 lg:w-16 rounded-full">
-            <Image width={200} height={200} src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt='' />
+            <Image width={200} height={200} src={user.image} alt='' />
           </div>
         </div>
-        Profile</Link></li>
+        {user.name}</Link></li>
       <li className=''><Link href="/dashboard">Dashboard</Link></li>
       <li className=' '><Link href="/petCommunity " >Pet Lover Community</Link></li>
       <li className=''><Link href="/allPetRequest">All adopt Request</Link></li>
@@ -30,7 +34,7 @@ const UserDashNav = ({ childrens }) => {
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col lg:flex-row">
           {/* Navbar */}
-          <div className="w-full basis-1/4 navbar ">
+          <div className="w-full basis-1/4 navbar bg-[#ffe3e1]">
             <div className="flex-none  lg:hidden">
               <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -38,7 +42,7 @@ const UserDashNav = ({ childrens }) => {
             </div>
             <div className="flex-1 px-2 mx-2 lg:hidden">Pet Adopter</div>
             <div className="flex-none min-w-full  hidden lg:block lg:max-h-screen  lg:overflow-auto">
-              <ul className="menu menu-verticle min-h-screen font-bold text-lg bg-[#ffe3e1] ">
+              <ul className="menu menu-verticle min-h-screen font-bold text-lg  ">
 
                 {Navlinks}
 
