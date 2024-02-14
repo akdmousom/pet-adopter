@@ -40,7 +40,7 @@ const petDetailPage = async ({ params }) => {
                     <p className="text-gray-700">{pet.description}</p>
 
                     <div className="mt-4 flex gap-10 items-center">
-                        <button className="hover:bg-[#f28583] bg-[#FA524F] text-white font-bold py-2 px-4 rounded">
+                        <button className="hover:bg-black bg-[#FA524F] text-white font-bold py-2 px-4 rounded">
                             Adopt
                         </button>
 
