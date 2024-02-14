@@ -17,11 +17,7 @@ const Banner = () => {
                         <p className="text-xl">You can adopt here any kind of pets for your children <br /> or your any friends.</p>
 
                         <div>
-<<<<<<< HEAD
-                            <Link href={'/pet-listing'}><button className="flex md:text-lg py-6 items-center gap-1 btn-sm rounded-md bg-[#F04336] text-white">View More<MdPets></MdPets></button></Link>
-=======
                             <button className="flex md:text-lg py-6 items-center gap-1 btn-sm rounded-md bg-[#F04336] hover:bg-black text-white">View More<MdPets></MdPets></button>
->>>>>>> main
                         </div>
 
                     </div>

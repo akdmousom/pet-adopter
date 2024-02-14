@@ -46,25 +46,7 @@ const EmailSection = () => {
           console.log(error.text);
         });
     };
-<<<<<<< HEAD
   }
-=======
-     }
-  
-        
-    return (
-        <div className="md:mx-12 lg:mx-24 lg:mt-10 mx-auto">
-        <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
-        
-              <div className="bg-[#FFE3E1] py-3 text-center text-xl font-bold mb-2 mt-8 my-10">Contact us with e-mail</div>
-              <div className="bg-[#FFE3E1] flex flex-col-reverse lg:flex-row py-10 px-20">
-                <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 space-y-3 flex-1 py-10 mx-auto">
-                <input type="text" name='user_name' placeholder="Your Name" className="input input-bordered input-secondary w-full max-w-xs" />
-                <input type="email" name='user_email' placeholder="Your E-mail" className="input input-bordered input-secondary w-full max-w-xs" />
-                <input type="text" name='subject' placeholder="Subject" className="input input-bordered input-secondary w-full max-w-xs" />
-                <textarea type='text' name='message' className="textarea textarea-secondary w-full max-w-xs" placeholder="Your Massage"></textarea>
-                <button className="btn btn-active hover:bg-black bg-[#F04336] text-white font-bold w-full max-w-xs">Send email</button>
->>>>>>> main
 
 
   return (
