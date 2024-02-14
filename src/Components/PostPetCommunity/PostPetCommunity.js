@@ -2,7 +2,9 @@
 import  axios from 'axios';
 import  Swal  from 'sweetalert2';
 
-const PostPetCommunity = () => {
+const PostPetCommunity = ({user}) => {
+    const {name,image}=user
+    
     const handleCommunityData=(e)=>{
         e.preventDefault();
         const event = e.target
@@ -14,8 +16,8 @@ const PostPetCommunity = () => {
         formData.append('image',img)
         axios.post(`https://api.imgbb.com/1/upload?key=${imgbb_key}`,formData)
         .then(res=>{
-            const image=res.data.data.display_url
-            const postData={image,message}
+            const input_image=res.data.data.display_url
+            const postData={input_image,input_message:message,user_name:name,user_image:image}
             console.log(image,message)
             if(message==='' || img===''){
                 Swal.fire({
