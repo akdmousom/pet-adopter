@@ -6,11 +6,11 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
- return (
+  return (
     <html lang="en">
       <body>
         <div className="">
-          
+
           <UserDashNav childrens={children} />
         </div>
       </body>

@@ -9,9 +9,9 @@ const PetlistingPage = () => {
 
     return (
         <div>
-            <Suspense  fallback={<Loading/>}>
+            <Suspense fallback={<Loading />}>
 
-            <Petlisting />
+                <Petlisting />
             </Suspense>
         </div>
     );

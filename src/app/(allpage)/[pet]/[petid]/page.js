@@ -14,9 +14,9 @@ const petDetailPage = async ({ params }) => {
 
     const handleAdoptClick = () => {
         const userData = {
-            name: session?.user.name,
-            email: session?.user.email,
-            image: session?.user.image, // Adjust this based on the actual structure of your user object
+            name: session?.user?.name,
+            email: session?.user?.email,
+            image: session?.user?.image, // Adjust this based on the actual structure of your user object
         };
         axios.post('http://localhost:5000/api/v1/adoptrequest', { pet, user: userData })
             .then(res => {
@@ -67,9 +67,6 @@ const petDetailPage = async ({ params }) => {
                             className="hover:bg-[#f28583] bg-[#FA524F] text-white font-bold py-2 px-4 rounded">
                             Adopt
                         </button>
-
-
-
                     </div>
                 </div>
             </div>

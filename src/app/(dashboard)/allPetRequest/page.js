@@ -3,7 +3,7 @@ import AllPetRequest from "@/components/AllPetRequest/AllPetRequest";
 const page = () => {
     return (
         <div>
-            <AllPetRequest/>
+            <AllPetRequest />
         </div>
     );
 };

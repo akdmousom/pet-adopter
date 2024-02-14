@@ -92,7 +92,7 @@ const AddPet = () => {
 
                 </div>
 
-                <button type="submit" className="px-4 py-2 rounded-md border-none text-white hover:bg-[#f28583] bg-[#FA524F] focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+                <button type="submit" className="px-4 py-2 rounded-md border-none text-white hover:bg-black bg-[#FA524F] focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
                     Submit
                 </button>
 

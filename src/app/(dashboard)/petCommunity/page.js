@@ -4,7 +4,7 @@ import PetCommunity from "@/components/PetCommunity/PetCommunity";
 const page = () => {
     return (
         <div className="">
-            <PetCommunity/>
+            <PetCommunity />
         </div>
     );
 };
