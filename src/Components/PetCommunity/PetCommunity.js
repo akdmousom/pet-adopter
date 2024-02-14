@@ -1,8 +1,9 @@
 'use client'
 import Image from "next/image";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import Modal from "./Modal";
 
 const PetCommunity = () => {
     const [trueData,setStrueData]=useState(true)
@@ -10,7 +11,7 @@ const PetCommunity = () => {
 
      
      useEffect(()=>{
-        axios.get('http://localhost:5000/api/v1/petCommunity')
+        axios.get('https://pet-adopter-backend.vercel.app/api/v1/petCommunity')
      .then(res=>setPostData(res.data))
      .catch(error=>console.log(error,'error'))
      

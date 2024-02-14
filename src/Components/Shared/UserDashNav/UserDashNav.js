@@ -2,6 +2,15 @@
 import { auth } from '@/app/api/auth';
 import Image from 'next/image';
 import Link from 'next/link';
+import dashboard from '../../../../public/images/user_dashboard.svg'
+import social from '../../../../public/images/user-social.svg'
+import pet_Request from '../../../../public/images/pet-request.svg'
+import post from '../../../../public/images/user_post.svg'
+import setting from '../../../../public/images/setting.svg'
+import security from '../../../../public/images/security.svg'
+import petListing from '../../../../public/images/pet-listing.svg'
+import home from '../../../../public/images/home.svg'
+import adoptRequest from '../../../../public/images/adopt-request.svg'
 
 const UserDashNav = async({ childrens }) => {
   const session = await auth();
@@ -16,16 +25,15 @@ const UserDashNav = async({ childrens }) => {
           </div>
         </div>
         {user.name}</Link></li>
-      <li className=''><Link href="/dashboard">Dashboard</Link></li>
-      <li className=' '><Link href="/petCommunity " >Pet Lover Community</Link></li>
-      <li className=''><Link href="/allPetRequest">All adopt Request</Link></li>
-      <li><Link href='/postPetCommunity'>Post Your Community</Link></li>
-      <li className=''><Link href='/yourRequest'>Menu</Link></li>
-      <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" >Home Page</Link></li>
-      <li className=' '><Link href="/adoptHerePage" >Adopt Request</Link></li>
-      <li className=' '><Link href="/pet-listing" >Pet-Listing</Link></li>
-      <li className=' border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" >Setting</Link></li>
-      <li className=' '><Link href="/adoptHerePage" >Security</Link></li>
+      <li className=''><Link href="/dashboard"><Image src={dashboard} alt="alt" width={20} height={20} /> Dashboard</Link></li>
+      <li className=' '><Link href="/petCommunity "><Image src={social} alt="alt" width={20} height={20} /> Pet Lover Community</Link></li>
+      <li className=''><Link href="/allPetRequest"><Image src={pet_Request} alt="alt" width={20} height={20} /> All adopt Request</Link></li>
+      <li><Link href='/postPetCommunity'><Image src={post} alt="alt" width={20} height={20} /> Post Your Community</Link></li>
+      <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={home} alt="alt" width={20} height={20} /> Home Page</Link></li>
+      <li className=' '><Link href="/adoptHerePage" ><Image src={adoptRequest} alt="alt" width={20} height={20} /> Adopt Request</Link></li>
+      <li className=' '><Link href="/pet-listing" ><Image src={petListing} alt="alt" width={20} height={20} /> Pet-Listing</Link></li>
+      <li className=' border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={setting} alt="alt" width={20} height={20} /> Setting</Link></li>
+      <li className=' '><Link href="/adoptHerePage" ><Image src={security} alt="alt" width={20} height={20} /> Security</Link></li>
     </>
   )
   return (
