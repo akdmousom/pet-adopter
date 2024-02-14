@@ -6,7 +6,7 @@ import Link from 'next/link';
 const UserDashNav = async({ childrens }) => {
   const session = await auth();
     const user=session.user
-    console.log(user,'navabar')
+    // console.log(user,'navabar')
   const Navlinks = (
     <>
       <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link   href={{pathname:"/userprofile",query:{user}}} className='py-2 lg:py-5'>
