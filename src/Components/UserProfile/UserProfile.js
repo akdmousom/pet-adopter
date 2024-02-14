@@ -2,13 +2,10 @@ import Image from "next/image";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-// import  useRouter from 'next/router';
-// import { useRouter } from 'next/router';
 import { auth } from '@/app/api/auth';
-const UserProfile = async() => {
+    const UserProfile = async() => {
     const session = await auth();
     const user=session.user
-    // console.log(user.name,'navabar')
     return (
         <div className="my-5 max-w-[1200px] mx-auto">
 

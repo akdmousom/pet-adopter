@@ -37,9 +37,9 @@ const Modal = () => {
                     </form>
                     <div className="text-center p-4 lg:p-8 md:p-8">
 
-                        <form onSubmit={handleComment} >
+                        <form onSubmit={handleComment} className='flex'>
                             <input type="text" name="comment" placeholder="Write a comment...." className="input input-bordered input-error w-full max-w-xs" />
-                            <button type="submit" name="send" className="btn hover:bg-red-400 bg-[#F04336] text-[#F04336] ml-3 mt-4"><LuSendHorizonal className="text-white text-base" /> </button>
+                            <button type="submit" name="send" className="btn hover:bg-red-400 bg-[#F04336] text-[#F04336]  ml-2 "><LuSendHorizonal className="text-white text-base" /> </button>
                         </form>
 
                     </div>

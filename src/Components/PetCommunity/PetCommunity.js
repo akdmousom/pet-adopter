@@ -33,7 +33,7 @@ const PetCommunity = () => {
                         </div>
                         {/* Name & Time  */}
                         <div>
-                            <h3 className="text-base">{data.user_name}</h3>
+                            <h3 className="text-base font-bold">{data.user_name}</h3>
                             <p>3hr ago</p>
                         </div>
                     </div>
