@@ -13,9 +13,9 @@ const UserDashNav = ({ childrens }) => {
         </div>
         Profile</Link></li>
       <li className=''><Link href="/dashboard">Dashboard</Link></li>
-      <li className=' '><Link href="/pet-listing" >Pet Lover Community</Link></li>
+      <li className=' '><Link href="/petCommunity " >Pet Lover Community</Link></li>
       <li className=''><Link href="/allPetRequest">All adopt Request</Link></li>
-      <li><Link href='/yourRequest'>Your Request</Link></li>
+      <li><Link href='/postPetCommunity'>Post Your Community</Link></li>
       <li className=''><Link href='/yourRequest'>Menu</Link></li>
       <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" >Home Page</Link></li>
       <li className=' '><Link href="/adoptHerePage" >Adopt Request</Link></li>
@@ -38,7 +38,7 @@ const UserDashNav = ({ childrens }) => {
             </div>
             <div className="flex-1 px-2 mx-2 lg:hidden">Pet Adopter</div>
             <div className="flex-none min-w-full  hidden lg:block lg:max-h-screen  lg:overflow-auto">
-              <ul className="menu menu-verticle h-full font-bold text-lg bg-[#ffe3e1] ">
+              <ul className="menu menu-verticle min-h-screen font-bold text-lg bg-[#ffe3e1] ">
 
                 {Navlinks}
 
@@ -46,7 +46,7 @@ const UserDashNav = ({ childrens }) => {
             </div>
           </div>
           {/* Page content here */}
-          <div className='lg:h-screen lg:overflow-hidden '>
+          <div className='lg:h-screen lg:overflow-hidden w-full'>
             <div className='h-full overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200'>
               {childrens}
             </div>
