@@ -4,6 +4,7 @@ import Link from "next/link";
 import logo from "../../../../public/logo.png"
 import Header from "@/components/Home/Header/Header";
 import UserDropdown from "./UserDropdown/UserDropDown";
+// import Header from "@/components/Home/Header/Header";
 
 
 
@@ -11,7 +12,8 @@ const NavLinks = [
     { id: 1, name: 'Home', path: '/' },
     { id: 2, name: 'Pet-listing', path: '/pet-listing' },
     { id: 3, name: 'About', path: '/about' },
-    { id: 4, name: 'Contact', path: '/contact' },
+    { id: 4, name: 'Blog', path: '/blogs' },
+    { id: 5, name: 'Contact', path: '/contact' },
 ];
 
 const NavBar = async ({ children }) => {
