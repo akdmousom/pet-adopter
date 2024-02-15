@@ -10,7 +10,7 @@ const PetCommunity = () => {
     
       
      useEffect(()=>{
-        axios.get('https://pet-adopter-rosy.vercel.app/api/v1/petCommunity')
+        axios.get('https://pet-adopter-backend.vercel.app/api/v1/petCommunity')
      .then(res=>{
          
         setPostData(res.data.reverse())
