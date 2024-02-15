@@ -7,15 +7,18 @@ import axios from 'axios';
 const PetCommunity = () => {
     const [trueData,setStrueData]=useState(true)
     const [postData,setPostData]=useState([])
-
-     
+    
+      
      useEffect(()=>{
-        axios.get('http://localhost:5000/api/v1/petCommunity')
-     .then(res=>setPostData(res.data))
+        axios.get('https://pet-adopter-rosy.vercel.app/api/v1/petCommunity')
+     .then(res=>{
+         
+        setPostData(res.data.reverse())
+     })
      .catch(error=>console.log(error,'error'))
      
      },[])
-     console.log(postData)
+    //  console.log(postData)
     return (
         <div>
             {postData.map(data=><div key={data._id} className="max-w-[1366px] mx-auto my-10 p-5">
@@ -34,7 +37,7 @@ const PetCommunity = () => {
                         {/* Name & Time  */}
                         <div>
                             <h3 className="text-base font-bold">{data.user_name}</h3>
-                            <p>3hr ago</p>
+                            <h1>{data.post_date}</h1>
                         </div>
                     </div>
                     {/* Description  */}
