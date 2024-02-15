@@ -11,7 +11,6 @@ const NavLinks = [
     { id: 1, name: 'Home', path: '/' },
     { id: 2, name: 'Pet-listing', path: '/pet-listing' },
     { id: 3, name: 'About', path: '/about' },
-    { id: 3, name: 'Blog', path: '/blogs' },
     { id: 4, name: 'Contact', path: '/contact' },
 ];
 
