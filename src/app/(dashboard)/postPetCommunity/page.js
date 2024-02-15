@@ -1,4 +1,4 @@
-import PostPetCommunity from '@/Components/PostPetCommunity/PostPetCommunity';
+import PostPetCommunity from '@/components/PostPetCommunity/PostPetCommunity';
 import { auth } from '@/app/api/auth';
 import React from 'react';
 
