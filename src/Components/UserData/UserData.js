@@ -11,7 +11,7 @@ const UserData = ({ user }) => {
     const [postData, setPostData] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/petCommunity')
+        axios.get('https://pet-adopter-rosy.vercel.app/api/v1/petCommunity')
             .then(res => {
                 const filterdata=res.data.filter(items=>items.user_email===email)
                 setPostData(filterdata)
