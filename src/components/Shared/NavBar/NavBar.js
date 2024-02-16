@@ -56,7 +56,7 @@ const NavBar = async ({ children }) => {
                             </div>
                             <div className="flex gap-3 md:gap-5 items-center ">
                                 <Link href="/adoptHerePage">
-                                    <button className="md:text-lg  text-white rounded-full font-medium md:px-5 px-2 py-2 md:py-1 hover:bg-black bg-[#F04336]">Adopt Here</button>
+                                    <button className="md:text-lg  text-white rounded-full font-medium md:px-5 px-2 py-2 md:py-2 hover:bg-black bg-[#F04336]">Adopt Here</button>
                                 </Link>
                                 {/* <CgProfile onClick={showPopup} className="text-3xl text-[#F04336] cursor-pointer" /> */}
                             </div>

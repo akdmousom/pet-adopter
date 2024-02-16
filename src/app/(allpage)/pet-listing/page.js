@@ -10,7 +10,6 @@ const PetlistingPage = () => {
     return (
         <div>
             <Suspense fallback={<Loading />}>
-
                 <Petlisting />
             </Suspense>
         </div>
