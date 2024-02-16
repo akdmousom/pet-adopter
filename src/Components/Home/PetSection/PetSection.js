@@ -40,8 +40,8 @@ const PetSection = async () => {
                                         <p className="text-black font-medium mb-2">Age: {pet.petAge}</p>
                                         <p className="text-black font-medium mb-2">Location: {pet.petLocation}</p>
                                         <div className="flex justify-around mt-4 mb-2">
-                                            <button className="btn-sm text-white rounded-md bg-[#F04336] hover:bg-black ">Adopt</button>
-                                            <button className="btn-sm rounded-md hover:bg-black  bg-pink-700  text-white">Read More</button>
+                                            <Link href={'/pet-listing'}><button className="btn-sm text-white rounded-md bg-[#F04336] hover:bg-black ">Adopt</button></Link>
+                                            {/* <button className="btn-sm rounded-md hover:bg-black  bg-pink-700  text-white">Read More</button> */}
                                         </div>
                                     </div>
                                 </div>
