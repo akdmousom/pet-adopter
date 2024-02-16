@@ -2,23 +2,23 @@
 
 import axios from 'axios';
 import Image from 'next/image';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/navigation'
 
 
 const PetDetails = ({ pet, user }) => {
-    // console.log(seasion);
+    const router = useRouter()
     console.log(user);
 
     const handleAdoptClick = () => {
-        // const userData = {
-        //     name: seasion?.user?.name,
-        //     email: seasion?.user?.email,
-        //     image: seasion?.user?.image, // Adjust this based on the actual structure of your user object
-        // };
+
         axios.post('http://localhost:5000/api/v1/adoptrequest', { pet, user })
             .then(res => {
                 console.log(res.data);
 
-                console.log('Pet adopted successfully!');
+                toast.success('Pet adopted successfully!');
+                router.push('/pet-listing')
             })
             .catch(error => {
 
@@ -59,12 +59,25 @@ const PetDetails = ({ pet, user }) => {
                     <div className="mt-4 flex gap-10 items-center">
                         <button
                             onClick={handleAdoptClick}
-                            className="hover:bg-[#f28583] bg-[#FA524F] text-white font-bold py-2 px-4 rounded">
+                            className="hover:bg-black bg-[#F04336] text-white font-bold py-2 px-4 rounded">
                             Adopt
                         </button>
                     </div>
                 </div>
             </div>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+
+            />
         </div>
     );
 };

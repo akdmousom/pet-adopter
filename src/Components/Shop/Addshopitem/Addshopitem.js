@@ -1,5 +1,9 @@
 'use client'
 
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Addshopitem = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -8,7 +12,16 @@ const Addshopitem = () => {
         const image = e.target.image.value
         const description = e.target.description.value
         const category = e.target.category.value
-        console.log(name, rating, image, description, category);
+        const price = e.target.price.value
+
+        const itemInfo = { name, rating, image, description, category, price }
+
+        axios.post('http://localhost:5000/api/v1/shopitems', itemInfo)
+            .then(res => {
+                toast.success('Item Added successfully!');
+                console.log(res.data);
+                e.target.reset();
+            })
     };
 
     const inputStyle = "mt-1 p-2 border rounded-md w-full";
@@ -37,13 +50,20 @@ const Addshopitem = () => {
                     <label htmlFor="rating" className="block text-sm font-medium text-gray-600">
                         Rating
                     </label>
-                    <input type="number" name="rating" className={inputStyle} required />
+                    <input type="text" name="rating" className={inputStyle} required />
+
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="price" className="block text-sm font-medium text-gray-600">
+                        Price
+                    </label>
+                    <input type="text" name="price" className={inputStyle} required />
 
                 </div>
 
                 <div className="mb-4">
                     <label htmlFor="Category">Item Category:</label>
-                    <select name="Category" className={inputStyle} required>
+                    <select name="category" className={inputStyle} required>
                         <option value="">All Categories</option>
                         <option value="food">Food</option>
                         <option value="equipment">Equipment</option>
@@ -68,6 +88,19 @@ const Addshopitem = () => {
                 </button>
 
             </ form>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+
+            />
         </div>
     );
 };

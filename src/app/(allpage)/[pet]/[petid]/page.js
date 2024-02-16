@@ -8,7 +8,7 @@ const petDetailPage = async ({ params }) => {
     // console.log(pet);
     const seasion = await auth()
 
-    const { name, email, image } = seasion.user
+    const { name, email, image } = seasion?.user
     const user = {
         name, email, image
     }
