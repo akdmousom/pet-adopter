@@ -1,9 +1,10 @@
-import UserProfile from '@/components/UserProfile/UserProfile';
+import EditProfile from "@/components/EditProfile/EditProfile";
+
 
 const page = () => {
     return (
         <div>
-            <UserProfile />
+            <EditProfile/>
         </div>
     );
 };

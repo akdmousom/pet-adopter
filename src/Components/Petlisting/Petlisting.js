@@ -11,16 +11,19 @@ import Loading from "@/app/(allpage)/pet-listing/loading";
 
 
 
-const Petlisting = () => {
+const Petlisting = ({ searchParams }) => {
     // State Declear For Filter 
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('')
     const [locationFilter, setLocationFilter] = useState("");
     const [petlistings, setPetlistings] = useState([])
-
+    //pagination state
+    const [totalData, setTotalData] = useState(0)
+    const [pageNumber, setPageNumber] = useState(0)
     // All pets data fetch from database
     useEffect(() => {
-        axios.get('https://pet-adopter-backend.vercel.app/api/v1/petlistings')
+        axios.get(`https://pet-adopter-backend.vercel.app/api/v1/petlistings?pageNumber=${pageNumber}`)
+            // axios.get(`https://pet-adopter-backend.vercel.app/api/v1/petlistings?pageNumber=${pageNumber}`)
             .then(res => {
                 setPetlistings(res.data);
             })
@@ -29,8 +32,18 @@ const Petlisting = () => {
             duration: 700,
             once: true
         });
+    }, [pageNumber])
+    useEffect(() => {
+        axios.get('https://pet-adopter-backend.vercel.app/api/v1/petlistcount')
+            // axios.get('https://pet-adopter-backend.vercel.app/api/v1/petlistcount')
+            .then(res => {
+                setTotalData(res.data)
+            })
     }, [])
 
+    // pagination 
+    const totalPage = Number(Math.ceil(totalData / 10))//10 ta item dekhabe
+    const pages = [...Array(totalPage).keys()];
     // grab the filter location
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
@@ -41,11 +54,11 @@ const Petlisting = () => {
         setSelectedCategory(e.target.value);
     };
 
-     // grab the location
+    // grab the location
     const handleLocationFilterChange = (e) => {
         setLocationFilter(e.target.value);
     };
-     // Performe the filter
+    // Performe the filter
 
     const filteredPetListing = petlistings?.filter((card) => {
         // Filter by name
@@ -100,7 +113,7 @@ const Petlisting = () => {
             </div>
             <div data-aos="fade-up" className="  ">
                 {/* if filter length is bigger then 0 then show first div otherwise show the not avilable message */}
-                { filteredPetListing.length > 0 ? 
+                {filteredPetListing.length > 0 ?
 
                 <Suspense fallback={<Loading/>}>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-4 mx-auto">
@@ -128,7 +141,11 @@ const Petlisting = () => {
                     <h1 className="text-center font-bold text-3xl">Pet&apos;s Not Available</h1>
                     </div>}
             </div>
-
+            <div className='text-center container mx-auto py-10 pagination'>
+                {
+                    pages.map(i => <button key={i} className={`p-3 py-1 btn btn-ghost m-1 rounded-lg active:scale-90 ${pageNumber === i && 'bg-orange-400'}`} onClick={() => setPageNumber(i)}>{i + 1}</button>)
+                }
+            </div>
         </div>
     );
 };
