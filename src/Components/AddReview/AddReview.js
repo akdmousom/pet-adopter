@@ -1,3 +1,4 @@
+'use client'
 
 import { useState } from 'react';
 import StarRatings from 'react-star-ratings';
@@ -6,7 +7,16 @@ const AddReview = () => {
 
     const [rating, setRating] = useState(5)
 
-   
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const review = form.review.value;
+        event.target.reset();
+        console.log(review);
+
+       
+
+    };
 
 
     return (
