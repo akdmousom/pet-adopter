@@ -7,8 +7,8 @@ const PetService = () => {
         <div className=" max-w-[1366px] mx-auto mt-20 mb-20">
 
         <div className="text-center">
-            <h3 className="text-base font-semibold text-[#F04336]">WHAT WE PROVIDE</h3>
-            <h1 className="text-lg lg:text-3xl md:text-xl font-bold">Pet Care Services</h1>
+            <h3 className="text-base font-semibold text-[#F04336]">What We Provide</h3>
+            <h1 className="text-3xl lg:text-5xl text-center font-bold pb-6">Pet Care Services</h1>
         </div>
 
       
