@@ -1,5 +1,5 @@
 'use client'
-
+import axios from 'axios';
 import { useState } from 'react';
 import StarRatings from 'react-star-ratings';
 
@@ -14,7 +14,17 @@ const AddReview = () => {
         event.target.reset();
         console.log(review);
 
-       
+        const reviewInfo = {
+            review,
+        }
+
+        axios.post('http://localhost:5000/api/v1/Feedbacks', reviewInfo)
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(error => {
+                console.log(error.massage);
+            })
 
     };
 
