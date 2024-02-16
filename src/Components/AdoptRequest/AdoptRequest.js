@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 const AdoptRequest = () => {
     const [adoptData, setAdoptData] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/adoptrequest')
+        axios.get('https://pet-adopter-backend.vercel.app/api/v1/adoptrequest')
             .then(res => setAdoptData(res.data))
     }, [])
     console.log(adoptData);

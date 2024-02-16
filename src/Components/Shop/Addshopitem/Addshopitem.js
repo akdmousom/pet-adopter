@@ -16,10 +16,9 @@ const Addshopitem = () => {
 
         const itemInfo = { name, rating, image, description, category, price }
 
-        axios.post('http://localhost:5000/api/v1/shopitems', itemInfo)
+        axios.post('https://pet-adopter-backend.vercel.app/api/v1/shopitems', itemInfo)
             .then(res => {
                 toast.success('Item Added successfully!');
-                console.log(res.data);
                 e.target.reset();
             })
     };
