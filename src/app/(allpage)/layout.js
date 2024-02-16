@@ -5,12 +5,12 @@ import Footer from '@/components/Shared/Footer/Footer'
 
 
 const poppins = Poppins(
-  { 
-  subsets: ['latin'],
-  display: 'swap',
-  style: ['normal', 'italic'],
-  weight:['400', '500', '600', '700', '800', '900']
-})
+  {
+    subsets: ['latin'],
+    display: 'swap',
+    style: ['normal', 'italic'],
+    weight: ['400', '500', '600', '700', '800', '900']
+  })
 
 export const metadata = {
   title: 'Create Next App',
@@ -22,18 +22,18 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme='light'>
       <body className={poppins.className}>
 
-          <div className=" max-w-[1366px] mx-auto">
+        <div className=" max-w-[1366px] mx-auto">
 
           <div className="bg-[#FFF5E4]">
-             <NavBar>
-            {children}
+            <NavBar>
+              {children}
             </NavBar>
           </div>
-         
+
 
           <Footer />
         </div>
-   
+
       </body>
     </html>
   )

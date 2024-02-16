@@ -1,6 +1,6 @@
 import About from '@/components/About/About';
 
-const AboutPage = async() => {
+const AboutPage = async () => {
 
 
 

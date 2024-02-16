@@ -3,9 +3,9 @@ import '../../globals.css'
 // import UserData from '@/components/UserData/UserData'
 import { auth } from '@/app/api/auth';
 import UserData from './../../../Components/UserData/UserData';
-const page = async() => {
+const page = async () => {
     const session = await auth();
-        const user = session.user;  
+    const user = session.user;
     return (
         <div className='min-h-screen w-full'>
             <div className="bg-[#ffe3e1] lg:ml-1 w-full">
