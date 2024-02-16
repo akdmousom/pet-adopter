@@ -23,7 +23,7 @@ const Petlisting = ({ searchParams }) => {
     // All pets data fetch from database
     useEffect(() => {
         axios.get(`https://pet-adopter-backend.vercel.app/api/v1/petlistings?pageNumber=${pageNumber}`)
-        // axios.get(`http://localhost:5000/api/v1/petlistings?pageNumber=${pageNumber}`)
+            // axios.get(`https://pet-adopter-backend.vercel.app/api/v1/petlistings?pageNumber=${pageNumber}`)
             .then(res => {
                 setPetlistings(res.data);
             })
@@ -35,7 +35,7 @@ const Petlisting = ({ searchParams }) => {
     }, [pageNumber])
     useEffect(() => {
         axios.get('https://pet-adopter-backend.vercel.app/api/v1/petlistcount')
-        // axios.get('http://localhost:5000/api/v1/petlistcount')
+            // axios.get('https://pet-adopter-backend.vercel.app/api/v1/petlistcount')
             .then(res => {
                 setTotalData(res.data)
             })
