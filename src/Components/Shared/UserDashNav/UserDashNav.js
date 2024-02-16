@@ -32,6 +32,7 @@ const UserDashNav = async({ childrens }) => {
       <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={home} alt="alt" width={20} height={20} /> Home Page</Link></li>
       <li className=' '><Link href="/adoptHerePage" ><Image src={adoptRequest} alt="alt" width={20} height={20} /> Adopt Request</Link></li>
       <li className=' '><Link href="/pet-listing" ><Image src={petListing} alt="alt" width={20} height={20} /> Pet-Listing</Link></li>
+      <li className=' '><Link href="/addreview" ><Image src={post} alt="alt" width={20} height={20} /> Add Review</Link></li>
       <li className=' border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={setting} alt="alt" width={20} height={20} /> Setting</Link></li>
       <li className=' '><Link href="/adoptHerePage" ><Image src={security} alt="alt" width={20} height={20} /> Security</Link></li>
     </>
