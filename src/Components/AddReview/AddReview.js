@@ -5,7 +5,7 @@ import StarRatings from 'react-star-ratings';
 
 const AddReview = () => {
 
-    const [rating, setRating] = useState(5)
+    const [rating, setRating] = useState(1)
     console.log(rating);
 
     const handleSubmit = async (event) => {
