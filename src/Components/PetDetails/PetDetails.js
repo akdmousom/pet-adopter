@@ -13,7 +13,7 @@ const PetDetails = ({ pet, user }) => {
 
     const handleAdoptClick = () => {
 
-        axios.post('http://localhost:5000/api/v1/adoptrequest', { pet, user })
+        axios.post('https://pet-adopter-backend.vercel.app/api/v1/adoptrequest', { pet, user })
             .then(res => {
                 console.log(res.data);
 
