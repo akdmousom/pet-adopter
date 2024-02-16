@@ -5,7 +5,7 @@ import React from 'react';
 
 const Donate = ({ heading }) => {
     return (
-        <div className='bg-[#FFF5E4]'>
+        <div className='bg-[#ffe3e1] py-8'>
             <SectionTitle heading={' Help Us Change Lives'} />
             <div className="px-16 py-5 text-white ">
                 <div className="hero bg-fixed lg:h-[500px]" style={{ backgroundImage: 'url(https://i.ibb.co/HYr8Rqh/donate.jpg)' }}>

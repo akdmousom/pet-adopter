@@ -1,4 +1,3 @@
-
 import { auth } from '@/app/api/auth';
 import Image from 'next/image';
 import Link from 'next/link';
