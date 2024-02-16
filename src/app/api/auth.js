@@ -9,8 +9,8 @@ export const authOptions = {
                     name: "credentials",
         
                     credentials: {
-                        username: { label: "Email", type: "Email", placeholder: "petadopter@petadopter.com" },
-                        password: { label: "Password", type: "password", placeholder: "Password"  }
+                        username: { label: "Email", type: "Email", placeholder: "petadopter@petadopter.com", required: true },
+                        password: { label: "Password", type: "password", placeholder: "Password", required: true  }
                       },
         
                       authorize: async(credentials)=> {
