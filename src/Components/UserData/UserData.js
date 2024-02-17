@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Image from 'next/image'; // Corrected import statement
-import Modal from './../PetCommunity/Modal';
 import EmptyDashboard from '../EmptyDashboard/EmptyDashboard';
+import Modal from '../PetCommunity/Modal';
 
 const UserData = ({ user }) => {
     const { email } = user;
@@ -23,7 +23,7 @@ const UserData = ({ user }) => {
         <div>
             {
                 postData===''?
-                  <EmptyDashboard/>
+                  <EmptyDashboard />
                 :
                 <div>
                     {postData.map(data => (
