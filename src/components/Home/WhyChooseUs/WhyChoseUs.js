@@ -9,8 +9,8 @@ const WhyChoseUs = () => {
                 <Statistics />
                 <div className="grid mx-auto my-8">
                     <div className="text-black p-8">
-
-                        <h3 className="text-3xl lg:text-5xl text-center font-bold py-6">Why Choose Us?</h3>
+                    <h3 className="text-base font-semibold text-center text-[#F04336]">Excellence in Every Choice</h3>
+                        <h3 className="text-3xl lg:text-5xl text-center font-bold pb-6">Why Choose Us?</h3>
 
                         <div className="grid lg:grid-cols-4 gap-6 items-center justify-center my-4">
                             <div className="mb-4 lg:mb-0">

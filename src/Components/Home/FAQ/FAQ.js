@@ -5,8 +5,9 @@ const FAQ = () => {
     return (
         <>
             <div className='bg-[#FFF5E4] py-8 mb-8'>
-                <h3 className='text-3xl lg:text-5xl text-center font-bold pb-6'>FAQ</h3>
-                <div className='flex flex-col lg:flex-row items-center justify-center gap-3 py-4 px-4'>
+                <h3 className="text-base font-semibold text-center text-[#F04336]">Answers to Your Questions</h3>
+                <h3 className='text-3xl lg:text-5xl text-center font-bold pb-6'>Pet Adoption FAQs</h3>
+                <div className='flex flex-col lg:flex-row items-center justify-center gap-3 py-8 px-4'>
                     <div className='w-1/2'>
                         <Image src="https://i.ibb.co/hKdxMdP/pet-6.jpg" alt="pet-6" width={400} height={400} className='hidden md:block rounded-md w-[400px] md:w-[400px] lg:w-[600px] h-[200px] md:h-[400px] lg:h-[400px] object-cover' />
                     </div>

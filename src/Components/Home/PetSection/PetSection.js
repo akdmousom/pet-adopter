@@ -29,7 +29,7 @@ const PetSection = async () => {
 
                     {
                         slicedData?.map(pet =>
-                            <div key={pet._id} className="shadow-xl rounded-lg bg-white">
+                            <div key={pet._id} className="card bg-white lg:mx-auto">
 
                                 <Image src={pet.petImage} alt="" width={300} height={300} className="rounded-t-lg hover:cursor-pointer hover:scale-105 object-cover transform delay-200 duration-700 h-[280px] w-[350px]" />
 
@@ -53,7 +53,7 @@ const PetSection = async () => {
             </div>
 
             {/* See All Pets Button  */}
-            <div className="text-center mt-20 ">
+            <div className="text-center mt-12 ">
                 <Link href="/pet-listing">
                     <button className=" p-2 rounded-md bg-[#F04336] text-white hover:bg-black font-medium ">See All Pets</button>
                 </Link>
