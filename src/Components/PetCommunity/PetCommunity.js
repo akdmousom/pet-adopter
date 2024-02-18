@@ -3,7 +3,6 @@ import Image from "next/image";
 // import Modal from "./Modal";
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import Modal from "./Modal";
 
 const PetCommunity = () => {
     const [trueData, setStrueData] = useState(true)
@@ -24,7 +23,7 @@ const PetCommunity = () => {
     //  console.log(postData)
     return (
         <div>
-            {postData.map(data => <div key={data._id} className="max-w-[1366px] mx-auto my-10 p-5">
+            {postData.map(data => <div key={data._id} className="max-w-full mx-auto my-10 p-5">
                 <div className="grid lg:grid-cols-1 md:grid-cols-1 gap-3">
 
                     {/* Blog Card 1 */}

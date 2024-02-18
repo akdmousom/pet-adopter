@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Banner = () => {
     return (
-        <div className="max-w-[1366px] mx-auto mb-10">
+        <div className="max-w-full mx-auto mb-10">
             {/* Banner  */}
-            <div className="hero relative h-[550px]" style={{ backgroundImage: 'url(https://i.ibb.co/dLtZm6F/banner-Img.jpg)' }}>
+            <div className="hero relative h-[750px]" style={{ backgroundImage: 'url(https://i.ibb.co/dLtZm6F/banner-Img.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
 
                 <div className="absolute flex transform -translate-y-1/5 md:left-5 md:right-5 ">
@@ -26,35 +26,25 @@ const Banner = () => {
 
             {/* Shared with Banner  */}
 
-            <div className=" hidden mx-auto lg:block md:block xl:w-[1120px] lg:w-[782px] md:w-[578px]  absolute bg-[#0A303A] h-[116px] md:left-[46px] xl:left-[123px] lg:left-[123px] xl:right-[123px] lg:right-[123px] top-[604px] left-[39px] right-[44px] ">
+            <div className=" hidden mx-auto lg:block md:block xl:w-[1120px] lg:w-[782px] md:w-[578px]  absolute bg-[#0A303A] h-[116px] md:left-[46px] xl:left-[123px] lg:left-[123px] xl:right-[123px] lg:right-[123px] top-[604px] left-[39px] right-[44px] mt-[200px]">
 
                 {/* Banner Card  */}
                 <div className="flex justify-evenly mt-[43px]">
 
                     {/* button 1  */}
                     <div className="text-white px-3">
-                        <h3 className="lg:text-2xl md:text-lg items-center justify-center gap-5 flex">Pets Rescue <MdPets/> </h3>
+                        <h3 className="lg:text-2xl md:text-lg items-center justify-center gap-5 flex">Pets Rescue <MdPets /> </h3>
                     </div>
                     {/* button 2  */}
                     <div className="text-white px-3">
-                        <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Grooming <MdPets/> </h3>
+                        <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Grooming <MdPets /> </h3>
                     </div>
                     {/* button 3  */}
                     <div className="text-white px-3">
-                        <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Sitter <MdPets/> </h3>
+                        <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Sitter <MdPets /> </h3>
                     </div>
-
-
-
                 </div>
-
-
-
-
-
             </div>
-
-
         </div>
     );
 };

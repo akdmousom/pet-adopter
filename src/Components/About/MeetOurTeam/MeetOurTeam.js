@@ -4,11 +4,11 @@ import Image from "next/image";
 const MeetOurTeam = () => {
 
     return (
-        <div className="space-y-10 mt-14 mb-14 max-w-[1366px] mx-auto">
+        <div className="space-y-10 mt-14 mb-14 max-w-full mx-auto">
 
         {/* Title  */}
         <div className="text-center space-y-1">
-            <h3 className="text-2xl font-semibold text-[#F04336]">Meet Our Team</h3>
+            <h3 className="text-3xl lg:text-5xl text-[#F04336] text-center font-bold my-8">Meet Our Team</h3>
             <p className="font-semibold">Get to know the team behind Pawwelfare. We are veterinarians, <br/> animal rights activists and volunteers. But above all, we are animal lovers.</p>
         </div>
 

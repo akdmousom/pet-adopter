@@ -4,7 +4,7 @@ import Image from "next/image";
 const PetService = () => {
 
     return (
-        <div className=" max-w-[1366px] mx-auto mt-20 mb-20">
+        <div className=" max-w-full mx-auto mt-20 mb-20">
 
         <div className="text-center">
             <h3 className="text-base font-semibold text-[#F04336]">What We Provide</h3>

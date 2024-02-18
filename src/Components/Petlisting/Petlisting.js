@@ -73,7 +73,7 @@ const Petlisting = ({ searchParams }) => {
 
     return (
         <div>
-            <div className="py-4 md:flex justify-center items-center">
+            <div className="md:flex justify-center items-center py-4 lg:my-8">
                 <input
                     value={searchTerm}
                     onChange={handleSearchChange}
@@ -111,15 +111,15 @@ const Petlisting = ({ searchParams }) => {
 
                 </select>
             </div>
-            <div data-aos="fade-up" className="  ">
+            <div data-aos="fade-up">
                 {/* if filter length is bigger then 0 then show first div otherwise show the not avilable message */}
                 {filteredPetListing.length > 0 ?
 
                 <Suspense fallback={<Loading/>}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-4 mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
                    {
                      filteredPetListing?.map(pet =>
-                        <div key={pet._id} className="card border border-[#f04336] py-4 px-5 mx-4 lg:mx-auto mb-8">
+                        <div key={pet._id} className="card border border-[#f04336] py-4 px-4 lg:mx-auto mb-8">
                             <Image src={pet?.petImage} alt="cat" width={400} height={340} className="rounded-lg w-[400px] h-[340px] object-cover mb-4 hover:scale-110 duration-700" />
                             <h2 className="text-2xl font-bold mb-2">{pet.petName}</h2>
                             <p className="text-gray-500 mb-2">Age: {pet.petAge}</p>

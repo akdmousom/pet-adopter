@@ -1,13 +1,13 @@
 'use client'
 import Link from 'next/link';
 import React from 'react';
-
 import googleIcon from '../../../../public/images/google.svg'
 import facebookIcon from '../../../../public/images/facebook.svg'
-
 import Image from 'next/image'
 import { POST } from '@/app/api/auth/[...nextauth]/route';
 import { redirect } from 'next/navigation';
+
+
 const page = () => {
 
     const userData = async (formData) => {
@@ -41,7 +41,7 @@ const page = () => {
 
 
     return (
-        <div className="hero max-w-[1366px] min-h-screen bg-base-200">
+        <div className="hero max-w-full min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Register now!</h1>

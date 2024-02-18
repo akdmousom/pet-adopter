@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Image from 'next/image'; // Corrected import statement
-import EmptyDashboard from '../EmptyDashboard/EmptyDashboard';
 import Modal from '../PetCommunity/Modal';
+import EmptyDashboard from '../EmptyDashboard/EmptyDashboard';
 
 const UserData = ({ user }) => {
     const { email } = user;
@@ -27,7 +27,7 @@ const UserData = ({ user }) => {
                 :
                 <div>
                     {postData.map(data => (
-                    <div key={data._id} className="max-w-[1366px] mx-auto my-10 p-5">
+                    <div key={data._id} className="max-w-full mx-auto my-10 p-5">
                         <div className="grid lg:grid-cols-1 md:grid-cols-1 gap-3">
                             {/* Blog Card 1 */}
                             <div className="card  bg-base-100 shadow-xl">

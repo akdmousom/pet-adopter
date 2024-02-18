@@ -13,7 +13,7 @@ const PetSection = async () => {
 
 
     return (
-        <div className="mt-10 mb-20  max-w-[1366px]  mx-auto">
+        <div className="mt-10 mb-20  max-w-full  mx-auto">
             <div className="text-center space-y-3">
 
                 <Image width={200} height={200} className="w-12 rounded-2xl mx-auto" src="https://i.ibb.co/3fdPN5F/pawprint.gif" alt="" />
@@ -31,7 +31,7 @@ const PetSection = async () => {
                         slicedData?.map(pet =>
                             <div key={pet._id} className="shadow-xl rounded-lg bg-white">
 
-                                <Image src={pet.petImage} alt="" width={300} height={300} className="rounded-t-lg hover:cursor-pointer hover:scale-105 transform delay-200 duration-700 h-[280px] w-[350px]" />
+                                <Image src={pet.petImage} alt="" width={300} height={300} className="rounded-t-lg hover:cursor-pointer hover:scale-105 object-cover transform delay-200 duration-700 h-[280px] w-[350px]" />
 
                                 <div className="px-2 py-4">
                                     <h3 className="text-lg font-semibold mb-2">{pet.petName}</h3>
@@ -53,7 +53,7 @@ const PetSection = async () => {
             </div>
 
             {/* See All Pets Button  */}
-            <div className="text-center my-5 ">
+            <div className="text-center mt-20 ">
                 <Link href="/pet-listing">
                     <button className=" p-2 rounded-md bg-[#F04336] text-white hover:bg-black font-medium ">See All Pets</button>
                 </Link>

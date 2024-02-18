@@ -2,7 +2,7 @@
 import '../../globals.css'
 // import UserData from '@/components/UserData/UserData'
 import { auth } from '@/app/api/auth';
-import UserData from './../../../Components/UserData/UserData';
+import UserData from './../../../components/UserData/UserData';
 const page = async () => {
     const session = await auth();
     const user = session.user;
