@@ -11,11 +11,19 @@ import './UserReview.css'
 
 import { EffectCoverflow, Autoplay, Pagination, } from 'swiper/modules';
 import Image from 'next/image';
-import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const UserReview = () => {
 
-   
+    const [review, setReview] = useState()
+
+    axios.get('https://pet-adopter-backend.vercel.app/api/v1/Feedbacks')
+        .then(res => {
+            setReview(res.data)
+            
+        })
+       
+
 
     return (
         <div className='mt-20 mb-12'>

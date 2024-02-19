@@ -4,7 +4,7 @@ import { useState } from 'react';
 import StarRatings from 'react-star-ratings';
 import Swal from 'sweetalert2';
 
-const AddReview = ({ user }) => {
+export const AddReview = ({ user }) => {
     const { name, image } = user;
     const [rating, setRating] = useState(1)
 
