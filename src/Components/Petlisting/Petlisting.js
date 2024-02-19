@@ -23,7 +23,7 @@ const Petlisting = ({ searchParams }) => {
     // All pets data fetch from database
     useEffect(() => {
         axios.get(`https://pet-adopter-backend.vercel.app/api/v1/petlistings?pageNumber=${pageNumber}`)
-        // axios.get(`http://localhost:5000/api/v1/petlistings?pageNumber=${pageNumber}`)
+            // axios.get(`https://pet-adopter-backend.vercel.app/api/v1/petlistings?pageNumber=${pageNumber}`)
             .then(res => {
                 setPetlistings(res.data);
             })
@@ -35,7 +35,7 @@ const Petlisting = ({ searchParams }) => {
     }, [pageNumber])
     useEffect(() => {
         axios.get('https://pet-adopter-backend.vercel.app/api/v1/petlistcount')
-        // axios.get('http://localhost:5000/api/v1/petlistcount')
+            // axios.get('https://pet-adopter-backend.vercel.app/api/v1/petlistcount')
             .then(res => {
                 setTotalData(res.data)
             })
@@ -115,31 +115,30 @@ const Petlisting = ({ searchParams }) => {
                 {/* if filter length is bigger then 0 then show first div otherwise show the not avilable message */}
                 {filteredPetListing.length > 0 ?
 
-                    <Suspense fallback={<Loading />}>
-                        <div className="grid md:grid-cols-2 min-h-screen lg:grid-cols-3 items-center justify-center gap-5">
-                            {
-                                filteredPetListing?.map(pet =>
-                                    <div key={pet._id} className="bg-white rounded-md shadow-md p-4">
-                                        <Image src={pet?.petImage} alt="cat" width={400} height={340} className="rounded-lg w-[400px] h-[340px] object-cover mb-4 hover:scale-110 duration-700" />
-                                        <h2 className="text-2xl font-bold mb-2">{pet.petName}</h2>
-                                        <p className="text-gray-500 mb-2">Age: {pet.petAge}</p>
-                                        <p className="text-gray-500 mb-2">Location: {pet.petLocation}</p>
-                                        <Link href={`/${pet.petCategory}/${pet._id}`} >
-                                            <button
-                                                className="bg-[#FA524F] text-white font-bold rounded-md px-4 py-2 hover:bg-black active:bg-[#f17876] focus:outline-none"
-                                            >
-                                                View Details
-                                            </button>
-                                        </Link>
-                                    </div>
-
-                                )
-                            }
-                        </div>
-                    </Suspense>
-
-                    : <div className="max-w-full grid min-h-screen justify-center items-center mx-auto">
-                        <h1 className="text-center font-bold text-3xl">Pet&apos;s Not Available</h1>
+                <Suspense fallback={<Loading/>}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-4 mx-auto">
+                   {
+                     filteredPetListing?.map(pet =>
+                        <div key={pet._id} className="card border border-[#f04336] py-4 px-5 mx-4 lg:mx-auto mb-8">
+                            <Image src={pet?.petImage} alt="cat" width={400} height={340} className="rounded-lg w-[400px] h-[340px] object-cover mb-4 hover:scale-110 duration-700" />
+                            <h2 className="text-2xl font-bold mb-2">{pet.petName}</h2>
+                            <p className="text-gray-500 mb-2">Age: {pet.petAge}</p>
+                            <p className="text-gray-500 mb-2">Location: {pet.petLocation}</p>
+                            <Link href={`/${pet.petCategory}/${pet._id}`} >
+                                <button
+                                    className="bg-[#FA524F] text-white font-bold rounded-md px-4 py-2 hover:bg-black active:bg-[#f17876] focus:outline-none"
+                                >
+                                    View Details
+                                </button>
+                            </Link>
+                        </div> 
+                    )
+                   }
+                </div>
+                </Suspense>
+                
+                : <div className="max-w-full grid min-h-screen justify-center items-center mx-auto">
+                    <h1 className="text-center font-bold text-3xl">Pet&apos;s Not Available</h1>
                     </div>}
             </div>
             <div className='text-center container mx-auto py-10 pagination'>

@@ -10,7 +10,7 @@ const WhyChoseUs = () => {
                 <div className="bg-[#ffe3e1] grid mx-auto my-8">
                     <div className="text-black p-8">
 
-                        <h3 className="text-4xl lg:text-5xl text-center font-bold py-8">Why Choose Us?</h3>
+                        <h3 className="text-3xl lg:text-5xl text-center font-bold py-6">Why Choose Us?</h3>
 
                         <div className="grid lg:grid-cols-4 gap-6 items-center justify-center my-4">
                             <div className="mb-4 lg:mb-0">
