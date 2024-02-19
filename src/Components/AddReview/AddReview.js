@@ -3,24 +3,25 @@ import axios from 'axios';
 import { useState } from 'react';
 import StarRatings from 'react-star-ratings';
 
-const AddReview = () => {
-
+const AddReview = ({ user }) => {
+    const { name, image } = user;
     const [rating, setRating] = useState(1)
-    console.log(rating);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.target;
         const review = form.review.value;
         event.target.reset();
-        console.log(review);
 
         const reviewInfo = {
+            name,
+            image,
             review,
             rating,
         }
+        console.log(reviewInfo);
 
-        axios.post('http://localhost:5000/api/v1/Feedbacks', reviewInfo)
+        axios.post('https://pet-adopter-backend.vercel.app/api/v1/Feedbacks', reviewInfo)
             .then(res => {
                 console.log(res.data);
             })
