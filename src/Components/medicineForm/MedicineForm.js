@@ -10,8 +10,8 @@ const MedicineForm = () => {
     // form submit function
     const onSubmit = async (data) => {
         setloading(true)
-        ///   https://pet-adopter-backend.vercel.app
-        const res = await fetch('http://localhost:5000/api/v1/medicine ', {
+        ///   https://pet-adopter-backend.vercel.app http://localhost:5000
+        const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/medicine', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
