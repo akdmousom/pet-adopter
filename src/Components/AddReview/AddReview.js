@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import StarRatings from 'react-star-ratings';
+import Swal from 'sweetalert2';
 
 const AddReview = ({ user }) => {
     const { name, image } = user;
@@ -19,11 +20,9 @@ const AddReview = ({ user }) => {
             review,
             rating,
         }
-        console.log(reviewInfo);
-
         axios.post('https://pet-adopter-backend.vercel.app/api/v1/Feedbacks', reviewInfo)
             .then(res => {
-                console.log(res.data);
+                Swal.fire(`${name} Your Review Done!`);
             })
             .catch(error => {
                 console.log(error.massage);

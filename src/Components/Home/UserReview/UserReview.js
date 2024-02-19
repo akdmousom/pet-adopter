@@ -9,10 +9,13 @@ import 'swiper/css/pagination';
 import './UserReview.css'
 
 
-import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Autoplay, Pagination, } from 'swiper/modules';
 import Image from 'next/image';
+import Swal from 'sweetalert2';
 
 const UserReview = () => {
+
+   
 
     return (
         <div className='mt-20 mb-12'>
