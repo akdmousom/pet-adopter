@@ -20,6 +20,7 @@ export const AddReview = ({ user }) => {
             review,
             rating,
         }
+
         axios.post('https://pet-adopter-backend.vercel.app/api/v1/Feedbacks', reviewInfo)
             .then(res => {
                 Swal.fire(`${name} Your Review Done!`);
