@@ -1,4 +1,5 @@
 'use client'
+import axios from 'axios'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Swal from 'sweetalert2'
@@ -9,7 +10,18 @@ const MedicineForm = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm()
     // form submit function
     const onSubmit = async (data) => {
-        setloading(true)
+        // setloading(true)
+        /*
+                const res = await axios.post("https://api.imgbb.com/1/upload?key=5201d474546c521dc75dd9c96eea7a84", { image: data.foodimage[0] }, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        })
+        if (res.data.success) {
+            data.foodimage = res.data.data.display_url
+        */
+   
+        return
         ///   https://pet-adopter-backend.vercel.app http://localhost:5000
         const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/medicine', {
             method: 'POST',
@@ -26,7 +38,7 @@ const MedicineForm = () => {
                 title: "medicine added to store",
                 showConfirmButton: false,
                 timer: 1500
-              });
+            });
         }
         setloading(false)
     }
@@ -58,6 +70,10 @@ const MedicineForm = () => {
                     {errors.side_effects && <span className='text-red-500'>side effects is required</span>}
                 </label>
             </div>
+            <label><span className=' font-semibold uppercase'>medicine image </span>
+                <input type='file' className='p-3 w-full border' placeholder="description for this medicine" {...register("medicine_img", { required: true })} />
+                {errors.medicine_img && <span className='text-red-500'>description  is required</span>}
+            </label>
             <label><span className=' font-semibold uppercase'>description </span>
                 <textarea className='p-3 w-full border' placeholder="description for this medicine" {...register("description ", { required: true })} />
                 {errors.description && <span className='text-red-500'>description  is required</span>}
