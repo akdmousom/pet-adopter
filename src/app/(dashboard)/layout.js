@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
  return (
     <html lang="en" data-theme="light">
       <body>
-        <div className="">
+        <div className="w-full">
 
           <UserDashNav childrens={children} />
         </div>

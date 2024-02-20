@@ -54,7 +54,7 @@ const PostPetCommunity = ({ user }) => {
                         timer: 1500
                     });
                 } else {
-                    axios.post('https://pet-adopter-rosy.vercel.app/api/v1/petCommunity', postData)
+                    axios.post('http://localhost:5000/api/v1/petCommunity', postData)
                         .then(res => {
                             if (res.statusText === 'OK') {
                                 Swal.fire({
