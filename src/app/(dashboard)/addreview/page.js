@@ -1,10 +1,14 @@
+import { auth } from "@/app/api/auth";
 import AddReview from "@/components/AddReview/AddReview";
 
-const page = () => {
+const page = async () => {
+
+    const session = await auth();
+    const user = session.user
 
     return (
         <div>
-            <AddReview/>
+            <AddReview user={user} />
         </div>
     );
 };
