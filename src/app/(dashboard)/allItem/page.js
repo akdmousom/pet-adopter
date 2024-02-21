@@ -1,8 +1,10 @@
+import DeleteItem from '@/Components/AllItem/DeleteItem';
 import Star from '@/Components/AllItem/Star';
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 import { FaEdit } from 'react-icons/fa';
-import { MdDelete, MdDetails } from 'react-icons/md';
+import { MdDetails } from 'react-icons/md';
 const page = async () => {
     // fetch store data
     const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/shopitems', {
@@ -39,10 +41,15 @@ const page = async () => {
                                 <Star ratings={item?.rating} />
                             </td>
                             <td >
+                                {/* updateitem */}
                                 <span className='flex justify-center items-center gap-2 text-2xl'>
-                                    <FaEdit className='hover:text-pink-500 active:scale-90 transition-all hover:scale-105 cursor-pointer'/>
-                                    <MdDelete className='hover:text-pink-500 active:scale-90 transition-all hover:scale-105 cursor-pointer'/>
-                                    <MdDetails className='hover:text-pink-500 active:scale-90 transition-all hover:scale-105 cursor-pointer'/>
+                                    <Link href={`/updateitem?itemid=${item?._id}`}>
+                                        <FaEdit className='hover:text-pink-500 active:scale-90 transition-all hover:scale-105 cursor-pointer' />
+                                    </Link>
+                                    <DeleteItem itemId={item?._id} />
+                                    <Link href={`/item/medical/${item?._id}`}>
+                                        <MdDetails className='hover:text-pink-500 active:scale-90 transition-all hover:scale-105 cursor-pointer' />
+                                    </Link>
                                 </span>
                             </td>
                         </tr>
