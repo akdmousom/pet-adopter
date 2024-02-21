@@ -1,31 +1,34 @@
 "use client"
-
+import axios from 'axios';
 import Image from "next/image";
-// import { useState } from "react";
 import { LuSendHorizonal } from "react-icons/lu";
-
-const Modal = () => {
-   
-    
+import { useEffect, useState } from "react";
+const Modal = ({data,user}) => {
+    console.log(user,'user data')
+    console.log(data,'data data')
+    const [commentData,setCommentData]=useState([])
+    const id=data._id
+    console.log(id,'id')
     const handleComment = event => {
         event.preventDefault()
         const form = event.target;
         const comment = form.comment.value;
+        const likeComment={id,user_image:user.image,user_name:user.name,comment}
+        axios.post('http://localhost:5000/api/v1/likeComment',likeComment)
+        .then(res=>console.log(res,'res'))
+        .catch(error=>console.log(error))
         event.target.comment.value=" "
         console.log(comment);
-        
-        
     }
-    const allcomments=[
-        {comments:'lokman hakim shawon'},
-        {comments:'lokman hakim shawon'},
-        {comments:'lokman hakim shawon'},
-        {comments:'lokman hakim shawon'},
-        {comments:'lokman hakim shawon'},
-        {comments:'lokman hakim shawon'},
-        {comments:'lokman hakim shawon'},
-        {comments:'lokman hakim shawon'},
-]
+    useEffect(() => {
+        axios.get('http://localhost:5000/api/v1/likeCommentGet')
+        .then(res=>{
+            const filterdata=res.data.filter(item=>item.id===id)
+            console.log(filterdata.id,'comment')
+            setCommentData(filterdata.reverse())
+        })
+        .catch(error=>console.log(error))
+    }, []);
 
     return (
         <div>
@@ -45,16 +48,16 @@ const Modal = () => {
 
                     </div>
                     {
-                        allcomments.map(data=><div key={data.comments} className="bg-gray-100 py-5 px-3 rounded-lg my-2">
+                        commentData.map(data=><div key={data._id} className="bg-gray-100 py-5 px-3 rounded-lg my-2">
                         <div className="flex space-x-2 ">
                         <div className="avatar">
                            <div className="w-8 rounded-full">
-                             <Image width={200} height={200} src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" alt=""/>
+                             <Image width={200} height={200} src={data.user_image} alt=""/>
                            </div>
                         </div>
-                            <h1 className="font-bold">commenter Name</h1>
+                            <h1 className="font-bold">{data.user_name}</h1>
                         </div>
-                        <h1 className="pl-5 py-3">{data.comments}</h1>
+                        <h1 className="pl-5 py-3">{data.comment}</h1>
                     </div>)
                     }
                 </div>

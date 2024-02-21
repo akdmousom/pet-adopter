@@ -5,50 +5,81 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import Modal from "./Modal";
 
-const PetCommunity = () => {
-    const [trueData, setStrueData] = useState(true)
+const PetCommunity = ({user}) => {
+    const [trueData, setTrueData] = useState(true)
     const [postData, setPostData] = useState([])
-
+    const [like, setLike] = useState(true)
+    
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/petCommunity/api/v1/petCommunity')
+        axios.get('http://localhost:5000/api/v1/petCommunity')
               .then(res => {
                        setPostData(res.data.reverse())
             })
-            .catch(error => console.log(error, 'error'))
+            .catch(error => console.log (error, 'error'))
    }, [])
-     console.log(postData)
+    const handleLike=(id)=>{
+      const like='like'
+    const likeComment={id,like}
+    axios.post('http://localhost:5000/api/v1/likeComment',likeComment)
+    .then(res=>{
+      console.log(res)
+      setLike(false)
+    })
+    .catch(error=>console.log(error))
+      
+        
+      }
     return (
         <div>
             {
-                postData.map(data=><div key={data._id} className="  bg-base-100 border border-red-600">
+              postData==''?
+              <h1 className="font-bold text-5xl text-center my-40">There are no post available !</h1>
+              :
+              <div>
+                {
+                postData.map(data=><div key={data._id} className="card  bg-base-100 shadow-xl my-10 mx-10">
                 <div className="flex py-2 lg:py-5 pl-2 lg:pl-5">
                 <div className="avatar py-2">
                 <div className="w-8 lg:w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  <img src={data.user_image} />
                 </div>
               </div>
                   <div className=' pl-5'>
-                  <h2 className="card-title text-sm">Name</h2>
-                  <p className='text-xs'>If a dog chews shoes whose shoes does he choose?</p>
+                  <h2 className="card-title text-lg">{data.user_name}</h2>
+                  <p className='text-xs'>{data.post_date}</p>
                   </div>
                 </div>
-                  <h1 className='text-xs p-1 lg:pl-5'>messeage</h1>
+                {
+                data.input_message.length>=100?
+                trueData==true?
+                <h1 className='text-lg p-1 lg:pb-5 lg:pl-5'>{data.input_message.slice(0,150)}.....<span onClick={()=>setTrueData(false)} className='cursor-pointer'>more</span></h1>
+                :
+                <h1 className='text-lg p-1 lg:pb-5 lg:pl-5'>{data.input_message}</h1>
+                :
+                <h1 className='text-sm p-1 lg:pb-5 lg:pl-5'>{data.input_message}</h1>
+              }
                 <div className=' flex flex-col items-center'>
-                   <figure className=""><img className="w-full" src={"https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"} alt="Shoes" /></figure>
+                   <figure className=""><img className="w-screen" src={data.input_image} alt="Shoes" /></figure>
                 </div>
-                <div className='flex justify-between mx-2 lg:mx-6 my-2 lg:my-5'>
+                <div className='flex justify-between mx-2 lg:mx-16 my-2 lg:my-5'>
                   <div className='space-y-2 lg:space-y-5'>
                      <h1 className='lg:font-bold text-center text-xs'>10K</h1>
-                     <h1 className='font-bold border border-black py-2 px-3 rounded-lg text-xs'>Like</h1>
+                     {
+                      like==true?
+                      <h1 className='font-bold border border-black py-2 px-3 rounded-lg text-xs' onClick={()=>handleLike(data._id)}>Like</h1>
+                      :
+                      <h1 className='font-bold border border-black py-2 px-3 rounded-lg text-xs text-white bg-black'>Like</h1>
+                     }
                   </div>
                   <div className='space-y-2 lg:space-y-5'>
                      <h1 className='lg:font-bold text-center text-xs'>500</h1>
-                     <h1 className='font-bold border border-black py-2 px-3 rounded-lg text-xs'>comment</h1>
-              
+                     <Modal data={data} user={user}/>
                   </div>
                 </div>
               </div>)
+            }
+              </div>
             }
         </div>
     );
