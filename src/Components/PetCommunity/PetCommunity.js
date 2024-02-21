@@ -12,7 +12,7 @@ const PetCommunity = ({user}) => {
     
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/petCommunity')
+        axios.get('https://pet-adopter-backend.vercel.app/api/v1/petCommunity')
               .then(res => {
                        setPostData(res.data.reverse())
             })
@@ -21,7 +21,7 @@ const PetCommunity = ({user}) => {
     const handleLike=(id)=>{
       const like='like'
     const likeComment={id,like}
-    axios.post('http://localhost:5000/api/v1/likeComment',likeComment)
+    axios.post('https://pet-adopter-backend.vercel.app/api/v1/likeComment',likeComment)
     .then(res=>{
       console.log(res)
       setLike(false)

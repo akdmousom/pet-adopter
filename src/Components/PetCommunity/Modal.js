@@ -14,14 +14,14 @@ const Modal = ({data,user}) => {
         const form = event.target;
         const comment = form.comment.value;
         const likeComment={id,user_image:user.image,user_name:user.name,comment}
-        axios.post('http://localhost:5000/api/v1/likeComment',likeComment)
+        axios.post('https://pet-adopter-backend.vercel.app/api/v1/likeComment',likeComment)
         .then(res=>console.log(res,'res'))
         .catch(error=>console.log(error))
         event.target.comment.value=" "
         console.log(comment);
     }
     useEffect(() => {
-        axios.get('http://localhost:5000/api/v1/likeCommentGet')
+        axios.get('https://pet-adopter-backend.vercel.app/api/v1/likeCommentGet')
         .then(res=>{
             const filterdata=res.data.filter(item=>item.id===id)
             console.log(filterdata.id,'comment')
