@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const UpdateShopItem = ({ item }) => {
     const router = useRouter()
     const handleSubmit = async (e) => {
-        const imgbb_key = 'ceccd7f28cf74921bd1fb98402d6032f';
         e.preventDefault();
+        const imgbb_key = 'ceccd7f28cf74921bd1fb98402d6032f';
         // get form value
         const rating = e.target.rating.value
         const name = e.target.name.value
@@ -20,7 +20,6 @@ const UpdateShopItem = ({ item }) => {
         const itemInfo = { name, rating, description, category, price }
         // upload image
         if (img) {
-            console.log('img')
             const formData = new FormData();
             formData.append('image', img);
             const res = await axios.post(`https://api.imgbb.com/1/upload?key=${imgbb_key}`, formData)
