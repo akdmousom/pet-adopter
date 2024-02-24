@@ -1,4 +1,4 @@
-import Addshopitem from '@/components/Shop/Addshopitem/Addshopitem';
+import Addshopitem from '@/Components/Shop/Addshopitem/Addshopitem';
 import React from 'react';
 
 const addItemPage = () => {

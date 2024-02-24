@@ -15,15 +15,15 @@ const Admin_dashboard = () => {
     })
     .catch(error=>console.log(error))
     
-    axios.get('http://localhost:5000/api/v1/petCommunity')
+    axios.get('https://pet-adopter-backend.vercel.app/api/v1/petCommunity')
     .then(res=>setTotalPost(res.data.length))
     .catch(error=>console.log(error))
 
-    axios.get('http://localhost:5000/api/v1/petlistings')
+    axios.get('https://pet-adopter-backend.vercel.app/api/v1/petlistings')
     .then(res=>setTotalPet(res.data.length))
     .catch(error=>console.log(error))
     
-    axios.get('http://localhost:5000/api/v1/adoptrequest')
+    axios.get('https://pet-adopter-backend.vercel.app/api/v1/adoptrequest')
     .then(res=>setTotalRequest(res.data.length))
     .catch(error=>console.log(error))
   },[])
