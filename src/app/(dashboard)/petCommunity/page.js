@@ -1,10 +1,12 @@
 import PetCommunity from "@/components/PetCommunity/PetCommunity";
 
-
-const page = () => {
+import { auth } from '@/app/api/auth';
+const page = async() => {
+    const session = await auth();
+  const user = session.user
     return (
         <div className="">
-            <PetCommunity />
+            <PetCommunity user={user} />
         </div>
     );
 };
