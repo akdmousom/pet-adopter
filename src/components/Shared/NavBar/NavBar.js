@@ -4,6 +4,7 @@ import Link from "next/link";
 import logo from "../../../../public/logo.png"
 import UserDropdown from "./UserDropdown/UserDropDown";
 import Header from "@/components/Home/Header/Header";
+import DarkMode from "@/components/DarkMode/DarkMode";
 
 
 
@@ -22,7 +23,7 @@ const NavBar = async ({ children }) => {
     return (
         <div>
             <Header />
-            <div className="drawer z-10 bg-[#ffe3e1] text-black shadow-md ">
+            <div className="drawer z-10 bg-[#ffe3e1] dark:bg-slate-800 text-black shadow-md ">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex justify-evenly flex-col">
                     {/* Navbar */}
@@ -34,9 +35,7 @@ const NavBar = async ({ children }) => {
                         </div>
                         <div className="flex justify-between md:justify-around lg:justify-between w-full mx-4">
                             <Image src={logo} alt="logo" className=" h-24 w-52 object-cover" />
-
-
-                            <div className="flex-none text-center hidden lg:block">
+                            <div className="flex-none text-center items-center hidden lg:block">
                                 <ul className="flex justi items-center gap-6">
                                     {/* Navbar menu content here */}
                                     {NavLinks.map((link) => {
@@ -54,14 +53,15 @@ const NavBar = async ({ children }) => {
 
                                 </ul>
                             </div>
-                            <div className="hidden md:flex gap-3 md:gap-5 items-center ">
+                            <div className="hidden md:flex gap-3 md:gap-5 items-center">
                                 <Link href="/adoptHerePage">
-                                    <button className="md:text-lg  text-white rounded-full font-medium md:px-5 px-2 py-2 md:py-2 hover:bg-black bg-[#F04336]">Adopt Here</button>
+                                    <button className="md:text-lg text-white text-center items-center rounded-full font-medium md:px-5 px-2 py-2 md:py-2 hover:bg-black bg-[#F04336]">Adopt Here</button>
                                 </Link>
                                 {/* <CgProfile onClick={showPopup} className="text-3xl text-[#F04336] cursor-pointer" /> */}
                             </div>
-
-
+                            <div className="flex items-center">
+                                <DarkMode />
+                            </div>
                             <div className="dropdown dropdown-end">
                                 <UserDropdown />
                             </div>
@@ -70,8 +70,6 @@ const NavBar = async ({ children }) => {
                     <div className="bg-[#FFF5E4]">
                         {children}
                     </div>
-
-
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
