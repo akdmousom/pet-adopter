@@ -33,7 +33,32 @@ const page = () => {
 
         const data = await response.json();
         console.log(data);
-       
+        
+        const regData = {
+            userName: rawFormData.fullName,
+            userEmail: rawFormData.userEmail,
+            userAvater: data.data.url,
+            userPassword: rawFormData.userPassword,
+        }
+        console.log(regData);
+
+
+        // When user hit the login button you can get user information in rawFormData object
+        await regData
+        const res = await fetch(`https://pet-adopter-backend.vercel.app/api/v1/userregistration`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+
+            },
+            body: JSON.stringify(regData),
+        })
+
+        if (res.ok) {
+
+            redirect('/')
+
+        }
     }
 
 
