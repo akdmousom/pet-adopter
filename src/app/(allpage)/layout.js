@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme='light'>
       <body className={poppins.className}>
           <div className=" max-w-full mx-auto">
-            <div className="bg-[#FFF5E4]">
+            <div className="bg-[#FFF5E4] dark:bg-[#585d65]">
               <NavBar>
                 {children}
               </NavBar>

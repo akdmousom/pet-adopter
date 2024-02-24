@@ -4,11 +4,11 @@ import Image from "next/image";
 const PetService = () => {
 
     return (
-        <div className=" max-w-full mx-auto mt-20 mb-20">
+        <div className="dark:bg-[#585d65] max-w-full mx-auto py-20">
 
         <div className="text-center">
-            <h3 className="text-base font-semibold text-[#F04336]">What We Provide</h3>
-            <h1 className="text-3xl lg:text-5xl text-center font-bold pb-6">Pet Care Services</h1>
+            <h3 className="text-base font-semibold text-[#F04336] dark:text-[#68e0cf]">What We Provide</h3>
+            <h1 className="text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white">Pet Care Services</h1>
         </div>
 
       
@@ -25,8 +25,8 @@ const PetService = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <h1 className='text-xl font-bold mt-2'>Online Order</h1>
-                        <p>To offer you a wide range of top-quality pet care products to ensure the health</p>
+                        <h1 className='text-xl font-bold mt-2 dark:text-[#68e0cf]'>Online Order</h1>
+                        <p className="dark:text-white">To offer you a wide range of top-quality pet care products to ensure the health</p>
                     </div>
                 </div>
                 {/* Card 2 */}
@@ -37,8 +37,8 @@ const PetService = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <h1 className='text-xl font-bold mt-2'>Pet Grooming</h1>
-                        <p>Pet grooming is a vital aspect of pet care that involves maintaining the cleanliness.</p>
+                        <h1 className='text-xl font-bold mt-2 dark:text-[#68e0cf]'>Pet Grooming</h1>
+                        <p className="dark:text-white">Pet grooming is a vital aspect of pet care that involves maintaining the cleanliness.</p>
                     </div>
                 </div>
                 {/* Card 3 */}
@@ -49,8 +49,8 @@ const PetService = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <h1 className='text-xl font-bold mt-2'>Pet Boarding</h1>
-                        <p>Pet boarding facilities offer a safe, supervised, and comfortable environment.</p>
+                        <h1 className='text-xl font-bold mt-2 dark:text-[#68e0cf]'>Pet Boarding</h1>
+                        <p className="dark:text-white">Pet boarding facilities offer a safe, supervised, and comfortable environment.</p>
                     </div>
                 </div>
                 {/* Card 4 */}
@@ -61,8 +61,8 @@ const PetService = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <h1 className='text-xl font-bold mt-2'>Dog Walking</h1>
-                        <p>It involves taking dogs for walks on a leash, usually in parks, neighborhoods.</p>
+                        <h1 className='text-xl font-bold mt-2 dark:text-[#68e0cf]'>Dog Walking</h1>
+                        <p className="dark:text-white">It involves taking dogs for walks on a leash, usually in parks, neighborhoods.</p>
                     </div>
                 </div>
                
