@@ -16,7 +16,7 @@ const Donate = ({ heading }) => {
                             <h1 className="mb-5 text-3xl font-bold"> <span className='text-5xl py-0 text-[#f8685e] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]'>Every</span> Tail Wags with Your Support</h1>
                             <p className="mb-5">Behind every happy rescue story are compassionate hearts like yours. Your kind donation fuels our mission to provide abandoned animals with second chances. It covers food, shelter, medical care, and the love they need until they find their forever homes.</p>
                             <Link href="donation/form">
-                                <button className="btn border-none rounded-md bg-[#F04336] hover:bg-black text-white dark:text-black dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Donate</button></Link>
+                                <button className="btn border-none rounded-md bg-[#F04336] hover:bg-black text-white dark:text-black dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] font-semibold">Donate</button></Link>
 
                         </div>
                     </div>
