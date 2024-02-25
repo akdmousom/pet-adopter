@@ -25,11 +25,11 @@ const PetSection = async () => {
             {/* Card section */}
             <div className="my-5">
 
-                <div className="grid grid-cols-1 mx-10 xl:grid-cols-4 lg:grid-cols- md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 mx-4 md:mx-10 xl:grid-cols-4 lg:grid-cols- md:grid-cols-2 gap-4">
 
                     {
                         slicedData?.map(pet =>
-                            <div key={pet._id} className="card bg-white dark:bg-slate-400 lg:mx-auto">
+                            <div key={pet._id} className="card bg-white dark:bg-[#9DB2BF] lg:mx-auto">
 
                                 <Image src={pet.petImage} alt="" width={300} height={300} className="rounded-t-lg hover:cursor-pointer hover:scale-105 object-cover transform delay-200 duration-700 h-[280px] w-[350px]" />
 
