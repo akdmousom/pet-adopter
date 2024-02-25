@@ -15,11 +15,11 @@ import Image from 'next/image';
 const UserReview = () => {
 
     return (
-        <div className='mt-20 mb-12'>
+        <div className='py-16 dark:bg-[#585d65]'>
 
             <div className='text-center'>
-                <h4 className='text-base font-semibold text-[#F04336]'>Users opinions</h4>
-                <h1 className='text-3xl lg:text-5xl text-center font-bold pb-6'>Users Review</h1>
+                <h4 className='text-base font-semibold text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]'>Users opinions</h4>
+                <h1 className='text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white'>Users Review</h1>
             </div>
 
 
@@ -50,7 +50,7 @@ const UserReview = () => {
                         <Image className='ml-[106px] h-24 w-24 object-cover' width={200} height={200} src="https://i.ibb.co/cYHQRCp/team4.jpg" alt="" />
 
                         <div>
-                            <h1 className='text-lg mt-2'>David Parker</h1>
+                            <h1 className='text-lg mt-4'>David Parker</h1>
 
                             {/* Rating 1 */}
                             <div className="rating w-20">
@@ -72,7 +72,7 @@ const UserReview = () => {
                         <Image className='ml-[106px] h-24 w-24 object-cover' width={200} height={200} src="https://i.ibb.co/tzTW92P/team2.jpg" alt="" />
 
                         <div>
-                            <h1 className='text-lg mt-2'>John Smith</h1>
+                            <h1 className='text-lg mt-4'>John Smith</h1>
 
                             {/* Rating 2 */}
                             <div className="rating w-20">
@@ -93,7 +93,7 @@ const UserReview = () => {
                         <Image className='ml-[106px] h-24 w-24 object-cover' width={200} height={200} src="https://i.ibb.co/MSLktRC/team1.jpg" alt="" />
 
                         <div>
-                            <h1 className='text-lg mt-2'>Daniel Lee</h1>
+                            <h1 className='text-lg mt-4'>Daniel Lee</h1>
 
                             {/* Rating 3 */}
                             <div className="rating w-20">
