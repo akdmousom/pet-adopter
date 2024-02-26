@@ -8,18 +8,13 @@ const Banner = () => {
             {/* Banner  */}
             <div className="hero relative h-[750px]" style={{ backgroundImage: 'url(https://i.ibb.co/dLtZm6F/banner-Img.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
-
                 <div className="absolute flex transform -translate-y-1/5 md:left-5 md:right-5 ">
-
                     <div className=" md:w-1/2 text-white ml-10 lg:ml-[103px] md:ml-[75px] space-y-7">
-
                         <h1 className=" text-2xl lg:text-5xl md:text-3xl font-semibold">Best Friend With  <br /> Happy Time</h1>
                         <p className="text-xl">You can adopt here any kind of pets for your children <br /> or your any friends.</p>
-
                         <div>
                             <button className="flex md:text-lg py-6 items-center gap-1 btn-sm rounded-md bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] dark:hover:bg-white hover:bg-black text-white dark:text-black font-semibold">View More<MdPets></MdPets></button>
                         </div>
-
                     </div>
                 </div>
             </div>
