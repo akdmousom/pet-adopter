@@ -72,7 +72,7 @@ const Petlisting = ({ searchParams }) => {
 
 
     return (
-        <div className=" dark:bg-[#585d65]">
+        <div className="dark:bg-[#585d65]">
             <div className="md:flex justify-center items-center py-4 lg:py-8">
                 <input
                     value={searchTerm}
