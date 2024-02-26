@@ -32,6 +32,7 @@ const PetCommunity = ({user}) => {
     return (
         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             {postData.map(data => <div key={data._id} className="max-w-full mx-auto my-10 p-5">
                 <div className="grid lg:grid-cols-1 md:grid-cols-1 gap-3">
 
@@ -71,6 +72,8 @@ const PetCommunity = ({user}) => {
                         </div>
                     </div>
 =======
+=======
+>>>>>>> main
             {
               postData==''?
               <h1 className="font-bold text-5xl text-center my-40">There are no post available !</h1>
@@ -82,6 +85,9 @@ const PetCommunity = ({user}) => {
                 <div className="avatar py-2">
                 <div className="w-8 lg:w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                   <img src={data.user_image} />
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
                 </div>
               </div>

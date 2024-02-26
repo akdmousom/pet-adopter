@@ -7,6 +7,9 @@ import UserData from './../../../components/UserData/UserData';
 =======
 import UserData from './../../../Components/UserData/UserData';
 import Admin_dashboard from '@/Components/Admin_penel/Admin_dashboard/Admin_dashboard';
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 const page = async () => {
     const session = await auth();

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import UpdateShopItem from '@/components/Shop/UpdateShopItem/UpdateShopItem'
+=======
+import UpdateShopItem from '@/Components/Shop/UpdateShopItem/UpdateShopItem'
+>>>>>>> main
 import { getSingleItem } from '@/utils/getSingleitem'
 import React from 'react'
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import MedicineForm from '@/components/medicineForm/MedicineForm'
+=======
+import MedicineForm from '@/Components/medicineForm/MedicineForm'
+>>>>>>> main
 import React from 'react'
 const page = () => {
     return (
