@@ -13,7 +13,7 @@ const Banner = () => {
                         <h1 className=" text-2xl lg:text-5xl md:text-3xl font-semibold">Best Friend With  <br /> Happy Time</h1>
                         <p className="text-xl">You can adopt here any kind of pets for your children <br /> or your any friends.</p>
                         <div>
-                            <button className="flex md:text-lg py-6 items-center gap-1 btn-sm rounded-md bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] dark:hover:bg-white hover:bg-black text-white dark:text-black font-semibold">View More<MdPets></MdPets></button>
+                        <Link href={'/pet-listing'}><button className="flex md:text-lg py-6 items-center gap-1 btn-sm rounded-md bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] dark:hover:bg-white hover:bg-black text-white dark:text-black font-semibold">View More<MdPets></MdPets></button></Link>
                         </div>
                     </div>
                 </div>

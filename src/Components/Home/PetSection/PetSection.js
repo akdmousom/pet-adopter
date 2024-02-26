@@ -40,8 +40,8 @@ const PetSection = async () => {
                                         <p className="text-black font-medium mb-2">Age: {pet.petAge}</p>
                                         <p className="text-black font-medium mb-2">Location: {pet.petLocation}</p>
                                         <div className="flex justify-around mt-4 mb-2">
-                                            <button className="btn-sm text-white dark:text-black rounded-md bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] hover:bg-black font-semibold">Adopt</button>
-                                            <button className="btn-sm rounded-md hover:bg-black  bg-pink-700 dark:bg-gradient-to-r from-pink-500 to-yellow-500 text-white dark:text-black font-semibold">Read More</button>
+                                        <Link href={'/pet-listing'}><button className="btn-sm text-white dark:text-black rounded-md bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] hover:bg-black font-semibold">Adopt</button></Link>
+                                        <Link href={`/${pet.petCategory}/${pet._id}`} ><button className="btn-sm rounded-md hover:bg-black  bg-pink-700 dark:bg-gradient-to-r from-pink-500 to-yellow-500 text-white dark:text-black font-semibold">Read More</button></Link>
                                         </div>
                                     </div>
                                 </div>

@@ -5,8 +5,6 @@ const page = () => {
     return (
         <div>
             <AdoptRequest />
-
-            {/* <AllPetRequest /> */}
         </div>
     );
 };

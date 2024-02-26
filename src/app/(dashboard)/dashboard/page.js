@@ -2,16 +2,24 @@
 import '../../globals.css'
 // import UserData from '@/components/UserData/UserData'
 import { auth } from '@/app/api/auth';
+<<<<<<< HEAD
 import UserData from './../../../components/UserData/UserData';
+=======
+import UserData from './../../../Components/UserData/UserData';
+import Admin_dashboard from '@/Components/Admin_penel/Admin_dashboard/Admin_dashboard';
+>>>>>>> main
 const page = async () => {
     const session = await auth();
     const user = session.user;
+    const isAdmin = process.env.ADMIN_DATA && user.email === process.env.ADMIN_DATA;
     return (
-        <div className='min-h-screen w-full'>
-            <div className="bg-[#ffe3e1] lg:ml-1 w-full">
-                <h1 className='py-10 text-3xl font-bold text-center w-full'>You Community Post</h1>
-            </div>
-            <UserData user={user} />
+        <div>
+            {
+                isAdmin?
+                <Admin_dashboard/>
+                :
+                <UserData user={user}/>
+            }
         </div>
     );
 };
