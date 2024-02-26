@@ -8,13 +8,13 @@ const MeetOurTeam = () => {
 
         {/* Title  */}
         <div className="text-center space-y-1">
-            <h3 className="text-3xl lg:text-5xl text-[#F04336] text-center font-bold my-8">Meet Our Team</h3>
-            <p className="font-semibold">Get to know the team behind Pawwelfare. We are veterinarians, <br/> animal rights activists and volunteers. But above all, we are animal lovers.</p>
+            <h3 className="text-3xl lg:text-5xl text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] text-center font-bold my-8">Meet Our Team</h3>
+            <p className="font-semibold dark:text-white">Get to know the team behind Pawwelfare. We are veterinarians, <br/> animal rights activists and volunteers. But above all, we are animal lovers.</p>
         </div>
 
         {/* Meet Our Team Card */}
 
-        <div className="grid  grid-cols-1 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 gap-5">
+        <div className="grid  grid-cols-1 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 gap-5 dark:text-white">
 
             {/* Card 1 */}
             <div className=' w-60 text-center mx-auto'>
