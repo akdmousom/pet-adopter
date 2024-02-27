@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import DeleteItem from '@/components/AllItem/DeleteItem';
 import Star from '@/components/AllItem/Star';
-=======
-import DeleteItem from '@/Components/AllItem/DeleteItem';
-import Star from '@/Components/AllItem/Star';
->>>>>>> main
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
