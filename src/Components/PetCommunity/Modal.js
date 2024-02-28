@@ -4,9 +4,10 @@ import Image from "next/image";
 import { LuSendHorizonal } from "react-icons/lu";
 import { useEffect, useState } from "react";
 const Modal = ({data,user}) => {
-    console.log(user,'user data')
-    console.log(data,'data data')
+    // console.log(user,'user data')
+    // console.log(data,'data data')
     const [commentData,setCommentData]=useState([])
+    // console.log(commentData,'commentdata')
     const id=data._id
     console.log(id,'id')
     const handleComment = event => {
@@ -23,9 +24,10 @@ const Modal = ({data,user}) => {
     useEffect(() => {
         axios.get('https://pet-adopter-backend.vercel.app/api/v1/likeCommentGet')
         .then(res=>{
-            const filterdata=res.data.filter(item=>item.id===id)
-            console.log(filterdata.id,'comment')
-            setCommentData(filterdata.reverse())
+            console.log(res.data,'res data')
+            const filteredData = res.data.filter(comment => comment.id === id);
+
+            setCommentData(filteredData.reverse())
         })
         .catch(error=>console.log(error))
     }, []);
