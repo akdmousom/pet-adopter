@@ -9,6 +9,7 @@ const PetCommunity = ({user}) => {
     const [trueData, setTrueData] = useState(true)
     const [postData, setPostData] = useState([])
     const [like, setLike] = useState(true)
+    const [userLike, setUserLike] = useState([])
     
 
     useEffect(() => {
@@ -17,11 +18,18 @@ const PetCommunity = ({user}) => {
                        setPostData(res.data.reverse())
             })
             .catch(error => console.log (error, 'error'))
+
+
+        axios.get('https://pet-adopter-backend.vercel.app/api/v1/petLikeGet')
+              .then(res => {
+                       setUserLike(res.data.reverse())
+            })
+            .catch(error => console.log (error, 'error'))
    }, [])
     const handleLike=(id)=>{
       const like='like'
     const likeComment={id,like}
-    axios.post('https://pet-adopter-backend.vercel.app/api/v1/likeComment',likeComment)
+    axios.post('https://pet-adopter-backend.vercel.app/api/v1/petLike',likeComment)
     .then(res=>{
       console.log(res)
       setLike(false)
@@ -51,7 +59,7 @@ const PetCommunity = ({user}) => {
                   </div>
                 </div>
                 {
-                data.input_message.length>=100?
+                data.input_message?.length>=100?
                 trueData==true?
                 <h1 className='text-lg p-1 lg:pb-5 lg:pl-5'>{data.input_message.slice(0,150)}.....<span onClick={()=>setTrueData(false)} className='cursor-pointer'>more</span></h1>
                 :
@@ -64,12 +72,12 @@ const PetCommunity = ({user}) => {
                 </div>
                 <div className='flex justify-between mx-2 lg:mx-16 my-2 lg:my-5'>
                   <div className='space-y-2 lg:space-y-5'>
-                     <h1 className='lg:font-bold text-center text-xs'>10K</h1>
+                  <h1 className='lg:font-bold text-center text-xs'>{userLike?.length}</h1>
                      {
                       like==true?
-                      <h1 className='font-bold border border-black py-2 px-3 rounded-lg text-xs' onClick={()=>handleLike(data._id)}>Like</h1>
+                      <h1 className='font-bold border border-black py-2 px-3 rounded-lg text-xs cursor-pointer' onClick={()=>handleLike(data._id)}>Like</h1>
                       :
-                      <h1 className='font-bold border border-black py-2 px-3 rounded-lg text-xs text-white bg-black'>Like</h1>
+                      <h1 className='font-bold border border-black py-2 px-3 rounded-lg text-xs text-white bg-black cursor-pointer'>Like</h1>
                      }
                   </div>
                   <div className='space-y-2 lg:space-y-5'>
