@@ -13,7 +13,7 @@ import adoptRequest from '../../../../public/images/adopt-request.svg'
 
 const UserDashNav = async({ childrens }) => {
   const session = await auth();
-    const user=session.user
+    const user=session?.user
     // console.log(user,'navabar')
     const isAdmin = process.env.ADMIN_DATA && user.email === process.env.ADMIN_DATA;
 
@@ -45,10 +45,10 @@ const UserDashNav = async({ childrens }) => {
       <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link   href={{pathname:"/userprofile",query:{user}}} className='py-2 lg:py-5'>
         <div className="avatar  lg:ml-5">
           <div className="w-8 lg:w-16 rounded-full">
-            <Image width={200} height={200} src={user.image} alt='' />
+            <Image width={200} height={200} src={user?.image} alt='' />
           </div>
         </div>
-        {user.name}</Link></li>
+        {user?.name}</Link></li>
       <li className=''><Link href="/dashboard"><Image src={dashboard} alt="alt" width={20} height={20} /> Dashboard</Link></li>
       <li className=' '><Link href="/petCommunity "><Image src={social} alt="alt" width={20} height={20} /> Pet Lover Community</Link></li>
       <li className=''><Link href="/allPetRequest"><Image src={pet_Request} alt="alt" width={20} height={20} /> All adopt Request</Link></li>
