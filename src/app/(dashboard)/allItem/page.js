@@ -1,12 +1,17 @@
 import DeleteItem from '@/Components/AllItem/DeleteItem';
 import Star from '@/Components/AllItem/Star';
+import { auth } from '@/app/api/auth';
 import Image from 'next/image'
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import React from 'react'
 import { FaEdit } from 'react-icons/fa';
 import { MdDetails } from 'react-icons/md';
 const page = async () => {
-    // fetch store data
+    const session = await auth();
+    if (!session?.user || session?.user?.role !=='admin') {
+        redirect('/')
+    }
     const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/shopitems', {
         next: { revalidate: 5 }
     })

@@ -1,13 +1,25 @@
 'use client'
 import { useEffect, useState } from 'react';
-import  axios  from 'axios';
+import axios from 'axios';
 
 const Admin_dashboard = () => {
-  const [totalUser,setTotalUser]=useState(0)
-  const [totalPost,setTotalPost]=useState(0)
-  const [totalPet,setTotalPet]=useState(0)
-  const [totalRequest,setTotalRequest]=useState(0)
-  useEffect(()=>{
+  const [user, setUser] = useState({})
+  useEffect(() => {
+    const getData = async () => {
+      const session = await auth();
+      setUser(session)
+    }
+    getData()
+  }, [])
+
+  if (!user || user?.role !== 'admin') {
+    redirect('/')
+  }
+  const [totalUser, setTotalUser] = useState(0)
+  const [totalPost, setTotalPost] = useState(0)
+  const [totalPet, setTotalPet] = useState(0)
+  const [totalRequest, setTotalRequest] = useState(0)
+  useEffect(() => {
     axios.get('https://pet-adopter-backend.vercel.app/api/v1/getUserDataCount')
     .then(res=>{
       console.log(res.data.totalRegisterdUser,'data res')
@@ -49,17 +61,11 @@ const Admin_dashboard = () => {
                <h2 className="card-title font-bold">TOTAL REQUEST</h2>
                  <p className='text-5xl font-bold'>{totalRequest}</p>
                </div>
-            </div>
-            {/* total post */}
-            <div className="card bg-pink-500 text-neutral-content">
-               <div className="card-body items-center text-center">
-               <h2 className="card-title font-bold">TOTAL PET</h2>
-                 <p className='text-5xl font-bold'>{totalPet}</p>
-               </div>
-            </div>
-            
+            </div>   
         </div>
-    );
+      </div>      
+    </div>
+  );
 };
 
 export default Admin_dashboard;

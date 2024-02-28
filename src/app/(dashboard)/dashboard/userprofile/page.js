@@ -1,10 +1,15 @@
+import { auth } from "@/app/api/auth";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
-const page = () => {
-
+const page = async() => {
+    const session = await auth();
+    if (!session?.user || !session?.user?.email) {
+        redirect('/')
+    }
     return (
         <div className="my-5 max-w-[1200px] mx-auto">
 
