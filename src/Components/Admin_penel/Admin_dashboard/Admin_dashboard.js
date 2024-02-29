@@ -68,8 +68,7 @@ const Admin_dashboard = () => {
           <h2 className="card-title font-bold">TOTAL PET</h2>
           <p className='text-5xl font-bold'>{totalPet}</p>
         </div>
-      </div>
-
+      </div>      
     </div>
   );
 };
