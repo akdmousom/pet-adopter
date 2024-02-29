@@ -4,7 +4,7 @@ import Image from "next/image";
 const PetService = () => {
 
     return (
-        <div className="dark:bg-[#585d65] max-w-full mx-auto py-20">
+        <div className="dark:bg-[#1B2430] max-w-full mx-auto py-6 lg:py-20">
 
         <div className="text-center">
             <h3 className="text-base font-semibold text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">What We Provide</h3>
@@ -13,7 +13,7 @@ const PetService = () => {
 
       
         {/* Pet Care Services */}
-        <div className="py-20">
+        <div className="lg:py-20">
 
             <div className=" grid md:px-8 grid-cols-1 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 gap-5">
 

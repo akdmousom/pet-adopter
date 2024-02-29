@@ -17,7 +17,7 @@ const UserReview = () => {
 
     const [review, setReview] = useState([])
     console.log(review);
-    
+
     useEffect(() => {
         axios.get('https://pet-adopter-backend.vercel.app/api/v1/Feedbacks')
             .then(res => setReview(res.data))
@@ -25,11 +25,11 @@ const UserReview = () => {
 
 
     return (
-        <div className='mt-20 mb-12'>
+        <div className='py-16  dark:bg-[#1B2430]'>
 
             <div className='text-center'>
-                <h1 className='text-3xl font-semibold'>Users Review</h1>
-                <h4 className='text-base font-semibold text-[#F04336]'>Users opinions</h4>
+                <h4 className='text-base font-semibold text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]'>Users opinions</h4>
+                <h1 className='text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white'>Users Review</h1>
             </div>
 
 
@@ -63,7 +63,7 @@ const UserReview = () => {
                                 <div>
                                     <h1 className='text-xl mt-2'>{item?.name}</h1>
 
-                                   <StarRatings 
+                                    <StarRatings
                                         starEmptyColor="orange"
                                         numberOfStars={item?.rating}
                                         starDimension="25px"
@@ -75,7 +75,6 @@ const UserReview = () => {
                             </div>
                         </SwiperSlide>)
                 }
-
             </Swiper>
         </div>
     );

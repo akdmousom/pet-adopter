@@ -5,14 +5,14 @@ const WhyChoseUs = () => {
 
     return (
         <>
-            <div className="bg-[#FFF5E4] dark:bg-[#585d65] max-w-full mx-auto">
+            <div className="bg-[#FFF5E4] dark:bg-[#1B2430] max-w-full mx-auto">
                 <Statistics />
                 <div className="grid mx-auto py-8">
-                    <div className="text-black p-8">
+                    <div className="text-black">
                     <h3 className="text-base font-semibold text-center text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Excellence in Every Choice</h3>
                         <h3 className="text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white">Why Choose Us?</h3>
 
-                        <div className="grid lg:grid-cols-4 gap-6 items-center justify-center my-4">
+                        <div className="grid lg:grid-cols-4 gap-6 items-center justify-center py-4">
                             <div className="mb-4 lg:mb-0">
                                 <Image src="https://i.ibb.co/Pw1vByK/pet-24service.jpg" alt="Pet-24/7 Service" width={300} height={300}
                                     className="rounded-full border-white hover:border-black hover:shadow-md border-2 hover:scale-110 transfrom duration-700 w-[200px] h-[200px] object-cover mx-auto" data-aos="zoom-in" />

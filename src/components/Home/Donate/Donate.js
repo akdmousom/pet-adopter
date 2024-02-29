@@ -5,10 +5,10 @@ import React from 'react';
 
 const Donate = ({ heading }) => {
     return (
-        <div className='bg-[#FFF5E4] dark:bg-[#585d65] py-8'>
+        <div className='bg-[#FFF5E4] dark:bg-[#1B2430] py-4 lg:py-8'>
             <h3 className="text-base font-semibold text-center text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Transforming Futures Together</h3>
             <SectionTitle heading={' Help Us Change Lives'} />
-            <div className="px-16 py-5 text-white ">
+            <div className="px-8 lg:px-16 py-5 text-white ">
                 <div className="hero bg-fixed lg:h-[500px]" style={{ backgroundImage: 'url(https://i.ibb.co/HYr8Rqh/donate.jpg)' }}>
                     <div className="hero-overlay bg-opacity-30"></div>
                     <div className="hero-content text-center text-neutral-content">

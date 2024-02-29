@@ -72,7 +72,7 @@ const Petlisting = ({ searchParams }) => {
 
 
     return (
-        <div className="dark:bg-[#585d65]">
+        <div className="dark:bg-[#1B2430]">
             <div className="md:flex justify-center items-center py-4 lg:py-8">
                 <input
                     value={searchTerm}
@@ -116,10 +116,10 @@ const Petlisting = ({ searchParams }) => {
                 {filteredPetListing.length > 0 ?
 
                 <Suspense fallback={<Loading/>}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                    {
                      filteredPetListing?.map(pet =>
-                        <div key={pet._id} className="card border border-[#f04336] dark:border-[#68e0cf] py-4 px-4 lg:mx-auto pb-8">
+                        <div key={pet._id} className="card border border-[#f04336] dark:border-[#68e0cf] py-6 px-6 lg:mx-auto">
                             <Image src={pet?.petImage} alt="cat" width={400} height={340} className="rounded-lg w-[400px] h-[340px] object-cover mb-4 hover:scale-110 duration-700" />
                             <h2 className="text-2xl dark:text-white font-bold mb-2">{pet.petName}</h2>
                             <p className="text-gray-500 dark:text-white mb-2">Age: {pet.petAge}</p>

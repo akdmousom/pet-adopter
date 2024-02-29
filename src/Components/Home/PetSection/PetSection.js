@@ -13,7 +13,7 @@ const PetSection = async () => {
 
 
     return (
-        <div className="dark:bg-[#585d65] pb-20 max-w-full mx-auto">
+        <div className="dark:bg-[#1B2430] pb-20 max-w-full mx-auto">
             <div className="text-center space-y-3">
 
                 <Image width={200} height={200} className="w-12 rounded-2xl mx-auto" src="https://i.ibb.co/3fdPN5F/pawprint.gif" alt="" />
@@ -29,7 +29,7 @@ const PetSection = async () => {
 
                     {
                         slicedData?.map(pet =>
-                            <div key={pet._id} className="card bg-white dark:bg-[#9DB2BF] mx-auto">
+                            <div key={pet._id} className="card bg-white dark:bg-[#AD8155] mx-auto">
 
                                 <Image src={pet.petImage} alt="" width={300} height={300} className="rounded-t-lg hover:cursor-pointer hover:scale-105 object-cover transform delay-200 duration-700 h-[280px] w-[350px] mx-auto" />
 
