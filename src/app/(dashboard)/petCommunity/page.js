@@ -8,9 +8,10 @@ const page = async() => {
     if (!session?.user || !session?.user?.email) {
         redirect('/')
     }
+    const user = session.user
     return (
         <div className="">
-            <PetCommunity />
+            <PetCommunity user={user} />
         </div>
     );
 };

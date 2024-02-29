@@ -21,7 +21,7 @@ const Admin_dashboard = () => {
   const [totalRequest, setTotalRequest] = useState(0)
   useEffect(() => {
     axios.get('https://pet-adopter-backend.vercel.app/api/v1/getUserDataCount')
-      .then(res => {
+    .then(res => {
         console.log(res.data.totalRegisterdUser, 'data res')
         setTotalUser(res.data.totalRegisterdUser)
       })
@@ -40,7 +40,7 @@ const Admin_dashboard = () => {
       .catch(error => console.log(error))
   }, [])
   return (
-    <div className=' lg:my-10 grid grid-cols-1 mx-2 lg:mx-0 md:grid-cols-2 lg:grid-cols-2 gap-5 py-5 md:py-10 lg:my-0 lg:px-10'>
+    <div className=' grid grid-cols-1 mx-2 lg:mx-0 md:grid-cols-2 lg:grid-cols-2 gap-5 py-5 md:py-10 lg:my-0 lg:px-10'>
       {/* total user */}
       <div className="card  bg-blue-500 text-neutral-content">
         <div className="card-body items-center text-center">
