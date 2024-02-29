@@ -53,8 +53,8 @@ const EmailSection = () => {
     <div className="mx-5 lg:mx-24">
 
       <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
-      <div className="bg-[#FFE3E1] dark:bg-[#AD8155] text-3xl lg:text-4xl text-center dark:text-white font-bold py-6 px-4  my-10">Contact us with e-mail</div>
-      <div className="bg-[#FFE3E1] dark:bg-[#AD8155] flex flex-col-reverse lg:flex-row py-10 px-10 lg:px-20">
+      <div className="bg-[#FFE3E1] dark:bg-[#AD8155] text-3xl lg:text-4xl text-center dark:text-white font-bold py-6 px-4 my-10">Contact us with email</div>
+      <div className="flex flex-col-reverse lg:flex-row py-10 px-10 lg:px-20">
         <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 space-y-3 flex-1 py-10">
           <input type="text" name='user_name' placeholder="Your Name" className="input input-bordered input-secondary w-full max-w-xs border-black" />
           <input type="email" name='user_email' placeholder="Your E-mail" className="input input-bordered input-secondary w-full max-w-xs border-black" />
