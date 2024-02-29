@@ -53,14 +53,14 @@ const EmailSection = () => {
     <div className="mx-5 lg:mx-24">
 
       <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
-      <div className="bg-[#FFE3E1] text-3xl lg:text-4xl text-center font-bold py-6 px-4  my-10">Contact us with e-mail</div>
-      <div className="bg-[#FFE3E1] flex flex-col-reverse lg:flex-row py-10 px-10 lg:px-20">
-        <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 space-y-3 flex-1 py-10 ">
-          <input type="text" name='user_name' placeholder="Your Name" className="input input-bordered input-secondary w-full max-w-xs" />
-          <input type="email" name='user_email' placeholder="Your E-mail" className="input input-bordered input-secondary w-full max-w-xs" />
-          <input type="text" name='subject' placeholder="Subject" className="input input-bordered input-secondary w-full max-w-xs" />
-          <textarea type='text' name='message' className="textarea textarea-secondary w-full max-w-xs" placeholder="Your Massage"></textarea>
-          <button className="btn btn-active bg-[#F04336] text-white font-bold w-full max-w-xs">Send email</button>
+      <div className="bg-[#FFE3E1] dark:bg-[#AD8155] text-3xl lg:text-4xl text-center dark:text-white font-bold py-6 px-4  my-10">Contact us with e-mail</div>
+      <div className="bg-[#FFE3E1] dark:bg-[#AD8155] flex flex-col-reverse lg:flex-row py-10 px-10 lg:px-20">
+        <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 space-y-3 flex-1 py-10">
+          <input type="text" name='user_name' placeholder="Your Name" className="input input-bordered input-secondary w-full max-w-xs border-black" />
+          <input type="email" name='user_email' placeholder="Your E-mail" className="input input-bordered input-secondary w-full max-w-xs border-black" />
+          <input type="text" name='subject' placeholder="Subject" className="input input-bordered input-secondary w-full max-w-xs border-black" />
+          <textarea type='text' name='message' className="textarea textarea-secondary w-full max-w-xs border-black" placeholder="Your Massage"></textarea>
+          <button className="btn btn-active bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] hover:bg-black font-semibold text-white dark:text-black w-full max-w-xs">Send email</button>
 
         </form>
         <div className="flex-1">

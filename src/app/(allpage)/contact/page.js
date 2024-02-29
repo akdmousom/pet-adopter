@@ -5,12 +5,10 @@ import Googlemap from "@/components/contact-page/googleMap/page";
 
 const ContactPage = () => {
     return (
-        <div>
+        <div className="dark:bg-[#1B2430]">
             <ContactBanner />
             <EmailSection />
             <Googlemap />
-
-
         </div>
     );
 };
