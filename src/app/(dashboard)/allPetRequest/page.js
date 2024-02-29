@@ -4,10 +4,10 @@ import AllPetRequest from "@/components/AllPetRequest/AllPetRequest";
 import { redirect } from "next/navigation";
 
 const page = async() => {
-    const session = await auth();
-    if (!session?.user || session?.user?.role !=='admin') {
-        redirect('/')
-    }
+    // const session = await auth();
+    // if (!session?.user || session?.user?.role !=='admin') {
+    //     redirect('/')
+    // }
     return (
         <div>
             <AdoptRequest />
