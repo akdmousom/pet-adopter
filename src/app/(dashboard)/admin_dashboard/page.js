@@ -5,7 +5,7 @@ import React from 'react';
 
 const page = async() => {
     const session = await auth();
-    if (!session?.user || session?.user?.role !=='admin') {
+    if (!session?.user || session?.user?.email !== process.env.ADMIN_DATA) {
         redirect('/')
     }
     return (
