@@ -3,18 +3,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Admin_dashboard = () => {
-  const [user, setUser] = useState({})
-  useEffect(() => {
-    const getData = async () => {
-      const session = await auth();
-      setUser(session)
-    }
-    getData()
-  }, [])
-
-  if (!user || user?.role !== 'admin') {
-    redirect('/')
-  }
   const [totalUser, setTotalUser] = useState(0)
   const [totalPost, setTotalPost] = useState(0)
   const [totalPet, setTotalPet] = useState(0)
@@ -26,6 +14,7 @@ const Admin_dashboard = () => {
         setTotalUser(res.data.totalRegisterdUser)
       })
       .catch(error => console.log(error))
+
 
     axios.get('http://localhost:5000/api/v1/petCommunity')
       .then(res => setTotalPost(res.data.length))
