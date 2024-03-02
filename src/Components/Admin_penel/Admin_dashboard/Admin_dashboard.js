@@ -3,18 +3,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const Admin_dashboard = () => {
-  const [user, setUser] = useState({})
-  useEffect(() => {
-    const getData = async () => {
-      const session = await auth();
-      setUser(session)
-    }
-    getData()
-  }, [])
-
-  if (!user || user?.role !== 'admin') {
-    redirect('/')
-  }
   const [totalUser, setTotalUser] = useState(0)
   const [totalPost, setTotalPost] = useState(0)
   const [totalPet, setTotalPet] = useState(0)
@@ -40,7 +28,7 @@ const Admin_dashboard = () => {
     .catch(error=>console.log(error))
   },[])
     return (
-        <div className=' lg:my-10 grid grid-cols-1 mx-2 lg:mx-0 md:grid-cols-2 lg:grid-cols-2 gap-5 py-5 md:py-10 lg:my-0 lg:px-10'>
+        <div1 className=' lg:my-10 grid grid-cols-1 mx-2 lg:mx-0 md:grid-cols-2 lg:grid-cols-2 gap-5 py-5 md:py-10 lg:my-0 lg:px-10'>
           {/* total user */}
             <div className="card  bg-blue-500 text-neutral-content">
                <div className="card-body items-center text-center">
@@ -62,9 +50,14 @@ const Admin_dashboard = () => {
                  <p className='text-5xl font-bold'>{totalRequest}</p>
                </div>
             </div>   
-        </div>
-      </div>      
-    </div>
+            {/* total pet */}
+            <div className="card  bg-pink-600 text-neutral-content">
+               <div className="card-body items-center text-center ">
+               <h2 className="card-title font-bold">TOTAL PETS</h2>
+                 <p className='text-5xl font-bold'>{totalPet}</p>
+               </div>
+            </div>   
+        </div1>
   );
 };
 
