@@ -13,9 +13,9 @@ export default function Home() {
     <div>
       <Banner />
       <WhyChoseUs />
+      <PetSection />
       <PetService />
       <Donate />
-      <PetSection />
       <GalleryPhoto />
       <UserReview />
       <FAQ />

@@ -13,7 +13,7 @@ import adoptRequest from '../../../../public/images/adopt-request.svg'
 
 const UserDashNav = async({ childrens }) => {
   const session = await auth();
-    const user=session.user
+    const user=session?.user
     // console.log(user,'navabar')
     const isAdmin = process.env.ADMIN_DATA && user.email === process.env.ADMIN_DATA;
 
@@ -30,7 +30,7 @@ const UserDashNav = async({ childrens }) => {
         </div>
         {user.name}</Link></li>
         <li className=''><Link href="/admin_dashboard"><Image src={dashboard} alt="alt" width={20} height={20} /> Admin Dashboard</Link></li>
-      <li className=' '><Link href="/petCommunity "><Image src={social} alt="alt" width={20} height={20} />All User</Link></li>
+      <li className=' '><Link href="/alluser"><Image src={social} alt="alt" width={20} height={20} />All User</Link></li>
       <li className=''><Link href="/allPetRequest"><Image src={pet_Request} alt="alt" width={20} height={20} />All pendding Post</Link></li>
       <li><Link href='/postPetCommunity'><Image src={post} alt="alt" width={20} height={20} /> Post Medical Store</Link></li>
       <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={home} alt="alt" width={20} height={20} /> Home Page</Link></li>
@@ -45,10 +45,10 @@ const UserDashNav = async({ childrens }) => {
       <li className=' border-y-2 lg:border-y-4 border-[#f04336] mb-2 lg:mb-5'><Link   href={{pathname:"/userprofile",query:{user}}} className='py-2 lg:py-5'>
         <div className="avatar  lg:ml-5">
           <div className="w-8 lg:w-16 rounded-full">
-            <Image width={200} height={200} src={user.image} alt='' />
+            <Image width={200} height={200} src={user?.image} alt='' />
           </div>
         </div>
-        {user.name}</Link></li>
+        {user?.name}</Link></li>
       <li className=''><Link href="/dashboard"><Image src={dashboard} alt="alt" width={20} height={20} /> Dashboard</Link></li>
       <li className=' '><Link href="/petCommunity "><Image src={social} alt="alt" width={20} height={20} /> Pet Lover Community</Link></li>
       <li className=''><Link href="/allPetRequest"><Image src={pet_Request} alt="alt" width={20} height={20} /> All adopt Request</Link></li>
@@ -93,7 +93,7 @@ const UserDashNav = async({ childrens }) => {
             </div>
           </div>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side z-10">
           <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
           <ul className="menu p-4 min-h-full bg-base-200">
             {Navlinks}

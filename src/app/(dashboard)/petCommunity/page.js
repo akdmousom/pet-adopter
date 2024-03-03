@@ -1,9 +1,14 @@
+import { auth } from "@/app/api/auth";
 import PetCommunity from "@/components/PetCommunity/PetCommunity";
+import { redirect } from "next/navigation";
 
-import { auth } from '@/app/api/auth';
+
 const page = async() => {
     const session = await auth();
-  const user = session.user
+    if (!session?.user || !session?.user?.email) {
+        redirect('/')
+    }
+    const user = session.user
     return (
         <div className="">
             <PetCommunity user={user} />

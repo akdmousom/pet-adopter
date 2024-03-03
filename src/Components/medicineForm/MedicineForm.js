@@ -22,7 +22,7 @@ const MedicineForm = () => {
         */
    
         return
-        ///   https://pet-adopter-backend.vercel.app http://localhost:5000
+        ///   https://pet-adopter-backend.vercel.app https://pet-adopter-backend.vercel.app
         const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/medicine', {
             method: 'POST',
             headers: {

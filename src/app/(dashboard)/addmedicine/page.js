@@ -1,6 +1,12 @@
 import MedicineForm from '@/components/medicineForm/MedicineForm'
+import { auth } from '@/app/api/auth';
+import { redirect } from 'next/navigation';
 import React from 'react'
-const page = () => {
+const page = async() => {
+    const session = await auth();
+    if (!session?.user || session?.user?.role !=='admin') {
+        redirect('/')
+    }
     return (
         <div className='pt-7'>
             <h3 className='text-3xl font-semibold text-center uppercase'>add medicine</h3>

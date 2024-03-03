@@ -67,7 +67,7 @@ const NavBar = async ({ children }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#FFF5E4]">
+                    <div className="">
                         {children}
                     </div>
                 </div>
