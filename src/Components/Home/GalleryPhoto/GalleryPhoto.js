@@ -4,7 +4,7 @@ import Image from "next/image";
 const GalleryPhoto = () => {
 
     return (
-        <div className="bg-[#ffe3e1] py-8">
+        <div className=" py-8">
             <div className="mt-16 mb-10 max-w-[1366px] mx-auto">
                 {/* Title  */}
                 <div className="text-center">

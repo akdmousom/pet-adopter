@@ -4,7 +4,7 @@ import React from 'react';
 const FAQ = () => {
     return (
         <>
-            <div className='bg-[#ffe3e1] py-8 mb-8'>
+            <div className=' py-8 mb-8 border-4'>
                 <h3 className='text-3xl lg:text-5xl text-center font-bold pb-6'>FAQ</h3>
                 <div className='flex flex-col lg:flex-row items-center justify-center gap-3 py-4 px-4'>
                     <div className='w-1/2'>
