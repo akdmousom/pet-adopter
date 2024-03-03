@@ -8,10 +8,9 @@ const stripePromise = loadStripe('pk_test_51OFa8mLyPuxrVtxVxj4uYM8JVPorLKehNtolk
 const StripePayment = ({ item, session }) => {
     const [clientSecretData,seclientSecretData]=useState(null)
     useEffect(() => {
-        console.log('client use effect')
-        axios.post('http://localhost:5000/createPaymentIntent', { price: item?.price })
+        // axios.post('http://localhost:5000/createPaymentIntent', https://pet-adopter-backend.vercel.app/createPaymentIntent
+        axios.post('https://pet-adopter-backend.vercel.app/createPaymentIntent', { price: item?.price })
             .then((res) => {
-                console.log('client',res.data)
                 seclientSecretData(res.data.clientSecret)
             })
     }, [])

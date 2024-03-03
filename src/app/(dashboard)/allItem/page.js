@@ -41,7 +41,7 @@ const page = async () => {
                             <td className='w-[190px] min-w-[189px]'>{item?.name}</td>
                             <td>{item?.category}</td>
                             <td>${item?.price}</td>
-                            <td className='w-[230px] min-w-[230px]'>{item?.description.slice(0, 50)}..</td>
+                            <td className='w-[230px] min-w-[230px]'>{item?.description?.slice(0, 50)}..</td>
                             <td className='w-[135px] min-w-[134px]'>
                                 <Star ratings={item?.rating} />
                             </td>

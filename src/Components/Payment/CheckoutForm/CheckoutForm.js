@@ -52,21 +52,25 @@ const CheckoutForm = ({ item, session, clientSecretData }) => {
         }
         else {
             if (paymentIntent.status === 'succeeded') {
-                // console.log(paymentIntent)
+                console.log(paymentIntent)
                 const OrderData = {
-                    name: session?.user?.fullName,
-                    fullName: session?.user?.fullName,
+                    email: session?.user?.email,
+                    fullName: session?.user?.name,
                     price: item.price,
                     itemName: item.name,
-                    transID : paymentIntent?.id
+                    transID : paymentIntent?.id,
+                    image : item.image,
                 }
-                axios.post('order', OrderData).then((res) => {
-                    if (res.data.success) {
+                // axios.post('http://localhost:5000/api/v1/orders', OrderData).then((res) => {
+                axios.post('https://pet-adopter-backend.vercel.app/api/v1/orders', OrderData).then((res) => {
+                    //.data.success
+                    console.log(res.data)
+                    if (res) {
                         setloading(false)
                         Swal.fire({
                             position: "top-end",
                             icon: "success",
-                            title: "Your work has been saved",
+                            title: "Your order has been taken",
                             showConfirmButton: false,
                             timer: 1500
                         });
@@ -94,7 +98,7 @@ const CheckoutForm = ({ item, session, clientSecretData }) => {
                         <p className='text-base font-semibold'>{item?.name}</p>
                         <p className="text-lg font-semibold">${item?.price}</p>
                         <span>
-                            <Link className='bg-red-500 p-3 rounded-md font-bold text-white py-1 inline-block' href={`/shop`}>
+                            <Link className='bg-red-500 p-3 rounded-md font-bold text-white py-1 inline-block' href={`/item/medical/${item?._id}`}>
                                 back
                             </Link>
                         </span>
