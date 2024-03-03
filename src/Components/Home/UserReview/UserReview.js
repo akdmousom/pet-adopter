@@ -24,7 +24,7 @@ const UserReview = () => {
 
 
     return (
-        <div className='mt-20 mb-12'>
+        <div className='mt-20 mb-12 border-4 py-10'>
 
             <div className='text-center'>
                 <h1 className='text-3xl font-semibold'>Users Review</h1>
