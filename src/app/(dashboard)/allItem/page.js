@@ -13,7 +13,7 @@ const page = async () => {
         redirect('/')
     }
     const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/shopitems', {
-        next: { revalidate: 5 }
+        cache:'no-store'
     })
     const storeItems = await res.json()
     console.log(storeItems)
