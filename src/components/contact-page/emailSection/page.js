@@ -5,6 +5,8 @@ import contactImg from '../../../../public/images/contact_img.png'
 import Script from "next/script";
 import emailjs from "../emailJsFile/page";
 import { useRef } from "react";
+import { FaVoicemail } from "react-icons/fa6";
+import { FaLocationArrow, FaPhone } from "react-icons/fa";
 const Swal = require('sweetalert2')
 
 const EmailSection = () => {
@@ -73,16 +75,17 @@ const EmailSection = () => {
 
       {/* New Design */}
 
-      <div className="my-8 mx-10">
-        <div className="my-6 space-y-3">
-          <h3 className="text-2xl font-medium">Contact Us</h3>
-          <h2 className="text-3xl font-bold">Lets Talk Question.</h2>
-          <p>The domestic dog is a doiated dendant of the wolf. The dog derived <br /> from an ancient, extinct wolf, and the modern grey.</p>
-        </div>
-        <div className="md:flex justify-between">
+      <div className="my-8 mx-10 md:flex justify-between">
+
+        <div className="">
+          <div className="my-6 space-y-3">
+            <h3 className="text-2xl font-medium">Contact Us</h3>
+            <h2 className="text-3xl font-bold">Lets Talk Question.</h2>
+            <p className="pt-4">The domestic dog is a doiated dendant of the wolf. The dog derived <br /> from an ancient, extinct wolf, and the modern grey.</p>
+          </div>
           {/* Right Side  */}
-          <div className="md:w-1/3">
-            <form className="space-y-3">
+          <div className="">
+            <form className="space-y-6">
               <label className="form-control">
                 <span className="label-text-alt font-medium text-base">Your Name</span>
                 <input type="text" required placeholder="Your Name" className="p-1 border-2 " />
@@ -102,9 +105,19 @@ const EmailSection = () => {
 
             </form>
           </div>
-          {/* Left Side  */}
-          <div>
-            <Image width={200} height={200} src={contactImg} alt="" />
+
+        </div>
+
+        {/* Left Side  */}
+        <div className="p-10 mt-10">
+          <Image width={200} height={200} src={contactImg} alt="" className="" />
+          <div className="my-8">
+            <div className="space-y-7">
+
+              <p className="flex items-center gap-4"> <FaLocationArrow className="text-[#F04336] w-9"></FaLocationArrow> Jashore, Khulna, Bangladesh,</p>
+              <p className="flex items-center gap-4"><FaPhone className="text-[#F04336] w-9"></FaPhone> +9 (256) 254 9568</p>
+              <p className="flex items-center gap-4"> <FaVoicemail className="text-[#F04336] w-9"></FaVoicemail> Contact@ info.com</p>
+            </div>
           </div>
         </div>
 
