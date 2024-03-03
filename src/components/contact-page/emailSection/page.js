@@ -75,13 +75,13 @@ const EmailSection = () => {
 
       <div className="my-8 mx-10">
         <div className="my-6 space-y-3">
-          <h3>Contact Us</h3>
-          <h2>Lets Talk Question.</h2>
+          <h3 className="text-2xl font-medium">Contact Us</h3>
+          <h2 className="text-3xl font-bold">Lets Talk Question.</h2>
           <p>The domestic dog is a doiated dendant of the wolf. The dog derived <br /> from an ancient, extinct wolf, and the modern grey.</p>
         </div>
-        <div className="flex justify-between">
+        <div className="md:flex justify-between">
           {/* Right Side  */}
-          <div className="w-1/3">
+          <div className="md:w-1/3">
             <form className="space-y-3">
               <label className="form-control">
                 <span className="label-text-alt font-medium text-base">Your Name</span>
