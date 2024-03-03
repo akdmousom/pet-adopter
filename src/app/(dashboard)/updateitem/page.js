@@ -1,4 +1,4 @@
-import UpdateShopItem from '@/Components/Shop/UpdateShopItem/UpdateShopItem'
+import UpdateShopItem from '@/components/Shop/UpdateShopItem/UpdateShopItem'
 import { auth } from '@/app/api/auth';
 import { getSingleItem } from '@/utils/getSingleitem'
 import { redirect } from 'next/navigation';

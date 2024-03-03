@@ -21,7 +21,7 @@ const EditProfile = () => {
 
 
     return (
-        <div className="max-w-[1366px] shadow-xl mx-auto ">
+        <div className="max-w-full shadow-xl mx-auto ">
             <div className="p-3">
 
                 <div className="flex items-center  w-4/5  mx-auto gap-5 my-4">
