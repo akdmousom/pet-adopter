@@ -9,10 +9,10 @@ const AddPet = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target.petAge.value)
-        console.log(e.target.petName.value)
-        console.log(e.target.petLocation.value)
-        console.log(e.target.petCategory.value)
+        // console.log(e.target.petAge.value)
+        // console.log(e.target.petName.value)
+        // console.log(e.target.petLocation.value)
+        // console.log(e.target.petCategory.value)
 
     };
 

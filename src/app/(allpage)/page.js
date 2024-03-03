@@ -19,7 +19,6 @@ export default function Home() {
       <GalleryPhoto />
       <UserReview />
       <FAQ />
-
     </div>
   )
 }
