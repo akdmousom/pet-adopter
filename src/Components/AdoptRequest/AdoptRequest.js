@@ -9,7 +9,7 @@ const AdoptRequest = () => {
         axios.get('https://pet-adopter-backend.vercel.app/api/v1/adoptrequest')
             .then(res => setAdoptData(res.data))
     }, [])
-    console.log(adoptData);
+    // console.log(adoptData);
     return (
         <div>
             <div className="overflow-x-auto my-16 mx-5 ">

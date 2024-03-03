@@ -17,7 +17,7 @@ const EmailSection = () => {
     let subject = target.subject.value
     let message = target.message.value
     const rules = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
-    console.log(name, email, subject, message)
+    // console.log(name, email, subject, message)
     if (name === '' || email === '' || subject === '' || message === '') {
       Swal.fire({
         position: "center",

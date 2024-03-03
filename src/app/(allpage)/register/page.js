@@ -32,7 +32,7 @@ const page = () => {
         })
 
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
         
         const regData = {
             userName: rawFormData.fullName,
@@ -40,7 +40,7 @@ const page = () => {
             userAvater: data.data.url,
             userPassword: rawFormData.userPassword,
         }
-        console.log(regData);
+        // console.log(regData);
 
 
         // When user hit the login button you can get user information in rawFormData object

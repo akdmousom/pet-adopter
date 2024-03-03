@@ -3,32 +3,32 @@ import axios from 'axios';
 import Image from "next/image";
 import { LuSendHorizonal } from "react-icons/lu";
 import { useEffect, useState } from "react";
-const Modal = ({data,user}) => {
-    console.log(user,'user data')
-    console.log(data,'data data')
-    const [commentData,setCommentData]=useState([])
-    const id=data._id
-    console.log(id,'id')
+const Modal = ({ data, user }) => {
+    // console.log(user, 'user data')
+    // console.log(data, 'data data')
+    const [commentData, setCommentData] = useState([])
+    const id = data._id
+    console.log(id, 'id')
     const handleComment = event => {
         event.preventDefault()
         const form = event.target;
         const comment = form.comment.value;
-        const likeComment={id,user_image:user.image,user_name:user.name,comment}
-        axios.post('https://pet-adopter-backend.vercel.app/api/v1/likeComment',likeComment)
-        .then(res=>console.log(res,'res'))
-        .catch(error=>console.log(error))
-        event.target.comment.value=" "
-        console.log(comment);
+        const likeComment = { id, user_image: user.image, user_name: user.name, comment }
+        axios.post('https://pet-adopter-backend.vercel.app/api/v1/likeComment', likeComment)
+            .then(res => console.log(res, 'res'))
+            .catch(error => console.log(error))
+        event.target.comment.value = " "
+        // console.log(comment);
     }
     useEffect(() => {
         axios.get('https://pet-adopter-backend.vercel.app/api/v1/likeCommentGet')
-        .then(res=>{
-            const filterdata=res.data.filter(item=>item.id===id)
-            console.log(filterdata.id,'comment')
-            setCommentData(filterdata.reverse())
-        })
-        .catch(error=>console.log(error))
-    }, []);
+            .then(res => {
+                const filterdata = res.data.filter(item => item.id === id)
+                // console.log(filterdata.id, 'comment')
+                setCommentData(filterdata.reverse())
+            })
+            .catch(error => console.log(error))
+    }, [id]);
 
     return (
         <div>
@@ -48,17 +48,17 @@ const Modal = ({data,user}) => {
 
                     </div>
                     {
-                        commentData.map(data=><div key={data._id} className="bg-gray-100 py-5 px-3 rounded-lg my-2">
-                        <div className="flex space-x-2 ">
-                        <div className="avatar">
-                           <div className="w-8 rounded-full">
-                             <Image width={200} height={200} src={data.user_image} alt=""/>
-                           </div>
-                        </div>
-                            <h1 className="font-bold">{data.user_name}</h1>
-                        </div>
-                        <h1 className="pl-5 py-3">{data.comment}</h1>
-                    </div>)
+                        commentData.map(data => <div key={data._id} className="bg-gray-100 py-5 px-3 rounded-lg my-2">
+                            <div className="flex space-x-2 ">
+                                <div className="avatar">
+                                    <div className="w-8 rounded-full">
+                                        <Image width={200} height={200} src={data.user_image} alt="" />
+                                    </div>
+                                </div>
+                                <h1 className="font-bold">{data.user_name}</h1>
+                            </div>
+                            <h1 className="pl-5 py-3">{data.comment}</h1>
+                        </div>)
                     }
                 </div>
             </dialog>
