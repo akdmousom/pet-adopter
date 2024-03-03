@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
 
         <div className=" max-w-[1366px] mx-auto">
 
-          <div className="bg-[#FFF5E4]">
+          <div className="">
             <NavBar>
               {children}
             </NavBar>
