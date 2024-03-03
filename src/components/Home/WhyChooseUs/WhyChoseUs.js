@@ -14,6 +14,11 @@ const WhyChoseUs = () => {
                             <p className="text-lg text-center pb-6 dark:text-white">Choose us for a personalized adoption experience tailored to your needs, ensuring a seamless journey to finding your perfect furry companion. With our commitment to responsible pet placement and ongoing support, trust us to help you welcome a new member into your family with joy and confidence.</p>
                             <Statistics />
                         </div>
+                        <div className="lg:pb-20">
+                            <h3 className="text-base font-semibold text-center text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Survey Our Suite of Services</h3>
+                            <h3 className="text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white">Discover Our Offerings</h3>
+                            <p className="text-lg text-center pb-6 dark:text-white">Explore our diverse range of furry companions awaiting their forever homes, each with their own unique story and personality. From playful pups to cuddly kittens, discover the perfect match to bring joy and companionship into your life.</p>
+                        </div>
                         <div className="grid lg:grid-cols-4 gap-6 items-center justify-center py-4">
                             <div className="mb-4 lg:mb-0">
                                 <Image src="https://i.ibb.co/Pw1vByK/pet-24service.jpg" alt="Pet-24/7 Service" width={300} height={300}
