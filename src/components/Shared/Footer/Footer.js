@@ -9,7 +9,7 @@ const Footer = () => {
     };
     return (
         <div>
-            <footer className="footer  px-4 py-10 md:px-10 bg-[#ffe3e1] dark:bg-[#121212] text-base-content dark:text-white">
+            <footer className="footer  px-4 py-10 md:px-10 bg-[#FFF5E4] dark:bg-[#121212] text-base-content dark:text-white">
                 <aside className="text-center">
                     <Image src={logo} height={120} width={120} alt="Footer logo" className="mx-auto" />
                     <p className="text-sm md:text-base"> Pet Adopter Limitied<br />Facilitating pet adoptions with trust and dedication since 1992.</p>

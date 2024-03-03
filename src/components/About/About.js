@@ -68,7 +68,7 @@ const About = () => {
                     </Marquee>
                 </div>
                 {/* Donate Advertisement */}
-                {/* <div className="bg-[#ffe3e1] my-8 px-3">
+                {/* <div className="bg-[#FFF5E4] my-8 px-3">
                     <div className="flex flex-1 flex-col lg:flex-row lg:grid-cols-3 gap-6 lg:gap-0 items-center justify-center">
                         <h3 className="text-xl lg:text-4xl font-bold col-span-5">Register your pet with us and <br /> <span className="text-[#F04336]">Get exiting gift</span></h3>
                         <Image src="https://i.ibb.co/7JRXqNQ/pet-4.jpg" width={1900} height={600} alt="pet-4" className="w-[200px] rounded-md lg:w-[250px] h-[200px] lg:h-[320px] col-span-2 object-cover" />

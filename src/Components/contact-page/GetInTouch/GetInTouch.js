@@ -4,7 +4,7 @@ import React from 'react';
 const GetInTouch = () => {
     return (
         <div className="mx-5 lg:mx-24">
-            <h3 className="bg-[#FFE3E1] dark:bg-[#AD8155] text-3xl lg:text-4xl text-center dark:text-white font-bold py-6 px-4 my-10">Get In Touch</h3>
+            <h3 className="bg-[#FFF5E4] dark:bg-[#AD8155] text-3xl lg:text-4xl text-center dark:text-white font-bold py-6 px-4 my-10">Get In Touch</h3>
             <div className='grid grid-cols-1 md:grid-cols-3 mx-12'>
                 <div className='flex flex-col text-center items-center space-y-6 py-8'>
                     <div>
