@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Banner = () => {
     return (
-        <div className="max-w-[1366px] mx-auto mb-10">
+        <div className="max-w-[1366px] mx-auto mb-20">
             {/* Banner  */}
             <div className="hero relative h-[550px]" style={{ backgroundImage: 'url(https://i.ibb.co/dLtZm6F/banner-Img.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
@@ -43,18 +43,8 @@ const Banner = () => {
                     <div className="text-white px-3">
                         <h3 className="lg:text-2xl md:text-lg items-center gap-5 flex">Pet Sitter <MdPets/> </h3>
                     </div>
-
-
-
                 </div>
-
-
-
-
-
             </div>
-
-
         </div>
     );
 };

@@ -22,7 +22,7 @@ const NavBar = async ({ children }) => {
     return (
         <div>
             <Header />
-            <div className="drawer z-10 bg-[#ffe3e1] text-black shadow-md ">
+            <div className="drawer z-10  text-black shadow-md ">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex justify-evenly flex-col">
                     {/* Navbar */}
@@ -67,7 +67,7 @@ const NavBar = async ({ children }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-[#FFF5E4]">
+                    <div className="">
                         {children}
                     </div>
 
