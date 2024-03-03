@@ -15,7 +15,7 @@ export default function Home() {
       <WhyChoseUs />
       <PetSection />
       <PetService />
-      <Donate />
+      {/* <Donate /> */}
       <GalleryPhoto />
       <UserReview />
       <FAQ />

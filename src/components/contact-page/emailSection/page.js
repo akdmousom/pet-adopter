@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import img from '../../../../public/images/email.svg'
+import contactImg from '../../../../public/images/contact_img.png'
 import Script from "next/script";
 import emailjs from "../emailJsFile/page";
 import { useRef } from "react";
@@ -52,7 +53,7 @@ const EmailSection = () => {
   return (
     <div className="mx-5 lg:mx-24">
 
-      <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
+      {/* <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
       <div className="bg-[#FFE3E1] dark:bg-[#AD8155] text-3xl lg:text-4xl text-center dark:text-white font-bold py-6 px-4 my-10">Contact us with email</div>
       <div className="flex flex-col-reverse lg:flex-row py-10 px-10 lg:px-20">
         <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 space-y-3 flex-1 py-10">
@@ -66,7 +67,55 @@ const EmailSection = () => {
         <div className="flex-1">
           <Image src={img} className="p-5" alt='image of contact page' />
         </div>
+      </div> */}
+
+
+
+      {/* New Design */}
+
+      <div className="my-8 mx-10">
+        <div className="my-6 space-y-3">
+          <h3>Contact Us</h3>
+          <h2>Lets Talk Question.</h2>
+          <p>The domestic dog is a doiated dendant of the wolf. The dog derived <br /> from an ancient, extinct wolf, and the modern grey.</p>
+        </div>
+        <div className="flex justify-between">
+          {/* Right Side  */}
+          <div className="w-1/3">
+            <form className="space-y-3">
+              <label className="form-control">
+                <span className="label-text-alt font-medium text-base">Your Name</span>
+                <input type="text" required placeholder="Your Name" className="p-1 border-2 " />
+              </label>
+
+              <label className="form-control">
+                <span className="label-text-alt font-medium text-base">Your Email</span>
+                <input type="text" required placeholder="Your Email" className="p-1 border-2 " />
+              </label>
+
+              <label className="form-control">
+                <span className="label-text-alt font-medium text-base">Your Message</span>
+                <textarea className="textarea textarea-error" placeholder="Opinion....."></textarea>
+              </label>
+
+              <button className="btn bg-[#F04336] text-white font-medium hover:bg-black">Send Now</button>
+
+            </form>
+          </div>
+          {/* Left Side  */}
+          <div>
+            <Image width={200} height={200} src={contactImg} alt="" />
+          </div>
+        </div>
+
       </div>
+
+
+
+
+
+
+
 
     </div>
   );
