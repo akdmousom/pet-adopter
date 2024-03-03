@@ -14,7 +14,7 @@ const Donate = ({ heading }) => {
                     bgImage="https://i.ibb.co/HYr8Rqh/donate.jpg"
                     bgImageAlt="the cat"
                     strength={200}>
-                    <div className="hero h-[900px]">
+                    <div className="hero h-[900px] object-cover">
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md text-white">

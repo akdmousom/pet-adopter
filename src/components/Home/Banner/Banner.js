@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div className="max-w-full mx-auto">
             {/* Banner  */}
-            <div className="hero relative h-[750px] lg:h-[850px]" style={{ backgroundImage: 'url(https://i.ibb.co/dLtZm6F/banner-Img.jpg)' }}>
+            <div className="hero relative h-[750px] lg:h-[850px] object-cover" style={{ backgroundImage: 'url(https://i.ibb.co/dLtZm6F/banner-Img.jpg)' }}>
                 <div className="absolute flex transform -translate-y-1/5 md:left-5 md:right-5 ">
                     <div className=" md:w-1/2 text-white ml-10 lg:ml-[103px] md:ml-[75px] space-y-7">
                         <h1 className=" text-2xl lg:text-5xl md:text-3xl font-semibold">Best Friend With  <br /> Happy Time</h1>
