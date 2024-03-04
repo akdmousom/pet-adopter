@@ -45,7 +45,7 @@ const DonationPage = () => {
                 <Link  title='donate $50'className='bg-red-600 text-white rounded-md hover:scale-110 font-bold transition-all px-10 py-2' href={`paydonation?pay=50`}>
                     $50
                 </Link>
-                <Link c title='donate $110'lassName='bg-red-600 text-white rounded-md hover:scale-110 font-bold transition-all px-10 py-2' href={`paydonation?pay=10`}>
+                <Link  title='donate $100'className='bg-red-600 text-white rounded-md hover:scale-110 font-bold transition-all px-10 py-2' href={`paydonation?pay=100`}>
                     $100
                 </Link>
             </div>

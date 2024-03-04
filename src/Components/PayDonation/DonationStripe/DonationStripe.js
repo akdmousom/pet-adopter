@@ -9,7 +9,7 @@ const DonationStripe = ({pay}) => {
     const [clientSecretData,seclientSecretData]=useState(null)
     useEffect(() => {
         // axios.post('http://localhost:5000/createPaymentIntent', https://pet-adopter-backend.vercel.app/createPaymentIntent
-        axios.post('http://localhost:5000/createPaymentIntent', { price: pay})
+        axios.post('https://pet-adopter-backend.vercel.app/createPaymentIntent', { price: pay})
             .then((res) => {
                 seclientSecretData(res.data.clientSecret)
             })
