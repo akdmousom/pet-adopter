@@ -1,11 +1,10 @@
-import React from 'react'
-
+import DonationPage from '@/Components/DonationPage/DonationPage'
 const page = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+    return (
+        <>
+           <DonationPage />
+        </>
+    )
 }
 
 export default page
