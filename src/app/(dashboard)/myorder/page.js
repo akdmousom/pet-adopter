@@ -7,24 +7,23 @@ import React from 'react'
 import { FaCheck } from 'react-icons/fa';
 const page = async () => {
     const session = await auth();
-    if (!session?.user || session?.user?.role !== 'admin') {
+    if (!session?.user) {
         redirect('/')
     }
-    // const res = await fetch('http://localhost:5000/api/v1/orders/api/v1/orders', {https://pet-adopter-backend.vercel.app || 
-    const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/orders', {
+    // const res = await fetch('http://localhost:5000/api/v1/orders/api/v1/orders', {https://pet-adopter-backend.vercel.app
+    const res = await fetch(`https://pet-adopter-backend.vercel.app/api/v1/orders/user?email=${session?.user?.email}`, {
         cache: 'no-store'
     })
     const storeItems = await res.json()
     return (
         <div className='p-10'>
-            <h3 className='uppercase font-semibold text-3xl text-center pb-5'>tolal order {storeItems?.length > 0 && <span>({storeItems.length})</span>}</h3>
+            <h3 className='uppercase font-semibold text-3xl text-center pb-5'>my order {storeItems?.length > 0 && <span>({storeItems.length})</span>}</h3>
             <div className="overflow-x-scroll">
                 <table className="table">
                     <thead>
                         <tr >
                             <th className='font-bold uppercase text-base'>image</th>
                             <th className='font-bold uppercase text-base'>email</th>
-                            <th className='font-bold uppercase text-base'>fullName</th>
                             <th className='font-bold uppercase text-base'>price</th>
                             <th className='font-bold uppercase text-base'>itemName</th>
                             <th className='font-bold uppercase text-base'>transID</th>
@@ -38,16 +37,14 @@ const page = async () => {
                             </td>
 
                             <td className='w-[190px] min-w-[189px]'>{item?.email}</td>
-                            <td>{item?.fullName}</td>
                             <td>${item?.price}</td>
                             <td className='w-[230px] min-w-[230px]'>{item?.itemName}</td>
                             <td className='w-[230px] min-w-[230px]'>{item?.transID}</td>
-                            <td className='flex justify-center item-center'>
+                            <td >
                                 {/* updateitem */}
                                 {
-                                    item?.status === 'deliverd' ? 'deliverd' : <UpdateOrder itemId={item?._id} useremail={item?.email} data={'deliverd'} ><FaCheck className='hover:text-pink-500 active:scale-90 transition-all text-2xl hover:scale-105 cursor-pointer' /></UpdateOrder>
+                                    item?.status === 'deliverd' ? 'deliverd' : session?.user?.role !== 'admin' ? 'pending' : <UpdateOrder itemId={item?._id} useremail={item?.email} data={'deliverd'} ><FaCheck className='hover:text-pink-500 active:scale-90 transition-all text-2xl hover:scale-105 cursor-pointer' /></UpdateOrder>
                                 }
-
                             </td>
                         </tr>
                         )}

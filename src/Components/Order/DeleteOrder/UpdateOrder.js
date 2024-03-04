@@ -16,7 +16,7 @@ const UpdateOrder = ({ itemId, data, useremail, children }) => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes"
         }).then(async (result) => {
-            if (result.isConfirmed) {//http://localhost:500/  https://pet-adopter-backend.vercel.app
+            if (result.isConfirmed) {//http://localhost:5000/  https://pet-adopter-backend.vercel.app
                 setloading(true)
                 const res = await axios.put(`https://pet-adopter-backend.vercel.app/api/v1/orders?id=${id}`, { status: data, email: useremail })
                 setloading(false)
