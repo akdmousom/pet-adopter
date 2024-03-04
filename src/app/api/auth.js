@@ -59,7 +59,7 @@ export const authOptions = {
         token.fullName = user.fullName,
         token.email = user.userEmail || profile?.email,
         token.avater= user.userAvater,
-        token.role = user.userRole
+        token.userRole = user.userRole
         
       }
 
@@ -74,7 +74,7 @@ export const authOptions = {
 
         session.user.image = token.avater || token.picture,
         session.user.name = token.fullName || token.name,
-        session.user.role = token.role     || "user"      
+        session.user.userRole = token.userRole  || "user"    
       }
         
       return session
