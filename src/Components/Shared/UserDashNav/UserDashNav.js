@@ -10,6 +10,9 @@ import security from '../../../../public/images/security.svg'
 import petListing from '../../../../public/images/pet-listing.svg'
 import home from '../../../../public/images/home.svg'
 import adoptRequest from '../../../../public/images/adopt-request.svg'
+import order from '../../../../public/images/3592871-200.png'
+import allitem from '../../../../public/images/1170628.png'
+import myorder from '../../../../public/images/my-orders-icon.webp'
 
 const UserDashNav = async({ childrens }) => {
   const session = await auth();
@@ -39,6 +42,8 @@ const UserDashNav = async({ childrens }) => {
       <li className=' '><Link href="/addreview" ><Image src={post} alt="alt" width={20} height={20} /> Add Review</Link></li>
       <li className=' border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={setting} alt="alt" width={20} height={20} /> Setting</Link></li>
       <li className=' '><Link href="/adoptHerePage" ><Image src={security} alt="alt" width={20} height={20} /> Security</Link></li>
+      <li className=' '><Link href="/order" ><Image src={order} alt="alt" width={20} height={20} /> orders</Link></li>
+      <li className=' '><Link href="/allItem" ><Image src={allitem} alt="alt" width={20} height={20} />shop items</Link></li>
     </>
     :
     <>
@@ -53,13 +58,13 @@ const UserDashNav = async({ childrens }) => {
       <li className=' '><Link href="/petCommunity "><Image src={social} alt="alt" width={20} height={20} /> Pet Lover Community</Link></li>
       <li className=''><Link href="/allPetRequest"><Image src={pet_Request} alt="alt" width={20} height={20} /> All adopt Request</Link></li>
       <li><Link href='/postPetCommunity'><Image src={post} alt="alt" width={20} height={20} /> Post Your Community</Link></li>
+      <li><Link href='/myorder'><Image src={myorder} alt="alt" width={20} height={20} /> myorder</Link></li>
       <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={home} alt="alt" width={20} height={20} /> Home Page</Link></li>
       <li className=' '><Link href="/adoptHerePage" ><Image src={adoptRequest} alt="alt" width={20} height={20} /> Adopt Request</Link></li>
       <li className=' '><Link href="/pet-listing" ><Image src={petListing} alt="alt" width={20} height={20} /> Pet-Listing</Link></li>
       <li className=' '><Link href="/addreview" ><Image src={post} alt="alt" width={20} height={20} /> Add Review</Link></li>
       <li className=' border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={setting} alt="alt" width={20} height={20} /> Setting</Link></li>
       <li className=' '><Link href="/adoptHerePage" ><Image src={security} alt="alt" width={20} height={20} /> Security</Link></li>
-      <li className=' '><Link href="/allItem" > All Medicine</Link></li>
     </>
 
     }
