@@ -6,7 +6,9 @@ import Script from "next/script";
 import emailjs from "../emailJsFile/page";
 import { useRef } from "react";
 import { FaVoicemail } from "react-icons/fa6";
-import { FaLocationArrow, FaPhone } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaLocationArrow, FaPhone, FaTwitter } from "react-icons/fa";
+import { HiOutlineMailOpen } from "react-icons/hi";
+import Link from "next/link";
 const Swal = require('sweetalert2')
 
 const EmailSection = () => {
@@ -75,7 +77,7 @@ const EmailSection = () => {
 
       {/* New Design */}
 
-      <div className="my-8 mx-10 md:flex justify-between">
+      <div className="my-8  md:flex justify-between">
 
         <div className="">
           <div className="my-6 space-y-3">
@@ -101,7 +103,7 @@ const EmailSection = () => {
                 <textarea className="textarea textarea-error" placeholder="Opinion....."></textarea>
               </label>
 
-              <button className="btn bg-[#F04336] text-white font-medium hover:bg-black">Send Now</button>
+              <button className="btn bg-[#F04336] text-white font-medium hover:bg-black transition duration-500">Send Now</button>
 
             </form>
           </div>
@@ -110,14 +112,29 @@ const EmailSection = () => {
 
         {/* Left Side  */}
         <div className="p-10 mt-10">
-          <Image width={200} height={200} src={contactImg} alt="" className="" />
+          <Image width={200} height={200} src={contactImg} alt="" className="w-56" />
           <div className="my-8">
             <div className="space-y-7">
 
-              <p className="flex items-center gap-4"> <FaLocationArrow className="text-[#F04336] w-9"></FaLocationArrow> Jashore, Khulna, Bangladesh,</p>
-              <p className="flex items-center gap-4"><FaPhone className="text-[#F04336] w-9"></FaPhone> +9 (256) 254 9568</p>
-              <p className="flex items-center gap-4"> <FaVoicemail className="text-[#F04336] w-9"></FaVoicemail> Contact@ info.com</p>
+              <p className="flex items-center gap-4"> <FaLocationArrow className="text-[#F04336] w-9" /> Jashore, Khulna, Bangladesh,</p>
+              <p className="flex items-center gap-4"><FaPhone className="text-[#F04336] w-9" /> +9 (256) 254 9568</p>
+              <p className="flex items-center gap-4"> <HiOutlineMailOpen className="text-[#F04336] w-9" /> Contact@ info.com</p>
             </div>
+          </div>
+          {/* Social Link  */}
+          <div className="flex gap-8 ">
+
+            <Link href='https://www.facebook.com/SabbirOfficial34'>
+              <FaFacebook className="text-blue-500 hover:cursor-pointer w-8 h-8" />
+            </Link>
+
+            <Link href='https://twitter.com/sk_sabbir34'>
+              <FaTwitter className="text-sky-400 hover:cursor-pointer w-8 h-8" />
+            </Link>
+
+            <Link href='#'>
+              <FaLinkedin className="text-blue-600 hover:cursor-pointer w-8 h-8" />
+            </Link>
           </div>
         </div>
 
