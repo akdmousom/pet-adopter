@@ -31,7 +31,7 @@ const UserDashNav = async({ childrens }) => {
         {user.name}</Link></li>
         <li className=''><Link href="/admin_dashboard"><Image src={dashboard} alt="alt" width={20} height={20} /> Admin Dashboard</Link></li>
       <li className=' '><Link href="/alluser"><Image src={social} alt="alt" width={20} height={20} />All User</Link></li>
-      <li className=''><Link href="/allPetRequest"><Image src={pet_Request} alt="alt" width={20} height={20} />All pendding Post</Link></li>
+      <li className=''><Link href="/allAdoptRequest"><Image src={pet_Request} alt="alt" width={20} height={20} />All Adopt Request</Link></li>
       <li><Link href='/postPetCommunity'><Image src={post} alt="alt" width={20} height={20} /> Post Medical Store</Link></li>
       <li className='border-t-2 lg:border-t-4 border-[#f04336]  lg:mt-10'><Link href="/" ><Image src={home} alt="alt" width={20} height={20} /> Home Page</Link></li>
       <li className=' '><Link href="/adoptHerePage" ><Image src={adoptRequest} alt="alt" width={20} height={20} /> Adopt Request</Link></li>
