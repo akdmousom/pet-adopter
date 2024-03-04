@@ -32,6 +32,7 @@
     "react-rating-stars-component": "^2.2.0",
     "react-star-ratings": "^2.3.0",
     "react-toastify": "^10.0.4",
+    "react-toggle-dark-mode": "^1.1.1",
     "sharp": "^0.33.2",
     "sweetalert2": "^11.10.4",
     "swiper": "^11.0.5"

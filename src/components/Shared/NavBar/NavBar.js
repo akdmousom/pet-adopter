@@ -13,6 +13,7 @@ const NavLinks = [
     { id: 3, name: 'About', path: '/about' },
     { id: 4, name: 'Shop', path: '/shop' },
     { id: 5, name: 'Contact', path: '/contact' },
+    
 ];
 
 const NavBar = async ({ children }) => {
@@ -60,8 +61,7 @@ const NavBar = async ({ children }) => {
                                 </Link>
                                 {/* <CgProfile onClick={showPopup} className="text-3xl text-[#F04336] cursor-pointer" /> */}
                             </div>
-
-
+                            
                             <div className="dropdown dropdown-end">
                                 <UserDropdown />
                             </div>
@@ -90,6 +90,8 @@ const NavBar = async ({ children }) => {
                             );
                         })}
                     </ul>
+                   <div>
+                   </div>
                 </div>
             </div>
         </div>
