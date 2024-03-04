@@ -59,14 +59,14 @@ const EmailSection = () => {
 
       <div className="my-8  md:flex justify-between">
 
-        <div className="">
+        <div >
           <div className="my-6 space-y-3">
             <h3 className="text-2xl font-medium">Contact Us</h3>
             <h2 className="text-4xl font-bold">Lets Talk Question.</h2>
             <p className="font-medium pt-4">The domestic dog is a doiated dendant of the wolf. The dog derived <br /> from an ancient, extinct wolf, and the modern grey.</p>
           </div>
-          {/* Right Side  */}
-          <div className="">
+          {/* Left Side  */}
+          <div>
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <label className="form-control">
                 <span className="label-text-alt font-medium text-base">Your Name</span>
@@ -90,7 +90,7 @@ const EmailSection = () => {
 
         </div>
 
-        {/* Left Side  */}
+        {/* Right Side  */}
         <div className="p-10 mt-10">
           <Image width={200} height={200} src={contactImg} alt="" className="w-56" />
           <div className="my-8">
