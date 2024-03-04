@@ -8,7 +8,7 @@ const WhyChoseUs = () => {
             <div className="bg-[#FFF5E4] dark:bg-[#1B2430] max-w-full mx-auto px-6">
                 <div className="grid mx-auto py-8">
                     <div className="text-black">
-                        <div className="lg:py-20">
+                        <div className="md:py-20">
                             <h3 className="text-base font-semibold text-center text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Excellence in Every Choice</h3>
                             <h3 className="text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white">Why Choose Us?</h3>
                             <p className="text-lg text-center pb-6 dark:text-white">Choose us for a personalized adoption experience tailored to your needs, ensuring a seamless journey to finding your perfect furry companion. With our commitment to responsible pet placement and ongoing support, trust us to help you welcome a new member into your family with joy and confidence.</p>

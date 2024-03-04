@@ -20,7 +20,7 @@ const Banner = () => {
 
             {/* Shared with Banner  */}
 
-            <div className=" hidden mx-auto lg:block md:block xl:w-[1120px] lg:w-[782px] md:w-[578px]  absolute bg-[#0A303A] dark:bg-[#AD8155] h-[116px] md:left-[46px] xl:left-[123px] lg:left-[123px] xl:right-[123px] lg:right-[123px] top-[704px] left-[39px] right-[44px] mt-[200px]">
+            <div className=" hidden mx-auto lg:block md:block xl:w-[1120px] lg:w-[782px] md:w-[578px]  absolute bg-[#0A303A] dark:bg-[#AD8155] h-[116px] md:left-[46px] xl:left-[123px] lg:left-[123px] xl:right-[123px] lg:right-[123px] md:top-[604px] lg:top-[704px] left-[39px] right-[44px] mt-[200px]">
 
                 {/* Banner Card  */}
                 <div className="flex justify-evenly mt-[43px]">
