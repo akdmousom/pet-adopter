@@ -23,18 +23,7 @@ const GetInTouch = () => {
                         <h3 className='text-lg font-semibold dark:text-white'>Southern Colorado Office</h3>
                         <p className='dark:text-white font-medium space-y-2'>4474 Barnes Road <br />Colorado Springs, CO 80917</p>
                     </div>
-                    <div>
-                        <h3 className='text-lg font-semibold dark:text-white'>Wyoming Office</h3>
-                        <p className='dark:text-white font-medium space-y-2'>308 Southwest Dr Unit E <br />Cheyenne, WY 82007</p>
-                    </div>
-                    <div>
-                        <h3 className='text-lg font-semibold dark:text-white'>Texas Office</h3>
-                        <p className='dark:text-white font-medium space-y-2'>1421 Wells Branch Pkwy. Ste 100 <br />Pflugerville, TX 78660</p>
-                    </div>
-                    <div>
-                        <h3 className='text-lg font-semibold dark:text-white'>Tennessee Office</h3>
-                        <p className='dark:text-white font-medium space-y-2'>1125 Harpeth Industrial Ct, Suite A <br />Franklin, TN 37064</p>
-                    </div>
+                   
                 </div>
                 <div className='flex flex-col text-center items-center space-y-6 py-8'>
                     <div>
@@ -57,14 +46,7 @@ const GetInTouch = () => {
                         <h3 className='text-lg font-semibold dark:text-white'>Wyoming Office</h3>
                         <p className='dark:text-white font-medium space-y-2'>877.Pet Adopter phone</p>
                     </div>
-                    <div>
-                        <h3 className='text-lg font-semibold dark:text-white'>Texas Office</h3>
-                        <p className='dark:text-white font-medium space-y-2'>877.Pet Adopter phone</p>
-                    </div>
-                    <div>
-                        <h3 className='text-lg font-semibold dark:text-white'>Tennessee Office</h3>
-                        <p className='dark:text-white font-medium space-y-2'>877.Pet Adopter phone</p>
-                    </div>
+                   
                 </div>
                 <div className='flex flex-col text-center items-center space-y-6 py-8'>
                     <div>
