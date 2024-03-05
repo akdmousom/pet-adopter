@@ -26,7 +26,7 @@ const AdoptRequest = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 axios.put(`https://pet-adopter-backend.vercel.app/api/v1/adoptrequest?id=${id}`, { status: 'approved' })
-                    // axios.put(`http://localhost:5000/api/v1/adoptrequest?id=${id}`)
+                    // axios.put(`https://pet-adopter-backend.vercel.app/api/v1/adoptrequest?id=${id}`)
                     .then(res => {
                         if (res?.data?.acknowledged) {
                             router.refresh()
@@ -55,7 +55,7 @@ const AdoptRequest = () => {
             confirmButtonText: "Yes"
         }).then((result) => {
             if (result.isConfirmed) {
-                // axios.put(`http://localhost:5000/api/v1/adoptrequest?id=${id}`, { status: 'rejected' })
+                // axios.put(`https://pet-adopter-backend.vercel.app/api/v1/adoptrequest?id=${id}`, { status: 'rejected' })
                 axios.put(`https://pet-adopter-backend.vercel.app/api/v1/adoptrequest?id=${id}`, { status: 'rejected' })
                     .then(res => {
                         if (res?.data?.acknowledged) {

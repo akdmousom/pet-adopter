@@ -5,8 +5,10 @@ import logo from "../../../../public/logo.png"
 import UserDropdown from "./UserDropdown/UserDropDown";
 import Header from "@/components/Home/Header/Header";
 import DarkMode from "@/components/DarkMode/DarkMode";
+<<<<<<< HEAD
+=======
 
-
+>>>>>>> main
 
 const NavLinks = [
     { id: 1, name: 'Home', path: '/' },

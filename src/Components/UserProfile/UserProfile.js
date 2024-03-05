@@ -7,6 +7,11 @@ import Link from "next/link";
 const UserProfile = async () => {
     const session = await auth();
     const user = session.user
+    const res = await fetch(`https://pet-adopter-backend.vercel.app/api/v1/getregisteruser?email=${user?.email}`, {
+        cache: 'no-store'
+    })
+    const userData = await res.json()
+    console.log(userData)
     return (
         <div className="my-5 max-w-[1200px] mx-auto">
 
