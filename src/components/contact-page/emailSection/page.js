@@ -1,11 +1,11 @@
 "use client"
 import Image from "next/image";
-// import img from '../../../../public/images/email.svg'
+import img from '../../../../public/images/email.svg'
 import contactImg from '../../../../public/images/contact_img.png'
 import Script from "next/script";
 import emailjs from "../emailJsFile/page";
 import { useRef } from "react";
-// import { FaVoicemail } from "react-icons/fa6";
+import { FaVoicemail } from "react-icons/fa6";
 import { FaFacebook, FaLinkedin, FaLocationArrow, FaPhone, FaTwitter } from "react-icons/fa";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import Link from "next/link";
@@ -20,7 +20,7 @@ const EmailSection = () => {
     let name = target.user_name.value
     let email = target.user_email.value
     let message = target.message.value
-    // const rules = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
+    const rules = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
     
     if (name === '' || email === ''  || message === '') {
       Swal.fire({
