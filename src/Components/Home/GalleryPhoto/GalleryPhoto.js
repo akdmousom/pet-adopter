@@ -4,12 +4,13 @@ import Image from "next/image";
 const GalleryPhoto = () => {
 
     return (
-        <div className="bg-[#FFF5E4] dark:bg-[#1B2430]">
+        <div className="dark:bg-[#1B2430]">
             <div className="Py-12 mx-auto">
                 {/* Title  */}
                 <div className="text-center">
                     <h3 className="text-base font-semibold text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Gallery Photos</h3>
                     <h1 className="text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white">Pet Care Memories</h1>
+                    <p className="font-medium text-center pb-6 dark:text-white">Capture and cherish precious moments with your furry companion in our section.<br /> Browse heartwarming snapshots and stories shared by our community, celebrating the love and joy pets bring into our lives.</p>
                 </div>
 
                 {/* Gallery Section  */}

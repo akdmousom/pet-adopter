@@ -52,7 +52,7 @@ const AdoptHerePage = () => {
     return (
         <div>
             {/* <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script> */}
-            <div className="hero min-h-screen bg-[#FFF5E4]">
+            <div className="hero min-h-screen">
      <div className="card shrink-0 w-full max-w-2xl lg:shadow-2xl bg-base-100">
       <form ref={form} onSubmit={handlesubmit} className="card-body">
         <div className="form-control">
@@ -81,7 +81,7 @@ const AdoptHerePage = () => {
           
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-[#F04336] hover:bg-black text-white font-bold">Send Adopt Request</button>
+          <button className="btn btn-ghost bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] hover:bg-black text-white dark:text-black font-semibold">Send Adopt Request</button>
         </div>
       </form>
     </div>

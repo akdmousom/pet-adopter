@@ -13,7 +13,7 @@ const DonationStripe = ({pay,session}) => {
             .then((res) => {
                 seclientSecretData(res.data.clientSecret)
             })
-    }, [])
+    }, [pay])
   return (
     <>
       <Elements stripe={stripePromise}>

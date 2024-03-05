@@ -8,7 +8,7 @@ const session = null;
 const PetlistingPage = () => {
 
     return (
-        <div>
+        <div className='bg-white dark:bg-[#1B2430]'>
             <Suspense fallback={<Loading />}>
                 <Petlisting />
             </Suspense>

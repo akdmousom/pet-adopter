@@ -18,9 +18,9 @@ const AddPet = () => {
 
     const inputStyle = "mt-1 p-2 border rounded-md w-full";
     return (
-        <div>
-
-            < form onSubmit={handleSubmit} className="w-7/12 mx-auto p-6 bg-white rounded-md border-2 border-black shadow-md" >
+        <div className="py-8">
+            <h3 className="text-3xl lg:text-5xl text-center font-semibold pb-6 dark:text-white">Add Pet</h3>
+            < form onSubmit={handleSubmit} className="w-7/12 mx-auto p-6 bg-white rounded-md border-2 border-black dark:border-white shadow-md dark:bg-[#f5f2eb]" >
 
                 <div className="mb-4">
                     <label htmlFor="petImage" className="block text-sm font-medium text-gray-600">
@@ -92,7 +92,7 @@ const AddPet = () => {
 
                 </div>
 
-                <button type="submit" className="px-4 py-2 rounded-md border-none text-white hover:bg-black bg-[#FA524F] focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+                <button type="submit" className="px-4 py-2 rounded-md border-none text-white dark:text-black hover:bg-black bg-[#FA524F] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
                     Submit
                 </button>
 

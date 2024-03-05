@@ -6,7 +6,7 @@ import ReactStars from "react-rating-stars-component";
 const ItemDetails = ({ item }) => {
     return (
         <div>
-            <div className=" md:flex items-center  px-5 max-w-full md:max-w-5xl h-full w-full mx-auto  rounded-xl overflow-hidden  my-4 shadow-lg">
+            <div className=" md:flex items-center  px-5 max-w-full md:max-w-5xl h-full w-full mx-auto  rounded-xl overflow-hidden  my-4 shadow-lg py-20">
                 <div className="md:w-1/2">
                     <Image
                         width={500} height={400}

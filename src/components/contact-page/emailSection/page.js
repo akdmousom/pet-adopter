@@ -57,33 +57,32 @@ const EmailSection = () => {
 
       <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
 
-      <div className="my-8  md:flex justify-between">
+      <div className="py-10 flex md:flex-col-reverse lg:flex-row items-center justify-around">
 
         <div >
           <div className="my-6 space-y-3">
-            <h3 className="text-2xl font-medium">Contact Us</h3>
-            <h2 className="text-4xl font-bold">Lets Talk Question.</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Lets Talk Question.</h2>
             <p className="font-medium pt-4">The domestic dog is a doiated dendant of the wolf. The dog derived <br /> from an ancient, extinct wolf, and the modern grey.</p>
           </div>
           {/* Left Side  */}
           <div>
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <label className="form-control">
-                <span className="label-text-alt font-medium text-base">Your Name</span>
-                <input type="text" name='user_name' required placeholder="Your Name" className="p-1 border-2 rounded-md" />
+                <span className="label-text-alt font-medium text-lg py-2 dark:text-white">Your Name</span>
+                <input type="text" name='user_name' required placeholder="Your Name" className="p-1 border-2 rounded-md py-4 px-4 bg-[#f5f2eb] dark:text-black" />
               </label>
 
               <label className="form-control">
-                <span className="label-text-alt font-medium text-base">Your Email</span>
-                <input type="email" name='user_email' required placeholder="Your Email" className="p-1 border-2 rounded-md" />
+                <span className="label-text-alt font-medium text-lg py-2 dark:text-white">Your Email</span>
+                <input type="email" name='user_email' required placeholder="Your Email" className="p-1 border-2 rounded-md py-4 px-4 bg-[#f5f2eb] dark:text-black" />
               </label>
 
               <label className="form-control">
-                <span className="label-text-alt font-medium text-base">Your Message</span>
-                <textarea className="textarea textarea-error" type='text' name='message' placeholder="Opinion....."></textarea>
+                <span className="label-text-alt font-medium text-lg py-2 dark:text-white">Your Message</span>
+                <textarea className="textarea textarea-error bg-[#f5f2eb] border-black dark:text-black" type='text' name='message' placeholder="Opinion....."></textarea>
               </label>
 
-              <button className="btn bg-[#F04336] text-white font-medium hover:bg-black">Send Now</button>
+              <button className="btn bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] text-white dark:text-black font-medium hover:bg-black">Send Now</button>
 
             </form>
           </div>
@@ -91,8 +90,8 @@ const EmailSection = () => {
         </div>
 
         {/* Right Side  */}
-        <div className="p-10 mt-10">
-          <Image width={200} height={200} src={contactImg} alt="" className="w-56" />
+        <div className="p-10 mt-10 bg-[#f5f2eb] rounded-xl">
+          <Image width={200} height={200} src={contactImg} alt="" className="w-72" />
           <div className="my-8">
             <div className="space-y-7">
 
@@ -102,7 +101,7 @@ const EmailSection = () => {
             </div>
           </div>
           {/* Social Link  */}
-          <div className="flex gap-8 ">
+          <div className="flex items-center justify-evenly gap-8 ">
 
             <Link href='https://www.facebook.com/SabbirOfficial34'>
               <FaFacebook className="text-blue-500 hover:cursor-pointer w-8 h-8" />

@@ -5,7 +5,7 @@ const singleItemPage = async ({ params }) => {
     const item = await getSingleItem(params.itemid)
 
     return (
-        <div>
+        <div className='bg-white dark:bg-[#1B2430]'>
             <ItemDetails item={item} />
         </div>
     );
