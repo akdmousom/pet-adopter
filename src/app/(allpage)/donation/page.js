@@ -1,8 +1,10 @@
 import DonationPage from '@/Components/DonationPage/DonationPage'
-const page = () => {
+import { auth } from '@/app/api/auth';
+const page = async () => {
+    const session = await auth();
     return (
         <>
-           <DonationPage />
+            <DonationPage/>
         </>
     )
 }

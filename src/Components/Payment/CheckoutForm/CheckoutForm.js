@@ -61,7 +61,7 @@ const CheckoutForm = ({ item, session, clientSecretData }) => {
                     transID : paymentIntent?.id,
                     image : item.image,
                 }
-                // 'http://localhost:5000/api/v1/orders'  https://pet-adopter-backend.vercel.app
+                // 'https://pet-adopter-backend.vercel.app/api/v1/orders'  https://pet-adopter-backend.vercel.app
                 axios.post('https://pet-adopter-backend.vercel.app/api/v1/orders', OrderData).then((res) => {
                     //.data.success
                     console.log(res.data)

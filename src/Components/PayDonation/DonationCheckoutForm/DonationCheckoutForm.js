@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-const DonationCheckoutForm = ({ pay, clientSecretData }) => {
+const DonationCheckoutForm = ({ pay, clientSecretData, session }) => {
     const router = useRouter()
     const [loading, setloading] = useState(false)
     const [error, seterror] = useState('')
@@ -17,7 +17,7 @@ const DonationCheckoutForm = ({ pay, clientSecretData }) => {
         const name = event.target.name.value
         const email = event.target.email.value
         const msg = event.target.msg.value
-        console.log(name,email,msg)
+        console.log(name, email, msg)
         if (!stripe || !elements) {
             setloading(false)
             return;
@@ -44,7 +44,7 @@ const DonationCheckoutForm = ({ pay, clientSecretData }) => {
                 card: card,
                 billing_details: {
                     email: email || 'anonymous',
-                    name: name|| 'anonymous'
+                    name: name || 'anonymous'
                 }
             }
         })
@@ -65,7 +65,7 @@ const DonationCheckoutForm = ({ pay, clientSecretData }) => {
                 }
                 // console.log(DonateData)
                 // return
-                // 'http://localhost:5000'  https://pet-adopter-backend.vercel.app
+                // 'https://pet-adopter-backend.vercel.app'  https://pet-adopter-backend.vercel.app
                 axios.post('https://pet-adopter-backend.vercel.app/api/v1/donations', DonateData).then((res) => {
                     //.data.success
                     console.log(res.data)
@@ -97,9 +97,12 @@ const DonationCheckoutForm = ({ pay, clientSecretData }) => {
                         <div className="relative w-full min-w-[200px] h-10">
                             <input
                                 className="peer w-full h-full bg-transparent text-blue-gray-700  outline outline-0 focus:outline-0  transition-all placeholder-shown:border  text-white placeholder-shown:border-black focus:text-white placeholder-shown:border-t-black border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-black focus:border-[#F04336]"
-                                defaultValue="anonymous"
+                                defaultValue={session?.user?.fullName || ''}
+                                disabled={session?.user?.fullName}
                                 type='text'
-                                name='name' />
+                                name='name'
+                                required
+                            />
                             <label
                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate  peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-white peer-focus:text-[#F04336] before:border-black peer-focus:before:!border-[#F04336] after:border-black peer-focus:after:!border-[#F04336]">Enter Your Name
                             </label>
@@ -109,9 +112,11 @@ const DonationCheckoutForm = ({ pay, clientSecretData }) => {
                         <div className="relative w-full min-w-[200px] h-10">
                             <input
                                 className="peer w-full h-full bg-transparent text-blue-gray-700  outline outline-0 focus:outline-0  transition-all placeholder-shown:border  text-white placeholder-shown:border-black focus:text-white placeholder-shown:border-t-black border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-black focus:border-[#F04336]"
-                                defaultValue="anonymous@gmail.com"
+                                defaultValue={session?.user?.email}
+                                disabled={session?.user?.email}
                                 type='email'
-                                name='email' />
+                                name='email'
+                                required />
                             <label
                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-white peer-focus:text-[#F04336] before:border-black peer-focus:before:!border-[#F04336] after:border-black peer-focus:after:!border-[#F04336]">Enter Your Email
                             </label>

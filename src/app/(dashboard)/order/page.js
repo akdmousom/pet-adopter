@@ -10,7 +10,7 @@ const page = async () => {
     if (!session?.user || session?.user?.role !== 'admin') {
         redirect('/')
     }
-    // const res = await fetch('http://localhost:5000/api/v1/orders/api/v1/orders', {https://pet-adopter-backend.vercel.app || 
+    // const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/orders/api/v1/orders', {https://pet-adopter-backend.vercel.app || 
     const res = await fetch('https://pet-adopter-backend.vercel.app/api/v1/orders', {
         cache: 'no-store'
     })
