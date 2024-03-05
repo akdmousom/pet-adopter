@@ -30,6 +30,7 @@ const UserReview = () => {
             <div className='text-center'>
                 <h4 className='text-base font-semibold text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]'>Users opinions</h4>
                 <h1 className='text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white'>Users Review</h1>
+                <p className="font-medium text-center pb-6 dark:text-white">Discover what our users have to say about their heartwarming adoption experiences!<br /> Read real-life stories of companionship, joy, and the unbreakable bond formed with their new furry family members.</p>
             </div>
 
 

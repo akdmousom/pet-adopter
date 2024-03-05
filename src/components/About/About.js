@@ -7,7 +7,7 @@ import Marquee from 'react-fast-marquee';
 const About = () => {
     return (
         <>
-            <div className="max-w-full mx-auto bg-[#FFF5E4] dark:bg-[#1B2430]">
+            <div className="max-w-full mx-auto dark:bg-[#1B2430]">
                 <div className="carousel-item relative w-full">
                     <Image src="https://i.ibb.co/MBNhPW4/pet-1.jpg" width={1900} height={600} alt="Pet Banner" className="w-screen lg:w-full h-[400px] lg:h-screen object-cover" />
                     <div className="absolute flex items-center h-full top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] px-3 lg:px-0">

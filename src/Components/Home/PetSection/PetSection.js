@@ -19,7 +19,7 @@ const PetSection = async () => {
                 <Image width={200} height={200} className="w-12 rounded-2xl mx-auto" src="https://i.ibb.co/3fdPN5F/pawprint.gif" alt="" />
                 <h3 className="text-base font-semibold text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Meet The Pets</h3>
                 <h1 className="text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white">Our Pets Waiting for Adoption</h1>
-                <p className="text-base font-medium dark:text-white">The best overall pet DNA test is Embark Breed & Health Kit (view at Chewy), which <br /> provides you with a breed brwn and information Most pets</p>
+                <p className="font-medium text-center pb-6 dark:text-white">The best overall pet DNA test is Embark Breed & Health Kit (view at Chewy), which <br /> provides you with a breed brwn and information Most pets</p>
             </div>
 
             {/* Card section */}

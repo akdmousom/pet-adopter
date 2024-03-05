@@ -3,8 +3,7 @@ import React from 'react';
 
 const AddPetPage = () => {
     return (
-        <div>
-            <p>Pet Add Page</p>
+        <div className='bg-white dark:bg-[#1B2430]'>
             <AddPet />
 
         </div>

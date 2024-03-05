@@ -12,8 +12,8 @@ const Shop = () => {
             .then(res => setItems(res.data))
     }, [])
     return (
-        <div className='bg-[#FFF5E4]'>
-            <div className='bg-[#FFF5E4] dark:bg-[#1B2430] py-12'>
+        <div className=''>
+            <div className='dark:bg-[#1B2430] py-12'>
                 <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 my-8'>
                     {items.map(item =>
                         <div key={item._id} className="card border border-[#f04336] dark:border-[#68e0cf] hover:scale-105 duration-1000 hover:shadow-xl">

@@ -80,15 +80,10 @@ const DonationPage = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                     <div className=" text-center py-10">
                         <button className=' text-center text-lg text-white hover:bg-black bg-[#F04336] px-4 py-2 rounded-lg '>  Next</button>
                     </div>
-
-
-
                 </form>
             </div>
 

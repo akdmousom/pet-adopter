@@ -9,6 +9,7 @@ const PetService = () => {
         <div className="text-center">
             <h3 className="text-base font-semibold text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">What We Provide</h3>
             <h1 className="text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white">Pet Care Services</h1>
+            <p className="font-medium text-center pb-6 dark:text-white">Explore our comprehensive Pet Care Services designed to cater to every aspect of your furry friend's well-being.<br /> From grooming and veterinary care to specialized training programs, we're here to ensure your pet receives the best care possible.</p>
         </div>
 
       

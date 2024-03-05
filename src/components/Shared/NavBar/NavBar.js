@@ -14,6 +14,7 @@ const NavLinks = [
     { id: 3, name: 'About', path: '/about' },
     { id: 4, name: 'Shop', path: '/shop' },
     { id: 5, name: 'Contact', path: '/contact' },
+    
 ];
 
 const NavBar = async ({ children }) => {
@@ -23,7 +24,7 @@ const NavBar = async ({ children }) => {
     return (
         <div>
             <Header />
-            <div className="drawer z-10 bg-[#FFF5E4]  dark:bg-[#121212] text-black shadow-md ">
+            <div className="drawer z-10 bg-[#FFF5E4] dark:bg-[#121212] text-black shadow-md ">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex justify-evenly flex-col">
                     {/* Navbar */}
@@ -55,11 +56,11 @@ const NavBar = async ({ children }) => {
                             </div>
                             <div className="hidden md:flex gap-3 md:gap-5 items-center">
                                 <Link href="/adoptHerePage">
-                                    <button className="md:text-lg text-white dark:text-black text-center items-center rounded-full font-medium md:px-5 px-2 py-2 md:py-2 hover:bg-black bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Adopt Here</button>
+                                    <button className="btn btn-ghost md:text-lg text-white dark:text-black text-center items-center rounded-full font-medium md:px-5 px-2 py-2 md:py-2 hover:bg-black bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Adopt Here</button>
                                 </Link>
                                 {/* <CgProfile onClick={showPopup} className="text-3xl text-[#F04336] cursor-pointer" /> */}
                             </div>
-                            <div className="flex items-center">
+                            <div className="">
                                 <DarkMode />
                             </div>
                             <div className="dropdown dropdown-end">
@@ -88,6 +89,8 @@ const NavBar = async ({ children }) => {
                             );
                         })}
                     </ul>
+                   <div>
+                   </div>
                 </div>
             </div>
         </div>
