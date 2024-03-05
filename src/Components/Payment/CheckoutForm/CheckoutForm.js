@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Swal from "sweetalert2";
+
 const CheckoutForm = ({ item, session, clientSecretData }) => {
     const router = useRouter()
     const [loading, setloading] = useState(false)
@@ -18,8 +19,8 @@ const CheckoutForm = ({ item, session, clientSecretData }) => {
         if (!stripe || !elements) {
             setloading(false)
             return;
-
         }
+        
         const card = elements.getElement(CardElement);
 
         if (card == null) {

@@ -5,11 +5,8 @@ const AboutPage = async () => {
 
 
     return (
-        <div>
-
+        <div className='bg-white'>
             <About />
-
-
         </div>
     );
 };

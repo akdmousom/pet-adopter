@@ -2,7 +2,7 @@ import DonationPage from "@/components/DonationPage/DonationPage";
 
 const page = () => {
     return (
-        <div>
+        <div className='bg-white dark:bg-[#1B2430]'>
             <DonationPage />
         </div>
     );

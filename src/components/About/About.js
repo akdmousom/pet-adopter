@@ -7,7 +7,7 @@ import Marquee from 'react-fast-marquee';
 const About = () => {
     return (
         <>
-            <div className="max-w-full mx-auto bg-[#FFF5E4] dark:bg-[#1B2430]">
+            <div className="max-w-full mx-auto dark:bg-[#1B2430]">
                 <div className="carousel-item relative w-full">
                     <Image src="https://i.ibb.co/MBNhPW4/pet-1.jpg" width={1900} height={600} alt="Pet Banner" className="w-screen lg:w-full h-[400px] lg:h-screen object-cover" />
                     <div className="absolute flex items-center h-full top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] px-3 lg:px-0">
@@ -68,7 +68,7 @@ const About = () => {
                     </Marquee>
                 </div>
                 {/* Donate Advertisement */}
-                {/* <div className="bg-[#ffe3e1] my-8 px-3">
+                {/* <div className="bg-[#FFF5E4] my-8 px-3">
                     <div className="flex flex-1 flex-col lg:flex-row lg:grid-cols-3 gap-6 lg:gap-0 items-center justify-center">
                         <h3 className="text-xl lg:text-4xl font-bold col-span-5">Register your pet with us and <br /> <span className="text-[#F04336]">Get exiting gift</span></h3>
                         <Image src="https://i.ibb.co/7JRXqNQ/pet-4.jpg" width={1900} height={600} alt="pet-4" className="w-[200px] rounded-md lg:w-[250px] h-[200px] lg:h-[320px] col-span-2 object-cover" />
