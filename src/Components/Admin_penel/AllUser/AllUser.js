@@ -6,136 +6,14 @@ import {
 } from 'material-react-table';
 import axios from 'axios';
 
-
-//nested data is ok, see accessorKeys in ColumnDef below
-// const data = [
-//   {
-//     name: {
-//       firstName: 'John',
-//       lastName: 'Doe',
-//     },
-//     address: '261 Erdman Ford',
-//     city: 'East Daphne',
-//     state: 'Kentucky',
-//   },
-//   {
-//     name: {
-//       firstName: 'Jane',
-//       lastName: 'Doe',
-//     },
-//     address: '769 Dominic Grove',
-//     city: 'Columbus',
-//     state: 'Ohio',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joe',
-//       lastName: 'Doe',
-//     },
-//     address: '566 Brakus Inlet',
-//     city: 'South Linda',
-//     state: 'West Virginia',
-//   },
-//   {
-//     name: {
-//       firstName: 'Kevin',
-//       lastName: 'Vandy',
-//     },
-//     address: '722 Emie Stream',
-//     city: 'Lincoln',
-//     state: 'Nebraska',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   },
-//   {
-//     name: {
-//       firstName: 'Joshua',
-//       lastName: 'Rolluffs',
-//     },
-//     address: '32188 Larkin Turnpike',
-//     city: 'Charleston',
-//     state: 'South Carolina',
-//   }
-// ];
-
 const AllUser = ({ session }) => {
   const [userData, setUserData] = useState([]);
   const role = session.user.userRole;
-  console.log(userData,'userData')
+  // console.log(userData,'userData')
 
   useEffect(() => {
     const userRole = { userRole: role };
-    axios.post('http://localhost:5000/api/v1/getUserDataCount', userRole)
+    axios.post('https://pet-adopter-backend.vercel.app/api/v1/getUserDataCount', userRole)
       .then(res => setUserData(res.data))
       .catch(error => console.log(error));
   }, [role]);

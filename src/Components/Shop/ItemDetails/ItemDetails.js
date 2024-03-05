@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image';
+import Link from 'next/link';
 import ReactStars from "react-rating-stars-component";
 
 const ItemDetails = ({ item }) => {
@@ -44,10 +45,12 @@ const ItemDetails = ({ item }) => {
                     <div className="mt-4 flex gap-10 items-center">
                         <p className="text-sm text-gray-600">Cash on Delivery Available</p>
                         <p className="text-sm text-gray-600">Order within 48 hours to avail</p>
-                        <button
-                            className="hover:bg-black bg-[#F04336] text-white font-bold py-2 px-4 rounded">
-                            Buy
-                        </button>
+                        <Link href={`/payment?id=${item?._id}`}>
+                            <button
+                                className="hover:bg-black bg-[#F04336] text-white font-bold py-2 px-4 rounded">
+                                Buy
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

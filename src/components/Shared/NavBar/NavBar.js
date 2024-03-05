@@ -6,8 +6,6 @@ import UserDropdown from "./UserDropdown/UserDropDown";
 import Header from "@/components/Home/Header/Header";
 import DarkMode from "@/components/DarkMode/DarkMode";
 
-
-
 const NavLinks = [
     { id: 1, name: 'Home', path: '/' },
     { id: 2, name: 'Pet-listing', path: '/pet-listing' },

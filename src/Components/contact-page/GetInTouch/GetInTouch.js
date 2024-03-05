@@ -23,7 +23,6 @@ const GetInTouch = () => {
                         <h3 className='text-lg font-semibold dark:text-white'>Southern Colorado Office</h3>
                         <p className='dark:text-white font-medium space-y-2'>4474 Barnes Road <br />Colorado Springs, CO 80917</p>
                     </div>
-                   
                 </div>
                 <div className='flex flex-col text-center items-center space-y-6 py-8'>
                     <div>
@@ -46,7 +45,6 @@ const GetInTouch = () => {
                         <h3 className='text-lg font-semibold dark:text-white'>Wyoming Office</h3>
                         <p className='dark:text-white font-medium space-y-2'>877.Pet Adopter phone</p>
                     </div>
-                   
                 </div>
                 <div className='flex flex-col text-center items-center space-y-6 py-8'>
                     <div>
