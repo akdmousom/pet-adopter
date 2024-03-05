@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 
 const PetDetails = ({ pet, user }) => {
     const router = useRouter()
-    console.log(user);
+    // console.log(user);
 
     const handleAdoptClick = () => {
 

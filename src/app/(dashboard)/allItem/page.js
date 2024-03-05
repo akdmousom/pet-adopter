@@ -1,5 +1,5 @@
-import DeleteItem from '@/Components/AllItem/DeleteItem';
-import Star from '@/Components/AllItem/Star';
+import DeleteItem from '@/components/AllItem/DeleteItem';
+import Star from '@/components/AllItem/Star';
 import { auth } from '@/app/api/auth';
 import Image from 'next/image'
 import Link from 'next/link';

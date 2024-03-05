@@ -11,8 +11,6 @@ const page = async() => {
     return (
         <div>
             <AdoptRequest />
-
-            {/* <AllPetRequest /> */}
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import Addshopitem from '@/Components/Shop/Addshopitem/Addshopitem';
+import Addshopitem from '@/components/Shop/Addshopitem/Addshopitem';
 import { auth } from '@/app/api/auth';
 import { redirect } from 'next/navigation';
 import React from 'react';
