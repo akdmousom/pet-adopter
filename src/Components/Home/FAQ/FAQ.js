@@ -7,7 +7,7 @@ const FAQ = () => {
             <div className='pt-8 pb-16'>
                 <h3 className="text-base font-semibold text-center text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Answers to Your Questions</h3>
                 <h3 className='text-3xl lg:text-5xl text-center font-bold pb-6 dark:text-white'>Pet Adoption FAQs</h3>
-                <p className="font-medium text-center pb-6 dark:text-white">Got questions about our adoption process, fees, or post-adoption support? Check out our FAQ section for quick answers to common inquiries.<br /> We're here to ensure your pet adoption journey is smooth, informed, and filled with joy</p>
+                <p className="font-medium text-center pb-6 dark:text-white">Got questions about our adoption process, fees, or post-adoption support? Check out our FAQ section for quick answers to common inquiries.<br /> We&apos;re here to ensure your pet adoption journey is smooth, informed, and filled with joy</p>
                 <div className='flex flex-col lg:flex-row items-center justify-center gap-3 py-8 px-4'>
                     <div className='w-1/2'>
                         <Image src="https://i.ibb.co/hKdxMdP/pet-6.jpg" alt="pet-6" width={400} height={400} className='hidden md:block rounded-md w-[400px] md:w-[400px] lg:w-[600px] h-[200px] md:h-[400px] lg:h-[400px] object-cover' />

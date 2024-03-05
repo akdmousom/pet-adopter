@@ -722,16 +722,17 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.6.1.tgz#9ab8f811930d7af3e3d549183a50884f9eb83f36"
   integrity sha512-UY+FGM/2jjMkzQLn8pxcHGMaVLh9aEitG3zY2CiY7XHdLiz3bZOwa6oDxNqEMv7zZkV+cj5DOdz0cQ1BP5Hjgw==
 
-"@stripe/react-stripe-js@stripe/react-stripe-js":
+"@stripe/react-stripe-js@^2.5.1":
   version "2.5.1"
-  resolved "https://codeload.github.com/stripe/react-stripe-js/tar.gz/caf1825f1fc8c43d8d79ae6d30218ccecf376a32"
+  resolved "https://registry.yarnpkg.com/@stripe/react-stripe-js/-/react-stripe-js-2.5.1.tgz#48604b2b00a1eff1e3f17e4b00762df5f5fdea1f"
+  integrity sha512-95BwDhOkl1TwIn5sldWW35GYt6wx+uYuwGjebaMOpOdHGyBKcDnBhTjIww+bUdmA2oCmpUqKnoB4OZJuqK8tJA==
   dependencies:
     prop-types "^15.7.2"
 
-"@stripe/stripe-js@^3.0.6":
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.6.tgz#80844af42eae50a9a0ba452038672c20217c7117"
-  integrity sha512-Ef3A0/zvgKbiMdCPT+rZgQBQqhNZ66wuR6Eg2w9YUuqykcIFFKU4nYApBr05WTvInrge8GuOqY5acSDiv6DOjA==
+"@stripe/stripe-js@^3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-3.0.7.tgz#ceec7db210830d742c1ba2a697ddaf3a210542af"
+  integrity sha512-qmjTsxnst84iWDsGqPxk5Wlff/fG4nSFjy/r24t9WWFAlCuvwnuUAe4eGgbqZBng019AtgWvo8wuhM3Y5/olbw==
 
 "@swc/helpers@0.5.2":
   version "0.5.2"
@@ -3025,6 +3026,17 @@ react-rating-stars-component@^2.2.0:
   resolved "https://registry.yarnpkg.com/react-rating-stars-component/-/react-rating-stars-component-2.2.0.tgz#e947c6a1f59278e6fea1098453f43cb15d077c14"
   integrity sha512-A3lgLxumfFQQicKQmxacZ91fq/zRaVWlCPnVodJmJV6obvod4/yCotetN9WuyBiUfnKsEFDBo/8B85ocwmL7ng==
 
+react-scroll-trigger@^0.6.14:
+  version "0.6.14"
+  resolved "https://registry.yarnpkg.com/react-scroll-trigger/-/react-scroll-trigger-0.6.14.tgz#7a1eea67356dc98816df138f5971140fbec20c00"
+  integrity sha512-Z7l9CMJTU4uPArv/3XaJzCtSej+JeLpbev1X7JxAmZwGf16ya5mxqjeeQ/5O4thvOVK0ZWhgyQf52tH1hg1O7Q==
+  dependencies:
+    "@types/react" "^16.14.23"
+    "@types/react-dom" "^16.9.14"
+    clean-react-props "^0.4.0"
+    lodash.throttle "^4.1.1"
+    prop-types "^15.8.1"
+
 react-spring@^9.0.0-rc.3:
   version "9.7.3"
   resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-9.7.3.tgz#3211dea4c4d7c5b541260af5100261b87becb5d5"
@@ -3036,26 +3048,6 @@ react-spring@^9.0.0-rc.3:
     "@react-spring/three" "~9.7.3"
     "@react-spring/web" "~9.7.3"
     "@react-spring/zdog" "~9.7.3"
-
-react-star-ratings@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/react-star-ratings/-/react-star-ratings-2.3.0.tgz#311a68f8f44492439a5b306ed743e63a63fe0fa7"
-  integrity sha512-34Z/oFNDRRn4ZcX7F3t9ccnpo7SQ32gD/vsusQOBc6B6vlqaGR6tke1/Yx3jTDjemKRSmXqhKgpPTR7/JAXq6A==
-  dependencies:
-    classnames "^2.2.1"
-    prop-types "^15.6.0"
-    react "^16.1.0"
-
-react-scroll-trigger@^0.6.14:
-  version "0.6.14"
-  resolved "https://registry.yarnpkg.com/react-scroll-trigger/-/react-scroll-trigger-0.6.14.tgz#7a1eea67356dc98816df138f5971140fbec20c00"
-  integrity sha512-Z7l9CMJTU4uPArv/3XaJzCtSej+JeLpbev1X7JxAmZwGf16ya5mxqjeeQ/5O4thvOVK0ZWhgyQf52tH1hg1O7Q==
-  dependencies:
-    "@types/react" "^16.14.23"
-    "@types/react-dom" "^16.9.14"
-    clean-react-props "^0.4.0"
-    lodash.throttle "^4.1.1"
-    prop-types "^15.8.1"
 
 react-star-ratings@^2.3.0:
   version "2.3.0"
