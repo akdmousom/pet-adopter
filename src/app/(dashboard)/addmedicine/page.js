@@ -1,4 +1,4 @@
-import MedicineForm from '@/Components/medicineForm/MedicineForm'
+import MedicineForm from '@/components/medicineForm/MedicineForm'
 import { auth } from '@/app/api/auth';
 import { redirect } from 'next/navigation';
 import React from 'react'

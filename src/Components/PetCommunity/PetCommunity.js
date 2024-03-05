@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-// import Modal from "./Modal";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Modal from "./Modal";
@@ -50,7 +49,7 @@ const PetCommunity = ({user}) => {
                 <div className="flex py-2 lg:py-5 pl-2 lg:pl-5">
                 <div className="avatar py-2">
                 <div className="w-8 lg:w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                  <img src={data.user_image} />
+                  <Image src={data.user_image} alt="" height={500} width={500} />
                 </div>
               </div>
                   <div className=' pl-5'>
@@ -68,7 +67,7 @@ const PetCommunity = ({user}) => {
                 <h1 className='text-sm p-1 lg:pb-5 lg:pl-5'>{data.input_message}</h1>
               }
                 <div className=' flex flex-col items-center'>
-                   <figure className=""><img className="w-screen" src={data.input_image} alt="Shoes" /></figure>
+                   <figure className=""><Image className="w-screen" src={data.input_image} alt="Shoes" height={500} width={500} /></figure>
                 </div>
                 <div className='flex justify-between mx-2 lg:mx-16 my-2 lg:my-5'>
                   <div className='space-y-2 lg:space-y-5'>

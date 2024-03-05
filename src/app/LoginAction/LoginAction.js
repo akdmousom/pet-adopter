@@ -5,7 +5,7 @@ import { signIn } from "../api/auth";
 
 const LoginAction = async (formData) => {
 
-    console.log(formData);
+   //  console.log(formData);
 
     
      await signIn('credentials', {

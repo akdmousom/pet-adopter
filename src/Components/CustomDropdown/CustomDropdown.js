@@ -18,7 +18,7 @@ const CustomDropdown = () => {
 
     const handleOptionClick = (value) => {
         // Handle the selected option value as needed
-        console.log('Selected:', value);
+        // console.log('Selected:', value);
         setIsOpen(false);
     };
 
