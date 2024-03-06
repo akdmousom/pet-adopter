@@ -10,7 +10,7 @@ import FAQ from '@/components/Home/FAQ/FAQ'
 
 export default function Home() {
   return (
-    <div className='bg-[#f5f2eb] dark:bg-[#1B2430]'>
+    <div className='bg-[#F5F5DC] dark:bg-[#1B2430]'>
       <Banner />
       <WhyChoseUs />
       <PetSection />
