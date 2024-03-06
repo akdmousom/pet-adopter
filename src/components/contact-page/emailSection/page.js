@@ -57,11 +57,11 @@ const EmailSection = () => {
 
       <Script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></Script>
 
-      <div className="py-10 flex md:flex-col-reverse lg:flex-row items-center justify-around">
+      <div className="py-10 md:flex  items-center justify-around">
 
-        <div >
+        <div>
           <div className="my-6 space-y-3">
-            <h2 className="text-3xl lg:text-5xl font-bold">Lets Talk Question.</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold">Lets Talk Question<span className="text-[#F04336]">.</span></h2>
             <p className="font-medium pt-4">The domestic dog is a doiated dendant of the wolf. The dog derived <br /> from an ancient, extinct wolf, and the modern grey.</p>
           </div>
           {/* Left Side  */}
