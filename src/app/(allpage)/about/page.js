@@ -5,7 +5,7 @@ const AboutPage = async () => {
 
 
     return (
-        <div className='bg-white'>
+        <div className='bg-white dark:bg-[#1B2430]'>
             <About />
         </div>
     );
