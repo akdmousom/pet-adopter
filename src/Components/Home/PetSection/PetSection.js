@@ -29,7 +29,7 @@ const PetSection = async () => {
 
                     {
                         slicedData?.map(pet =>
-                            <div key={pet._id} className="card bg-white dark:bg-pink-100 mx-auto">
+                            <div key={pet._id} className="card bg-pink-100 mx-auto">
 
                                 <Image src={pet.petImage} alt="" width={300} height={300} className="rounded-t-lg hover:cursor-pointer hover:scale-105 object-cover transform delay-200 duration-700 h-[280px] w-[350px] mx-auto" />
 
@@ -40,8 +40,8 @@ const PetSection = async () => {
                                         <p className="text-black font-medium mb-2">Age: {pet.petAge}</p>
                                         <p className="text-black font-medium mb-2">Location: {pet.petLocation}</p>
                                         <div className="flex justify-around mt-4 mb-2">
-                                        <Link href={'/pet-listing'}><button className="btn-sm text-white dark:text-black rounded-md bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] hover:bg-black font-semibold">Adopt</button></Link>
-                                        {/* <Link href={`/${pet.petCategory}/${pet._id}`} > */}
+                                            <Link href={'/pet-listing'}><button className="btn-sm text-white dark:text-black rounded-md bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] hover:bg-black font-semibold">Adopt</button></Link>
+                                            {/* <Link href={`/${pet.petCategory}/${pet._id}`} > */}
                                             <button className="btn-sm rounded-md hover:bg-black  bg-pink-700 dark:bg-gradient-to-r from-pink-500 to-yellow-500 text-white dark:text-black font-semibold">Read More</button>
                                             {/* </Link> */}
                                         </div>

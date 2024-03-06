@@ -115,30 +115,37 @@ const Petlisting = ({ searchParams }) => {
                 {/* if filter length is bigger then 0 then show first div otherwise show the not avilable message */}
                 {filteredPetListing.length > 0 ?
 
-                <Suspense fallback={<Loading/>}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-                   {
-                     filteredPetListing?.map(pet =>
-                        <div key={pet._id} className="card border border-[#f04336] dark:border-[#68e0cf] py-6 px-6 lg:mx-auto">
-                            <Image src={pet?.petImage} alt="cat" width={400} height={340} className="rounded-lg w-[400px] h-[340px] object-cover mb-4 hover:scale-110 duration-700" />
-                            <h2 className="text-2xl dark:text-white font-bold mb-2">{pet.petName}</h2>
-                            <p className="text-gray-500 dark:text-white mb-2">Age: {pet.petAge}</p>
-                            <p className="text-gray-500 dark:text-white mb-2">Location: {pet.petLocation}</p>
-                            <Link href={`/${pet.petCategory}/${pet._id}`} >
-                                <button
-                                    className="bg-[#FA524F] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] text-white dark:text-black font-semibold rounded-md px-4 py-2 hover:bg-black active:bg-[#f17876] focus:outline-none"
-                                >
-                                    View Details
-                                </button>
-                            </Link>
-                        </div> 
-                    )
-                   }
-                </div>
-                </Suspense>
-                
-                : <div className="max-w-full grid min-h-screen justify-center items-center mx-auto">
-                    <h1 className="text-center font-bold text-3xl">Pet&apos;s Not Available</h1>
+                    <Suspense fallback={<Loading />}>
+                        <div className="grid grid-cols-1 mx-4 md:mx-10 xl:grid-cols-4 lg:grid-cols- md:grid-cols-2 gap-6">
+                            {
+                                filteredPetListing?.map(pet =>
+                                    <div key={pet._id} className="card bg-pink-100 dark:bg-pink-100 mx-auto">
+                                        <Image src={pet?.petImage} alt="cat" width={400} height={340} className="rounded-t-lg hover:cursor-pointer hover:scale-105 object-cover transform delay-200 duration-700 h-[280px] w-[350px] mx-auto" />
+                                        <div className="px-2 py-4">
+                                            <h3 className="text-lg font-semibold mb-2">{pet.petName}</h3>
+
+                                            <div>
+                                                <p className="text-black font-medium mb-2">Age: {pet.petAge}</p>
+                                                <p className="text-black font-medium mb-2">Location: {pet.petLocation}</p>
+                                                <div className="flex mt-4 mb-2">
+                                                    <Link href={`/${pet.petCategory}/${pet._id}`} >
+                                                        <button
+                                                            className="bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] text-white dark:text-black font-semibold rounded-md px-4 py-2 hover:bg-black active:bg-[#f17876] focus:outline-none"
+                                                        >
+                                                            View Details
+                                                        </button>
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </Suspense>
+
+                    : <div className="max-w-full grid min-h-screen justify-center items-center mx-auto">
+                        <h1 className="text-center font-bold text-3xl">Pet&apos;s Not Available</h1>
                     </div>}
             </div>
             <div className='text-center container mx-auto py-10 pagination'>

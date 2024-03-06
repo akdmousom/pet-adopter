@@ -14,7 +14,7 @@ const petDetailPage = async ({ params }) => {
     }
 
     return (
-        <div>
+        <div className='bg-white dark:bg-[#1B2430]'>
 
             <PetDetails pet={pet} user={user} />
         </div>

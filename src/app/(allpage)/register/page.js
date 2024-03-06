@@ -65,11 +65,11 @@ const page = () => {
 
 
     return (
-        <div className="hero max-w-full min-h-screen bg-base-200">
+        <div className="hero max-w-full min-h-screen bg-base-200 dark:bg-[#1B2430]">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Register now!</h1>
-                    <p className="py-6">Register to your account from here. You can adopt any kind of pets from here</p>
+                    <h1 className="text-5xl font-bold dark:text-white">Register now!</h1>
+                    <p className="py-6 dark:text-white">Register to your account from here. You can adopt any kind of pets from here</p>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <form action={userData} className="card-body">
