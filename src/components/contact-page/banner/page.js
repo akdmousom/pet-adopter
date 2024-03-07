@@ -4,7 +4,6 @@ import Link from "next/link";
 const ContactBanner = () => {
     return (
         <div>
-            
             <div className="hero  relative w-full h-[350px] md:h-[550px] " style={{ backgroundImage: 'url(https://i.ibb.co/1vkY5rK/contactbanner.png)' }}>
                 <div className="absolute flex transform -translate-y-1/5 md:left-5 md:right-5 ">
                     <div className=" text-white ml-10 lg:ml-[103px] md:ml-[75px] space-y-7">
