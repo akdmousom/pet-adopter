@@ -27,11 +27,11 @@ const PetDetails = ({ pet, user }) => {
     };
     return (
         <div>
-            <div className=" md:flex items-center  px-5 max-w-full md:max-w-5xl h-full w-full mx-auto  rounded-xl overflow-hidden  my-4 shadow-lg">
+            <div className=" md:flex items-center py-16 px-5 max-w-full md:max-w-5xl h-full w-full mx-auto  rounded-xl overflow-hidden  my-4 shadow-lg dark:bg-[#1B2430]">
                 <div className="md:w-1/2">
                     <Image
                         width={500} height={400}
-                        className="w-full h-[400px] object-cover object-center"
+                        className="w-full h-full object-cover object-center"
                         src={pet.petImage}
                         alt={pet.petName}
                     />
@@ -39,27 +39,27 @@ const PetDetails = ({ pet, user }) => {
 
                 <div className="md:w-1/2 p-6">
                     <div className="mb-2">
-                        <h2 className="text-2xl font-bold text-gray-800">{pet.petName}</h2>
-                        <p>Age: {pet.petAge}</p>
+                        <h2 className="text-2xl font-bold text-gray-800 dark:text-white">{pet.petName}</h2>
+                        <p className='dark:text-white'>Age: {pet.petAge}</p>
                     </div>
 
                     <div className="flex mb-4">
                         <div className="flex-1">
-                            <p className="text-sm text-gray-600">Category: {pet.petCategory}</p>
+                            <p className="text-sm text-gray-600 dark:text-white">Category: {pet.petCategory}</p>
                         </div>
                     </div>
                     <div className="flex mb-4">
                         <div className="flex-1">
-                            <p className="text-sm text-gray-600">Location: {pet.petLocation}</p>
+                            <p className="text-sm text-gray-600 dark:text-white">Location: {pet.petLocation}</p>
                         </div>
                     </div>
 
-                    <p className="text-gray-700">{pet.description}</p>
+                    <p className="text-gray-700 dark:text-white">{pet.description}</p>
 
                     <div className="mt-4 flex gap-10 items-center">
                         <button
                             onClick={handleAdoptClick}
-                            className="hover:bg-black bg-[#F04336] text-white font-bold py-2 px-4 rounded">
+                            className="hover:bg-black bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] text-white dark:text-black font-bold py-2 px-4 rounded">
                             Adopt
                         </button>
                     </div>

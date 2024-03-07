@@ -1,5 +1,5 @@
 
-import DonationStripe from "@/Components/PayDonation/DonationStripe/DonationStripe"
+import DonationStripe from "@/components/PayDonation/DonationStripe/DonationStripe"
 import { auth } from "@/app/api/auth";
 const page = async({ searchParams }) => {
     const session = await auth();

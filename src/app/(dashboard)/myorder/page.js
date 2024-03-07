@@ -1,4 +1,4 @@
-import UpdateOrder from '@/Components/Order/DeleteOrder/UpdateOrder';
+import UpdateOrder from '@/components/Order/DeleteOrder/UpdateOrder';
 import { auth } from '@/app/api/auth';
 import Image from 'next/image'
 import Link from 'next/link';

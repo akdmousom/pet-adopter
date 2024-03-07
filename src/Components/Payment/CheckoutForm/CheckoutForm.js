@@ -87,7 +87,7 @@ const CheckoutForm = ({ item, session, clientSecretData }) => {
 
     return (
         <div>
-            <div className="flex justify-center items-center container mx-auto mt-10">
+            <div className="flex justify-center items-center container mx-auto py-24 bg-base-200 dark:bg-[#1B2430]">
                 <div className="flex space-x-2 sm:space-x-4 mx-a">
                     <Image
                         width={500} height={400}
@@ -96,10 +96,10 @@ const CheckoutForm = ({ item, session, clientSecretData }) => {
                         alt={item.name}
                     />
                     <div className="flex flex-col justify-center gap-2 w-full pb-4">
-                        <p className='text-base font-semibold'>{item?.name}</p>
-                        <p className="text-lg font-semibold">${item?.price}</p>
+                        <p className='text-base font-semibold dark:text-white'>{item?.name}</p>
+                        <p className="text-lg font-semibold dark:text-white">${item?.price}</p>
                         <span>
-                            <Link className='bg-red-500 p-3 rounded-md font-bold text-white py-1 inline-block' href={`/item/medical/${item?._id}`}>
+                            <Link className='btn-ghost bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] p-3 rounded-md font-semibold text-white dark:text-black py-1 inline-block' href={`/item/medical/${item?._id}`}>
                                 back
                             </Link>
                         </span>
@@ -107,7 +107,7 @@ const CheckoutForm = ({ item, session, clientSecretData }) => {
 
                 </div>
             </div>
-            <form className="my-11 max-w-2xl container mx-auto p-5" onSubmit={handleSubmit}>
+            <form className="my-11 max-w-2xl container mx-auto p-5 font-semibold" onSubmit={handleSubmit}>
                 <CardElement
                     options={{
                         style: {
@@ -130,12 +130,12 @@ const CheckoutForm = ({ item, session, clientSecretData }) => {
                     error && <p className="py-2 text-red-600 font-bold text-xl">{error}</p>
                 }{
                     loading && <button className=" mt-10 mx-auto block px-16  py-3" type="submit" disabled>
-                        <span className="flex justify-center items-center gap-2">
+                        <span className="flex justify-center items-center gap-2 dark:text-white">
                             Paying ${item?.price}  <span className="animate-spin mt-1 inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500" role="status" aria-label="loading"></span>
                         </span>
                     </button>
                 }
-                {!loading && <button className="border-green-600 py-3 bg-green-500 mt-10 mx-auto block px-16 hover:bg-green-300 transition-all active:scale-90" type="submit" disabled={!stripe || !elements || loading}>
+                {!loading && <button className="btn-ghost border-green-600 py-3 bg-[#F04336] dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] mt-10 mx-auto block px-16 hover:bg-green-300 transition-all active:scale-90" type="submit" disabled={!stripe || !elements || loading}>
                     Pay ${item?.price}
                 </button>}
             </form>
