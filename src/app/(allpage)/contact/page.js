@@ -1,5 +1,6 @@
 "use client"
 import GetInTouch from "@/components/contact-page/GetInTouch/GetInTouch";
+import Subscribe from "@/components/contact-page/Subscribe/Subscribe";
 import ContactBanner from "@/components/contact-page/banner/page";
 import EmailSection from "@/components/contact-page/emailSection/page";
 import Googlemap from "@/components/contact-page/googleMap/page";
@@ -10,6 +11,7 @@ const ContactPage = () => {
             <ContactBanner />
             <GetInTouch />
             <EmailSection />
+            <Subscribe/>
             <Googlemap />
         </div>
     );
