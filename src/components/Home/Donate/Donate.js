@@ -6,20 +6,20 @@ import { Parallax } from 'react-parallax';
 
 const Donate = ({ heading }) => {
     return (
-        <div className='dark:bg-[#1B2430] py-4 lg:py-8'>
+        <div className='dark:bg-[#1B2430] py-4  lg:py-8'>
             <h3 className="text-base font-semibold text-center text-[#F04336] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]">Transforming Futures Together</h3>
             <SectionTitle heading={' Help Us Change Lives'} />
             <p className="font-medium text-center pb-6 dark:text-white">Join us in our mission to change lives, one wagging tail and purring friend at a time. <br />Your support empowers us to continue providing loving homes for pets in need, making a profound difference in their lives and in the hearts of their new families.</p>
-            <div className="px-8 lg:px-16 py-5 text-white ">
+            <div className="px-8 lg:px-16  py-5 text-white ">
                 <Parallax blur={{ min: -50, max: 50 }}
                     bgImage="https://i.ibb.co/HYr8Rqh/donate.jpg"
                     bgImageAlt="the cat"
                     strength={200}>
-                    <div className="hero h-[900px] object-cover">
+                    <div className="hero md:h-[550px]  object-cover">
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
-                            <div className="max-w-md text-white">
-                                <h1 className="mb-5 sm:text-3xl lg:text-5xl font-bold"> <span className='text-5xl py-0 text-[#f8685e] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]'>Every</span> Tail Wags with Your Support</h1>
+                            <div className="max-w-xl text-white">
+                                <h1 className="mb-5  sm:text-3xl lg:text-5xl font-bold"> <span className='text-5xl py-0 text-[#f8685e] dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff]'>Every</span> Tail Wags with Your Support</h1>
                                 <p className="mb-5 lg:text-lg space-y-6">Behind every happy rescue story are compassionate hearts like yours. Your kind donation fuels our mission to provide abandoned animals with second chances. It covers food, shelter, medical care, and the love they need until they find their forever homes.</p>
                                 <Link href="donation/form">
                                     <button className="btn border-none rounded-md bg-[#F04336] hover:bg-black text-white dark:text-black dark:bg-gradient-to-r from-[#5edae8] to-[#12fbff] font-semibold">Donate</button></Link>
